@@ -460,25 +460,152 @@ For this example, I'm going to use microdata from the American Community Survey,
 
 Before you jump into writing the API call in Python, use the available documentation to make sense of how the URL is structured, what variables are included in the dataset, etc. 
 
+Note that for the Census Bureau API, your key is part of the URL. Concatenation and a string variable can be helpful here.
+
+Let's break down one of the example URLs included in the documentation for this survey.
+
+```
+https://api.census.gov/data/2022/acs/acs1/pums?get=SEX,PWGTP,MAR&SCHL=24&key=YOUR_KEY_GOES_HERE
+```
+
+We can start to break down the pieces of information included here:
+- Root: `https://api.census.gov/data`
+- Survey: `acs` (American Community Survey)
+- Coverage: `acs1` (1 year estimates)
+- Subset: `pums` (Public Use Microdata Sample)
+- Query: `?get=` (prefix for selecting specific variables)
+- Variables: `SEX,PWGTP,MAR&SCHL=24` (codes for specific variables, from [the documentation](https://api.census.gov/data/2022/acs/acs1/pums/variables.html))
+  * NOTE: In this example, the URL is structured to select all values for the `SEX`, `PWGTP`, `MAR` variables. This query will only return records where the `SCHL` variable value is `24`.
+  * In a scenario where we are not filtering for specific variable values, we could just include variable names separated by commas (i.e. `SEX, PWGTP, MAR, SCHL`)
+- `&key=` (prefix for entering your API key)
+
+#### Writing the API Call
+
 Remember our general API workflow:
 - Customize query URL
 - Load response in Python
 - Parse the data structure to isolate the data we want
 - Store that data as a Pandas `DataFrame`
 
-Note that for the Census Bureau API, your key is part of the URL. Concatenation and a string variable can be helpful here.
-
-Let's break down one of the example URLs included in the documentation for this survey.
-
+```Python
+import requests, pandas as pd # import statements
+key = "" # add your key to make this a string variable
+url = f"https://api.census.gov/data/2022/acs/acs1/pums?get=SEX,PWGTP,MAR&SCHL=24&key={key}" # use f strings and concatenation to construct the query
+r = requests.get(url) # requests data
+data = r.json() # store response
+df = pd.DataFrame(data[1:], columns=data[0]) # create the dataframe, making the first sublist the column headers, and starting with the first row of data to avoid duplicating headers)
+print(df) # show output
 ```
-api.census.gov/data/2022/acs/acs1/pums?get=SEX,PWGTP,MAR&SCHL=24&key=YOUR_KEY_GOES_HERE
+
+#### Other Resources
+
+This is an example query- there are lots of ways to customize Census Bureau API requests. Check out [`census-docs`](https://census-docs.com/) and the Census Bureau's API documentation for more info.
+- For example, if we just wanted data for Indiana, we could add the `in` parameter to your URL: 'api.census.gov/data/2022/acs/acs1/pums?get=SEX,PWGTP,MAR&SCHL=24&in=state:17&key=`
+
+Some datasets include `Groups`, which let you return multiple related variables.
+- [Link to more information on groups](https://www.census.gov/data/developers/updates/groups-functionality.html)
+
+DataMade also has a Python wrapper for the Census Bureau APIs, which is designed to streamline programming workflows.
+- [Link to more information](https://github.com/datamade/census)
+
+The Census Bureau APIs can be overwhelming, but they're a powerful tool for accessing data. Wading through the documentation is worth your time.
+
+#### Application 
+
+
+Q4: 
+
+Write your own Census Bureau API call. You could use the same dataset and modify the year, variables, geography scope, etc.
+
+You could also explore other datasets.
+
+Starting to make sense of the documentation
+
+Getting the data in Python
+
+Storing as pandas df
+
+## Working With Unstructured Text
+
+START HERE
+- Elisevier video: https://youtu.be/I3cjbB38Z4A?si=N3hv-j7dkOHDkXED
+- Elsivier video: https://youtu.be/xxqrIZyKKuk?si=ncOxIy5EZufVpmkf
+
+EXPLANATION FOR UNSTRUCTURED TEXT
+
+If you took Elements of Computing I with Prof. Walden, you had some exposure to how we can start to work with unstructured text, looking at things like term relationships, frequency, etc. Web scraping is a great workflow for information that is online in web pages. But what about text information contained in documents? 
+
+Enter Optical Character Recognition, or OCR.
+
+"Optical character recognition (OCR) is sometimes referred to as text recognition. An OCR program extracts and repurposes data from scanned documents, camera images and image-only pdfs. OCR software singles out letters on the image, puts them into words and then puts the words into sentences, thus enabling access to and editing of the original content...OCR systems use a combination of hardware and software to convert physical, printed documents into machine-readable text" (IBM Cloud Education, "[What is Optical Character Recognition?](https://www.ibm.com/blog/optical-character-recognition/)", 5 January 2022)
+
+OCR is an example of computer vision in action. A full exploration of OCR or computer vision is outside the scope of this course. We're going to focus on some Python workflows for extracting text and data from PDF documents that already contain text.
+- [Link to a (messy) Jupyter Notebook that walks through some OCR foundations](https://drive.google.com/file/d/1WbGTAvs1WCGrC5XZeADyhminFn8QMEHT/view?usp=sharing)
+
+We're going to be using a couple Python libraries built for extracting text and tables from PDF files.
+- [`pypdf`](https://pypdf.readthedocs.io/en/stable/index.html)
+- [`tabula-py`](https://tabula-py.readthedocs.io/en/latest/)
+
+And we'll be testing out these workflows on a PDF file from the [City of South Bend's Document Search Center](http://docs.southbendin.gov/WebLink/Welcome.aspx?cr=1). I'm looking at the [Inclusive Procurement & Contracting Board's 2020 report](http://docs.southbendin.gov/WebLink/0/edoc/335114/2020%20Annual%20Inclusion%20Contracting%20Procurement%20Report%203-27-21_.pdf).
+
+### Python Workflows
+
+We'll start by installing and importing these packages.
+
+```Python
+!pip install pypdf tabula-py
 ```
 
-We can start to break down the pieces of information included here:
-- Root: `api.census.gov/data`
-- Survey: `acs` (American Community Survey)
-- Coverage: `acs1` (1 year estimates)
-- Subset: `pums` (Public Use Microdata Sample)
-- Query: `?get=` (prefix for selecting specific variables
-- Variables: `SEX,PWGTP,MAR&SCHL` (
+```Python
+# import statements
+from pypdf importPdfReader
+import tabula
+```
+
+Next, we'll use `PdfReader` to extract text.
+
+```Python
+reader = PdfReader("pdf20.pdf") # load renamed file as reader object
+page = reader.pages[2] # isolate single page
+print(page.extract_text()) # show extracted text output
+```
+
+To iterate over all pages in the document and write the contents to a `.txt` file:
+
+```Python
+with open("output.txt", "a") as f: # create file
+  for p in reader.pages: # iterate over pages
+    f.write(p.extract_text()) # extract text and write to file
+```
+
+Folks may be wondering how we might handle tables or tabular data in a PDF file. We can use Tabula's `.read_pdf()` function to extract all tables in our document as Pandas `DataFrames`.
+
+```Python
+dfs = tabula.read_pdf("pdf20.pdf", pages="all") # load file, isolate dataframes
+dfs[5].to_csv("output.csv", index=False) # write single dataframe to CSV file
+dfs[5] # show single dataframe
+```
+
+There's more we probably want to do with output, but this gets us started.
+
+### Application
+
+Q5:
+
+Find another SB file. 
+
+Skim the document, what types of information are there.
+
+Extract text to txt file
+
+Extract tables, write one to CSV file
+
+Where you'd want to go next, other data processing steps
+
+## How to Submit This Lab & Show Your Work
+
+## Lab Notebook Questions
+`
+
+
 
