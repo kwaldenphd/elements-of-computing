@@ -1,3 +1,18 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.16.1
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 # Elements of Computing (S24): Data Sources (part 1)
 
 <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License" /></a>
@@ -256,6 +271,7 @@ Answer to this question includes program + comments that document process and ex
 
 Q1C: What challenges did you encounter? How did you address or solve them? 
 
++++
 
 Q2A: Navigate to an open data portal and download a JSON file. 
 
@@ -512,6 +528,7 @@ The Census Bureau APIs can be overwhelming, but they're a powerful tool for acce
 
 #### Application 
 
++++
 
 Q4: 
 
@@ -606,6 +623,3 @@ Where you'd want to go next, other data processing steps
 
 ## Lab Notebook Questions
 `
-
-
-
