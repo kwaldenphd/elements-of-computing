@@ -1,5 +1,7 @@
 # Application
 
+[Click here](https://colab.research.google.com/drive/14Zpi8TabYz-AzqbJZkeK14lhD1i_spze?usp=sharing) for a Jupyter Notebook template for this chapter's application problems.
+
 Q1: In your own words, explain the difference between the `print(hello)` command and `print(“hello”)`.
 
 Q2: Create your own list of numbers or strings, using the examples in the lab as a starting point. What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
