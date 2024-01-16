@@ -19,3 +19,21 @@ chapters:
     title: Control Flow, Iteration & Loops
   - file: 01-Python-Refresh/06-application
     title: Application
+- file: 02-Structured-Data/00-overview
+  title: Overview
+  sections:
+  - file: 02-Structured-Data/01-structured-data
+    title: Structured Data
+  - file: 02-Structured-Data/02-loading-data
+    title: Loading Data
+  - file: 02-Structured-Data/03-web-apis
+    title: Web APIs
+    sections:
+    - file: 02-Structured-Data/04-sb-open-data
+      title: South Bend Open Data Portal
+    - file: 02-Structured-Data/05-census-bureau
+      title: U.S. Census Bureau
+  - file: 02-Structured-Data/06-pdfs
+    title: Working With PDFs
+  - file: 02-Structured-Data/07-application
+    title: Application
