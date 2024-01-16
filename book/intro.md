@@ -1,30 +1,5 @@
-# Welcome to your Jupyter Book
+# Elements of Computing
 
-This is a small sample book to give you a feel for how book content is structured.
+Prof. Walden is exploring publishing instrucitonal materials in a different format this semester. This is a work in progress! 
 
-## What's Happening Here
-
-It shows off a few of the major file types, as well as some sample content.
-
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-### Sample Note
-
-:::{note}
-Here is a note!
-:::
-
-### Sample Code block
-
-And here is a code block:
-
-```
-e = mc^2
-```
-
-## Learn More
-
-Check out the content pages bundled with this sample book to see more.
-
-```{tableofcontents}
-```
+Use the menu on the left-hand side of the page to navigate this content. 

@@ -18,6 +18,5 @@ chapters:
   - file: 01-Python-Refresh/05-control-flow
     title: Control Flow, Iteration & Loops
   - file: 01-Python-Refresh/06-application
-    title: Application
-  
+    title: Application 
 - file: 02-Data-Sources-Structures/test
