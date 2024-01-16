@@ -1,5 +1,7 @@
 # Elements of Computing
 
-Prof. Walden is exploring publishing instrucitonal materials in a different format this semester. This is a work in progress! 
+Prof. Walden is exploring a new way of sharing instructional materials this semester. This is a work in progress!
 
-Use the menu on the left-hand side of the page to navigate this content. 
+The `How-To` page is a good place to start in terms of how to use this book.
+
+Use the table of contents on the left-hand side of the page to get started.
