@@ -179,6 +179,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">How to Interact With This Book</a></li>
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="01-Python-Refresh/00-Python.html">Python Refresh</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="01-Python-Refresh/01-comments-variables-assignment.html">Comments, Variables &amp; Assignment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-Python-Refresh/02-data-types-io.html">Data Types &amp; I/O</a></li>
@@ -234,37 +235,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://colab.research.google.com/github/kwaldenphd/elements-of-computing/blob/main/book/how-to.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onColab"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="_static/images/logo_colab.png">
-  </span>
-<span class="btn__text-container">Colab</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -273,7 +243,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/how-to.ipynb" target="_blank"
+      <li><a href="_sources/how-to.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -283,7 +253,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -367,13 +337,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">How to Interact With This Book</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-rocket-aria-hidden-true-i-open-jupyter-notebook-in-the-cloud"><i aria-hidden="true" class="fa fa-rocket"></i> Open Jupyter Notebook in the Cloud</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-download-aria-hidden-true-i-download-jupyter-notebook"><i aria-hidden="true" class="fa fa-download"></i> Download Jupyter Notebook</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-download-aria-hidden-true-i-download-pdf"><i aria-hidden="true" class="fa fa-download"></i> Download PDF</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fas-fa-expand-aria-hidden-true-i-make-full-screen"><i aria-hidden="true" class="fas fa-expand"></i> Make Full Screen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fab-fa-github-aria-hidden-true-i-open-issue-on-github"><i aria-hidden="true" class="fab fa-github"></i> Open Issue on GitHub</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#click-to-show-output-code">Click to Show Output/Code</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-jupyter-notebook">Download Jupyter Notebook</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fas-fa-expand-aria-hidden-true-i-make-full-screen"><i aria-hidden="true" class="fas fa-expand"></i> Make Full Screen</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -390,70 +363,18 @@ document.write(`
 <p>Below the interactive features of this Jupyter Book are explained in further detail. Most interactive features can be found in the toolbar at the top of the page.</p>
 <section id="i-class-fa-fa-rocket-aria-hidden-true-i-open-jupyter-notebook-in-the-cloud">
 <h2><i class="fa fa-rocket" aria-hidden="true"></i> Open Jupyter Notebook in the Cloud<a class="headerlink" href="#i-class-fa-fa-rocket-aria-hidden-true-i-open-jupyter-notebook-in-the-cloud" title="Permalink to this heading">#</a></h2>
-<p>You can open most pages from this book in the cloud and run the code live. Hover over the rocket icon <i class="fa fa-rocket" aria-hidden="true"></i>  at the top of the page and click “Binder” to open a version of the same page in the cloud.</p>
-<p><a class="reference external" href="https://mybinder.org/">Binder</a> is a service that allows you to run Jupyter notebooks without any prior configuration or installation. It may take a few minutes for the Jupyter notebook to load, so be patient.</p>
+<p>You can open most pages from this book in the cloud and run the code live. Hover over the rocket icon <i class="fa fa-rocket" aria-hidden="true"></i>  at the top of the page and click “Colab” to open a version of the same page in Google Colab.</p>
+<ul class="simple">
+<li><p><em>Note: Make sure you save the file to your Drive. Otherwise changes will not be saved.</em></p></li>
+</ul>
 </section>
-<section id="i-class-fa-fa-download-aria-hidden-true-i-download-jupyter-notebook">
-<h2><i class="fa fa-download" aria-hidden="true"></i> Download Jupyter Notebook<a class="headerlink" href="#i-class-fa-fa-download-aria-hidden-true-i-download-jupyter-notebook" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="download-jupyter-notebook">
+<h1>Download Jupyter Notebook<a class="headerlink" href="#download-jupyter-notebook" title="Permalink to this heading">#</a></h1>
 <p>You can download any Jupyter notebook page from this book as a Jupyter notebook file (.ipynb). Hover over the download icon <i class="fa fa-download" aria-hidden="true"></i> and click “.ipynb”</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>To work with this .ipynb file, you will need to have <span class="xref myst">Jupyter installed</span> and running on your own computer.</p>
-</div>
-</section>
-<section id="i-class-fa-fa-download-aria-hidden-true-i-download-pdf">
-<h2><i class="fa fa-download" aria-hidden="true"></i> Download PDF<a class="headerlink" href="#i-class-fa-fa-download-aria-hidden-true-i-download-pdf" title="Permalink to this heading">#</a></h2>
-<p>You can download any Jupyter notebook page from this book as a PDF file. Hover over the download icon <i class="fa fa-download" aria-hidden="true"></i> and click “.pdf”</p>
-</section>
 <section id="i-class-fas-fa-expand-aria-hidden-true-i-make-full-screen">
 <h2><i class="fas fa-expand" aria-hidden="true"></i> Make Full Screen<a class="headerlink" href="#i-class-fas-fa-expand-aria-hidden-true-i-make-full-screen" title="Permalink to this heading">#</a></h2>
 <p>To make any page from this book full screen, click the full screen <i class="fas fa-expand" aria-hidden="true"></i> icon at the top of the page.</p>
-</section>
-<section id="i-class-fab-fa-github-aria-hidden-true-i-open-issue-on-github">
-<h2><i class="fab fa-github" aria-hidden="true"></i> Open Issue on GitHub<a class="headerlink" href="#i-class-fab-fa-github-aria-hidden-true-i-open-issue-on-github" title="Permalink to this heading">#</a></h2>
-<p>If you run into any issues or would like to make a suggestion, you can open an issue on GitHub by hovering over the GitHub icon <i class="fab fa-github" aria-hidden="true"></i> and clicking “open issue.”</p>
-<p>You can also email me with issues or suggestions at <a class="reference external" href="mailto:melwalsh&#37;&#52;&#48;uw&#46;edu">melwalsh<span>&#64;</span>uw<span>&#46;</span>edu</a></p>
-</section>
-<section id="click-to-show-output-code">
-<h2>Click to Show Output/Code<a class="headerlink" href="#click-to-show-output-code" title="Permalink to this heading">#</a></h2>
-<p>Many of the pages in this book include hidden content. You can reveal the hidden content by clicking “Click to Show” beneath the cell on the right.</p>
-<p>Revealing content is meant to replicate the experience of running code live.</p>
-<div class="cell tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here&#39;s an example of hidden output! Click &#39;Click to Show&#39; to see the output!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Here&#39;s an example of hidden output! Click &#39;Click to Show&#39; to see the output!
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-<div class="cell tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span> <span class="o">*</span> <span class="mi">42</span>
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1764
-</pre></div>
-</div>
-</div>
-</details>
-</div>
 </section>
 </section>
 
@@ -521,13 +442,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">How to Interact With This Book</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-rocket-aria-hidden-true-i-open-jupyter-notebook-in-the-cloud"><i aria-hidden="true" class="fa fa-rocket"></i> Open Jupyter Notebook in the Cloud</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-download-aria-hidden-true-i-download-jupyter-notebook"><i aria-hidden="true" class="fa fa-download"></i> Download Jupyter Notebook</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-download-aria-hidden-true-i-download-pdf"><i aria-hidden="true" class="fa fa-download"></i> Download PDF</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fas-fa-expand-aria-hidden-true-i-make-full-screen"><i aria-hidden="true" class="fas fa-expand"></i> Make Full Screen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fab-fa-github-aria-hidden-true-i-open-issue-on-github"><i aria-hidden="true" class="fab fa-github"></i> Open Issue on GitHub</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#click-to-show-output-code">Click to Show Output/Code</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-jupyter-notebook">Download Jupyter Notebook</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fas-fa-expand-aria-hidden-true-i-make-full-screen"><i aria-hidden="true" class="fas fa-expand"></i> Make Full Screen</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
