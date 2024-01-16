@@ -20,7 +20,7 @@ chapters:
   - file: 01-Python-Refresh/06-application
     title: Application
 - file: 02-Structured-Data/00-overview
-  title: Overview
+  title: Data Structures & Sources
   sections:
   - file: 02-Structured-Data/01-structured-data
     title: Structured Data
