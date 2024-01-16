@@ -1,0 +1,23 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: how-to
+- file: 01-Python-Refresh/00-Python
+  sections:
+  - file: 01-Python-Refresh/01-comments-variables-assignment
+    title: Comments, Variables & Assignment
+  - file: 01-Python-Refresh/02-data-types-io
+    title: Data Types & I/O
+  - file: 01-Python-Refresh/03-operators
+    title: Operators
+  - file: 01-Python-Refresh/04-data-structures
+    title: Data Structures
+  - file: 01-Python-Refresh/05-control-flow
+    title: Control Flow, Iteration & Loops
+  - file: 01-Python-Refresh/06-application
+    title: Application
+  
+- file: 02-Data-Sources-Structures/test
