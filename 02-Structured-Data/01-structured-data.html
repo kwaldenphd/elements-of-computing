@@ -245,6 +245,37 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/kwaldenphd/elements-of-computing/blob/main/book/02-Structured-Data/01-structured-data.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -253,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/02-Structured-Data/01-structured-data.md" target="_blank"
+      <li><a href="../_sources/02-Structured-Data/01-structured-data.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -263,7 +294,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -347,7 +378,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-table-of-contents">Section Table of Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-or-delimited-data">Tabular (or Delimited) Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#javascript-object-notation">JavaScript Object Notation</a></li>
 </ul>
             </nav>
         </div>
@@ -374,8 +406,49 @@ document.write(`
 <li><p>“In computer science, an array is a data structure consisting of a collection of elements (values or variables), each identified by at least one array index or key…The simplest type of data structure is a linear array, also called one-dimensional array” (<a class="reference external" href="https://en.wikipedia.org/wiki/Array_(data_structure)">Wikipedia, “Array (data structure)</a>”)</p></li>
 <li><p>Associative arrays are “an abstract data type that stores a collection of (key, value) pairs, such that each possible key appears at most once in the collection” (<a class="reference external" href="https://en.wikipedia.org/wiki/Associative_array">Wikpedia, Associative Array</a>)</p></li>
 </ul>
-<section id="section-table-of-contents">
-<h2>Section Table of Contents<a class="headerlink" href="#section-table-of-contents" title="Permalink to this heading">#</a></h2>
+<section id="tabular-or-delimited-data">
+<h2>Tabular (or Delimited) Data<a class="headerlink" href="#tabular-or-delimited-data" title="Permalink to this heading">#</a></h2>
+<p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/main/images/table_diagram.png?raw=true" width="1000"></p>
+<p>“A delimited file is a sequential file with column delimiters. Each delimited file is a stream of records, which consists of fields that are ordered by column. Each record contains fields for one row. Within each row, individual fields are separated by column delimiters. All fields must be delimited character strings, non-delimited character strings, or external numeric values. Delimited character strings can contain column delimiters and can also contain character string delimiters when two successive character string delimiters are used to represent one character.” (IBM, “<a class="reference external" href="https://www.ibm.com/docs/en/db2-for-zos/11?topic=utilities-delimited-file-format">Delimited File Format</a>”, 5 February 2022)</p>
+<p>A few characteristics that distinguish <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files (or other plain-text delimited data formats) from proprietary spreadsheet file types:</p>
+<ul class="simple">
+<li><p>Columns in a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file don’t have a value type. Everything is a string.</p></li>
+<li><p>Values in a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file don’t have font or color formatting</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code> files only contain single worksheets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code> files don’t store formatting information like cell width/height</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code> files don’t recognize merged cells or other kinds of special formatting (frozen or hidden rows/columns, embedded images, etc.)</p></li>
+</ul>
+</section>
+<section id="javascript-object-notation">
+<h2>JavaScript Object Notation<a class="headerlink" href="#javascript-object-notation" title="Permalink to this heading">#</a></h2>
+<p>Start by watching a 3 minute video overview of JSON files &amp; Python.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/B8AvytgCBdE?si=pJMFgwFS87nbZya-">YouTube link</a></p></li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B8AvytgCBdE?si=noJ_hBEq0JIHL0Pg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/main/images/JSONSample.jpg?raw=true" width="500"></p>
+<p>JavaScript Object Notation (JSON) is as popular way to format data as a single (purportedly human-readable) string. JavaScript programs use JSON data structures, but we can frequently encounter JSON data outside of a JavaScript environment.</p>
+<p>Websites that make machine-readable data available via an application programming interface (API- more on this soon) often provide that data in a JSON format. JSON structures can vary WIDELY depending on the specific data provider, but the easiest way to think of JSON data as a plain-text data format made up of something like key-value pairs, like we’ve encountered previously in working with dictionaries (as a type of associative array).</p>
+<p>Example JSON string: <code class="docutils literal notranslate"><span class="pre">stringOfJsonData</span> <span class="pre">=</span> <span class="pre">'{&quot;name&quot;:</span> <span class="pre">Zophie&quot;,</span> <span class="pre">&quot;isCat&quot;:</span> <span class="pre">true,</span> <span class="pre">&quot;miceCaught&quot;:</span> <span class="pre">0,</span> <span class="pre">&quot;felineIQ&quot;:</span> <span class="pre">null}'</span></code>. From looking at the example string, we can see field names or keys (<code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">isCat</span></code>, <code class="docutils literal notranslate"><span class="pre">miceCaught</span></code>, <code class="docutils literal notranslate"><span class="pre">felineIQ</span></code>) and values for those fields.</p>
+<p>To use more precise terminology, JSON data has the following attributes:</p>
+<ul class="simple">
+<li><p>uses name/value pairs</p></li>
+<li><p>separates data using commas</p></li>
+<li><p>holds objects using curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code></p></li>
+<li><p>holds arrays using square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code></p></li>
+</ul>
+<p>In our example <code class="docutils literal notranslate"><span class="pre">stringOfJsonData</span></code>, we have an object contained in curly braces. An object can include multiple name/value pairs. Multiple objects together can form an array.</p>
+<p>How is data stored in a JSON format different than a <code class="docutils literal notranslate"><span class="pre">.csv</span></code>?</p>
+<ul class="simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file uses characters as delimiters and has more of a tabular (table-like) structure.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.json</span></code> data uses characters as part of the syntax, but not in the same way as delimited data files.</p></li>
+<li><p>The data stored in a JSON format has values that are attached to names (or keys).</p>
+<ul>
+<li><p>NOTE: We can mimic this structure somewhat by loading a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> as a dictionary data structure</p></li>
+</ul>
+</li>
+<li><p>JSON can also have a hierarchical or nested structure, in that objects can be stored or nested inside other objects as part of the same array.</p></li>
+</ul>
 </section>
 </section>
 
@@ -443,7 +516,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-table-of-contents">Section Table of Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-or-delimited-data">Tabular (or Delimited) Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#javascript-object-notation">JavaScript Object Notation</a></li>
 </ul>
   </nav></div>
 
