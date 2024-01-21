@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Application &#8212; Elements of Computing</title>
+    <title>Relational Schema &#8212; Elements of Computing</title>
   
   
   
@@ -63,11 +63,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '01-Python-Refresh/06-application';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '03-RBDMS/04-rs';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Structures &amp; Sources" href="../02-Structured-Data/00-overview.html" />
-    <link rel="prev" title="Conditional Statements &amp; Control Flow" href="05-control-flow.html" />
+    <link rel="next" title="Application" href="05-application.html" />
+    <link rel="prev" title="Entity Relationship Diagrams" href="03-erd.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,13 +178,13 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../how-to.html">How to Interact With This Book</a></li>
 
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-Python.html">Python Refresh</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="01-comments-variables-assignment.html">Comments, Variables &amp; Assignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02-data-types-io.html">Data Types &amp; I/O</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03-operators.html">Operators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04-data-structures.html">Data Structures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05-control-flow.html">Control Flow, Iteration &amp; Loops</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Application</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01-Python-Refresh/00-Python.html">Python Refresh</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/01-comments-variables-assignment.html">Comments, Variables &amp; Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/02-data-types-io.html">Data Types &amp; I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/03-operators.html">Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/04-data-structures.html">Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/05-control-flow.html">Control Flow, Iteration &amp; Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/06-application.html">Application</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../02-Structured-Data/00-overview.html">Data Structures &amp; Sources</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -199,12 +199,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/07-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../03-RBDMS/00-overview.html">Introduction to Relational Databases</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/01-from-table-to-database.html">From Table To Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/02-terminology.html">Terminology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/03-erd.html">Entity Relationship Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/04-rs.html">Relational Schema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/05-application.html">Application</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-overview.html">Introduction to Relational Databases</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-from-table-to-database.html">From Table To Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-terminology.html">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-erd.html">Entity Relationship Diagrams</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Relational Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-application.html">Application</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../04-SQL/00-overview.html">SQL Overview</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -269,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/01-Python-Refresh/06-application.md" target="_blank"
+      <li><a href="../_sources/03-RBDMS/04-rs.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -340,7 +340,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -351,11 +353,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Application</h1>
+    <h1>Relational Schema</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keys">Keys</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Relational Schema</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -365,27 +379,33 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="application">
-<h1>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h1>
-<p><a class="reference external" href="https://colab.research.google.com/drive/14Zpi8TabYz-AzqbJZkeK14lhD1i_spze?usp=sharing">Click here</a> for a Jupyter Notebook template for this chapter’s application problems.</p>
-<p>Q1: In your own words, explain the difference between the <code class="docutils literal notranslate"><span class="pre">print(hello)</span></code> command and <code class="docutils literal notranslate"><span class="pre">print(“hello”)</span></code>.</p>
-<p>Q2: Create your own list of numbers or strings, using the examples in the lab as a starting point. What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?</p>
-<p>Q3: In your own words, what is iteration?</p>
-<p>Q4: In your own words, what is the difference between a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop and a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop?</p>
-<p>Q5: For each concept, describe in your own words and provide an example using Python syntax. Use comments/narrative text to note each part of your answer.</p>
+  <section id="relational-schema">
+<h1>Relational Schema<a class="headerlink" href="#relational-schema" title="Permalink to this heading">#</a></h1>
+<p>By this point you may be wondering why our data tables have various <code class="docutils literal notranslate"><span class="pre">id</span></code> columns. The ERD we built in Q1 outlines the conceptual relationships across our data structures. To put that another way, ERDs are a conceptual model of a relational database structure.</p>
+<p>But relationship database programs require matching data fields and unique identifiers to be able to manifest those conceptual relationships. These unique identifiers and matching fields are called <code class="docutils literal notranslate"><span class="pre">keys</span></code>.</p>
+<section id="keys">
+<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">I/O</span></code> (input and ouput, using <code class="docutils literal notranslate"><span class="pre">print()</span></code> and <code class="docutils literal notranslate"><span class="pre">input()</span></code>)</p></li>
-<li><p>string variable</p></li>
-<li><p>integer variable</p></li>
-<li><p>concatenation</p></li>
-<li><p>arithmetic operators</p></li>
-<li><p>comparison operators</p></li>
-<li><p>list</p></li>
-<li><p>dictionary</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">if,</span> <span class="pre">else,</span> <span class="pre">elif</span></code> statements</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> loop</p></li>
+<li><p>“The <strong>primary key</strong> is defined as a column (or set of columns) where each value is unique and identifies a single row of the table.” (<a class="reference external" href="https://docs.oracle.com/cd/E12100_01/books/admintool/admintool_DataModeling4.html">Primary Key-Foreign Key Relationships,</a> Oracle)</p></li>
+<li><p>“A <strong>foreign key</strong> is a column or a set of columns in one table that references the primary key columns in another table.” (<a class="reference external" href="https://docs.oracle.com/cd/E12100_01/books/admintool/admintool_DataModeling4.html">Primary Key-Foreign Key Relationships,</a> Oracle)</p></li>
 </ul>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_31.jpg?raw=true" alt="Capture_2"  /></p>
+<p>Image from <a class="reference external" href="https://www.essentialsql.com/what-is-the-difference-between-a-primary-key-and-a-foreign-key/">Foreign and Primary Key Differences (Visually Explained),</a> EssentialSQL.</p>
+<section id="id1">
+<h3>Relational Schema<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>ERDs are a conceptual model of the relationships in a database. An ERD may not directly map onto the structure of tables, fields, etc. in a relational database.</p>
+<p>But, we might also want to represent our database structure based on tables, primary keys, and foreign keys. Relational schema (RS) model the logical, machine-readable relationship across tables and fields (linked by primary/foreign keys).</p>
+<p>Building a RS diagram involves listing fields by table, identifying relationships across tables, and which fields are serving as primary/foreign keys.</p>
+<p>An image from StackExchange’s <a class="reference external" href="https://dba.stackexchange.com/questions/119380/er-vs-database-schema-diagrams">ER vs database schema diagrams page</a> that illustrates the difference:</p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_c.png?raw=true" alt="Capture_2"  /></p>
+<p>Visit StackOverflow’s <a class="reference external" href="https://stackoverflow.com/questions/17641134/what-is-different-between-er-diagram-and-database-schema">What is the different between ER Diagram and Database Schema?</a> page to learn more.</p>
+</section>
+</section>
+<section id="application">
+<h2>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h2>
+<p>Q2A: What fields in our tables are functioning as keys? Which ones are primary keys and which ones are foreign keys? Include some explanation of your thought process.</p>
+<p>Q2B: Build a relational schema for a relational database that includes the <code class="docutils literal notranslate"><span class="pre">players</span></code>, <code class="docutils literal notranslate"><span class="pre">teams</span></code>, <code class="docutils literal notranslate"><span class="pre">locations,</span></code> and <code class="docutils literal notranslate"><span class="pre">transactions</span></code> tables. Include your diagram as well as an explanation of your process.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -401,7 +421,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./01-Python-Refresh"
+            path: "./03-RBDMS"
         },
         predefinedOutput: true
     }
@@ -419,20 +439,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="05-control-flow.html"
+       href="03-erd.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Conditional Statements &amp; Control Flow</p>
+        <p class="prev-next-title">Entity Relationship Diagrams</p>
       </div>
     </a>
     <a class="right-next"
-       href="../02-Structured-Data/00-overview.html"
+       href="05-application.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Structures &amp; Sources</p>
+        <p class="prev-next-title">Application</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -443,7 +463,24 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keys">Keys</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Relational Schema</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

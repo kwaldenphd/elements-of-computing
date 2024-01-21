@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Application &#8212; Elements of Computing</title>
+    <title>From Table to Database &#8212; Elements of Computing</title>
   
   
   
@@ -63,11 +63,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '01-Python-Refresh/06-application';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '03-RBDMS/01-from-table-to-database';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Structures &amp; Sources" href="../02-Structured-Data/00-overview.html" />
-    <link rel="prev" title="Conditional Statements &amp; Control Flow" href="05-control-flow.html" />
+    <link rel="next" title="Relational Database Terminology" href="02-terminology.html" />
+    <link rel="prev" title="Introduction to Relational Databases" href="00-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,13 +178,13 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../how-to.html">How to Interact With This Book</a></li>
 
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-Python.html">Python Refresh</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="01-comments-variables-assignment.html">Comments, Variables &amp; Assignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02-data-types-io.html">Data Types &amp; I/O</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03-operators.html">Operators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04-data-structures.html">Data Structures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05-control-flow.html">Control Flow, Iteration &amp; Loops</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Application</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01-Python-Refresh/00-Python.html">Python Refresh</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/01-comments-variables-assignment.html">Comments, Variables &amp; Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/02-data-types-io.html">Data Types &amp; I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/03-operators.html">Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/04-data-structures.html">Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/05-control-flow.html">Control Flow, Iteration &amp; Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/06-application.html">Application</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../02-Structured-Data/00-overview.html">Data Structures &amp; Sources</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -199,12 +199,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/07-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../03-RBDMS/00-overview.html">Introduction to Relational Databases</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/01-from-table-to-database.html">From Table To Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/02-terminology.html">Terminology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/03-erd.html">Entity Relationship Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/04-rs.html">Relational Schema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/05-application.html">Application</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-overview.html">Introduction to Relational Databases</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">From Table To Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-terminology.html">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-erd.html">Entity Relationship Diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-rs.html">Relational Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-application.html">Application</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../04-SQL/00-overview.html">SQL Overview</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -269,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/01-Python-Refresh/06-application.md" target="_blank"
+      <li><a href="../_sources/03-RBDMS/01-from-table-to-database.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -351,7 +351,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Application</h1>
+    <h1>From Table to Database</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -365,27 +365,55 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="application">
-<h1>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h1>
-<p><a class="reference external" href="https://colab.research.google.com/drive/14Zpi8TabYz-AzqbJZkeK14lhD1i_spze?usp=sharing">Click here</a> for a Jupyter Notebook template for this chapter’s application problems.</p>
-<p>Q1: In your own words, explain the difference between the <code class="docutils literal notranslate"><span class="pre">print(hello)</span></code> command and <code class="docutils literal notranslate"><span class="pre">print(“hello”)</span></code>.</p>
-<p>Q2: Create your own list of numbers or strings, using the examples in the lab as a starting point. What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?</p>
-<p>Q3: In your own words, what is iteration?</p>
-<p>Q4: In your own words, what is the difference between a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop and a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop?</p>
-<p>Q5: For each concept, describe in your own words and provide an example using Python syntax. Use comments/narrative text to note each part of your answer.</p>
+  <section id="from-table-to-database">
+<h1>From Table to Database<a class="headerlink" href="#from-table-to-database" title="Permalink to this heading">#</a></h1>
+<p>Let’s imagine we want to know how many professional baseball players that were born in Puerto Rico played for teams located in the state of Indiana during the 2016 season.</p>
+<p>Our first step is to break down the different components of this research question, with an eye toward what data we would need to answer this question.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">I/O</span></code> (input and ouput, using <code class="docutils literal notranslate"><span class="pre">print()</span></code> and <code class="docutils literal notranslate"><span class="pre">input()</span></code>)</p></li>
-<li><p>string variable</p></li>
-<li><p>integer variable</p></li>
-<li><p>concatenation</p></li>
-<li><p>arithmetic operators</p></li>
-<li><p>comparison operators</p></li>
-<li><p>list</p></li>
-<li><p>dictionary</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">if,</span> <span class="pre">else,</span> <span class="pre">elif</span></code> statements</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> loop</p></li>
+<li><p>We would need to have a list of people who played professional baseball during the 2016 season.</p></li>
+<li><p>We would need to know country birthplace information for everyone on that list.</p></li>
+<li><p>We would need to know what professional teams were located in Indiana during the 2016 season.</p></li>
+<li><p>We would need to know which players were on specific teams</p></li>
 </ul>
+<p>Our next step is to possible sources or resources that might provide this data. <a class="reference external" href="https://www.baseball-reference.com/">Baseball Reference</a>, “the complete source for current and historical baseball players, teams, scores and leaders,” seems like a good place to start.</p>
+<p>We could start by looking up the records for an individual player to see what information is available. Let’s take a look at the <a class="reference external" href="https://www.baseball-reference.com/players/s/samarje01.shtml">individual player page on Baseball Reference</a> for former Notre Dame baseball and football player Jeff Samardzija.</p>
+<p align="center"><a href="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_2.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_2.png?raw=true" /></a></p>
+<p align="center"><a href="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_3.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_3.png?raw=true" /></a></p>
+<p>We can get some pieces of information from this page, like player birthplace and teams played for. But not all of that information is located in a table structure. And the table structure that is present doesn’t lend itself to answering our specific research question.</p>
+<p>We could also look at the individual team page for a team located in Indiana. Let’s take a look at the <a class="reference external" href="https://www.baseball-reference.com/register/team.cgi?id=a87c825c">2019 season team page</a> for the South Bend Cubs.</p>
+<p align="center"><a href="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_4.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_4.png?raw=true" /></a></p>
+<p align="center"><a href="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_5.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_5.png?raw=true" /></a></p>
+<p>We can get some pieces of information from this page, like the team location and roster. But again, not all of that information is located in a table structure. And the table structure that is present doesn’t lend itself to answering our specific research questions.</p>
+<p>Since there are only 3 affiliated professional teams in Indiana, manually downloading the spreadsheets for these teams for a single season and wrangling the data into the structure needed to answer our specific research question wouldn’t be overly time intensive. But let’s say we might have other research questions down the line, or we might want to make our data available to other researchers.</p>
+<p>Only gathering data that responds to our specific research question might save time in the short term but foreclose possibilities long-term. Imagine the types of research questions we could ask and answer with data that covered multiple seasons, for teams in multiple locations.</p>
+<p>We could do some automated scraping and manual wrangling to end up with data structures that answer our specific research question but also would work to answer a variety of other research questions.</p>
+<p>Let’s imagine…</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">players</span></code> table that includes information about where players were born.</p>
+<div class="mmt-custom-content col-lg-6 col-sm-12"><table><tbody><tr><td>personID</td><td>DoB</td><td>locationID</td></tr><tr><td>1</td><td>1985</td><td>SanPedrodeMacoris_SanPedrodeMacoris_DO</td></tr><tr><td>50</td><td>1969</td><td>Santurce_PR</td></tr><tr><td>63</td><td>1989</td><td>Bani_Peravia_DO</td></tr></tbody></table></div>
+<p>A <code class="docutils literal notranslate"><span class="pre">teams</span></code> table that includes information about affiliations.</p>
+<div class="mmt-custom-content col-lg-6 col-sm-12"><table><tbody><tr><td>teamID</td><td>season</td><td>affiliateLeague</td><td>affiliate</td><td>league</td><td>teamName</td><td>class</td><td>locationID</td></tr><tr><td>1960_AmericanAssociation_Indianapolis</td><td>1960</td><td>National</td><td>PHI</td><td>American Association</td><td>Indianapolis</td><td>AAA</td><td>Indianapolis_IN_US</td></tr><tr><td>1960_Midwest_Kokomo</td><td>1960</td><td>National</td><td>LAD</td><td>Midwest</td><td>Kokomo</td><td>D</td><td>Kokomo_IN_US</td></tr><tr><td>1961_AmericanAssociation_Indianapolis</td><td>1961</td><td>National</td><td>CIN</td><td>American Association</td><td>Indianapolis</td><td>AAA</td><td>Indianapolis_IN_US</td></tr></tbody></table></div>
+<p>A <code class="docutils literal notranslate"><span class="pre">locations</span></code> table that includes additional information about locations.</p>
+<div class="mmt-custom-content col-lg-6 col-sm-12"><table><tbody><tr><td>locationID</td><td>city</td><td>state</td><td>country</td><td>region</td><td>group</td><td>lat</td><td>lon</td></tr><tr><td>Abbeville_LA_US</td><td>Abbeville</td><td>LA</td><td>US</td><td>Northern America</td><td>Northern America</td><td>31.571835</td><td>-85.250489</td></tr><tr><td>Abbeville_SC_US</td><td>Abbeville</td><td>SC</td><td>US</td><td>Northern America</td><td>Northern America</td><td>34.178172</td><td>-82.379015</td></tr><tr><td>Abbotsford_BC_CA</td><td>Abbotsford</td><td>BC</td><td>CA</td><td>Northern America</td><td>Northern America</td><td>49.05</td><td>-122.3</td></tr><tr><td>Aberdeen_MD_US</td><td>Aberdeen</td><td>MD</td><td>US</td><td>Northern America</td><td>Northern America</td><td>39.509556</td><td>-76.16412</td></tr></tbody></table></div>
+<p>A <code class="docutils literal notranslate"><span class="pre">transactions</span></code> table that includes information about which players played on specific teams in a given season.</p>
+<div class="mmt-custom-content col-lg-6 col-sm-12"><table><tbody><tr><td>personID</td><td>teamID</td></tr><tr><td>25</td><td>1999_International_Indianapolis</td></tr><tr><td>125</td><td>2013_International_Indianapolis</td></tr><tr><td>125</td><td>2014_International_Indianapolis</td></tr></tbody></table></div>
+<p>Let’s take a look at at Excel workbook that includes these tables. Open the <a class="reference external" href="https://docs.google.com/spreadsheets/d/1x40S3DSv5EzwPqma7ivsZIk92fre0Uj1IWhuozYO4pM/edit?usp=sharing">Google Sheets project</a> in a spreadsheet program (Google Sheets, Microsoft Excel, Apple Numbers).</p>
+<p>You may need to consult the following resources as needed to understand this data:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Decoding_table">ISO 3166 country code table (Wikipedia)</a></p></li>
+<li><p><a class="reference external" href="https://unstats.un.org/unsd/methodology/m49/">United Nations geographic regions</a></p></li>
+<li><p><a class="reference external" href="https://about.usps.com/who-we-are/postal-history/state-abbreviations.htm">USPS list of state abbreviations</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Baseball/Team_abbreviations">Wikipedia list of baseball team abbreviations</a></p></li>
+<li><p><a class="reference external" href="https://en.wiktionary.org/wiki/Appendix:Glossary_of_baseball">Wikipedia glossary of baseball jargon</a></p></li>
+</ul>
+<p>So now that we have some structured data, let’s return to our original research question.</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">players</span></code> table includes information about where players were born.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">teams</span></code> table includes information about teams.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">locations</span></code> table includes additional location information.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">transactions</span></code> table tells us which players played for which teams.</p></li>
+</ul>
+<p>But the <code class="docutils literal notranslate"><span class="pre">transactions</span></code> table on its own doesn’t include the information about player birthplace and team location we need to answer the question of how many baseball players born in Puerto Rico played for teams located in the state of Indiana. We could add that location information to the <code class="docutils literal notranslate"><span class="pre">transactions</span></code> table, but we would end up with significant redundant and duplicate information.</p>
+<p>Behold the magic of relational databases!</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -401,7 +429,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./01-Python-Refresh"
+            path: "./03-RBDMS"
         },
         predefinedOutput: true
     }
@@ -419,20 +447,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="05-control-flow.html"
+       href="00-overview.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Conditional Statements &amp; Control Flow</p>
+        <p class="prev-next-title">Introduction to Relational Databases</p>
       </div>
     </a>
     <a class="right-next"
-       href="../02-Structured-Data/00-overview.html"
+       href="02-terminology.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Structures &amp; Sources</p>
+        <p class="prev-next-title">Relational Database Terminology</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

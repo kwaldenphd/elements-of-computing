@@ -1,0 +1,891 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>From SQLite to Python &#8212; Elements of Computing</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '04-SQL/04-sql-python';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Application" href="05-application.html" />
+    <link rel="prev" title="Joins &amp; Views" href="03-sql-joins-views.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/favicon.png" class="logo__image only-light" alt="Elements of Computing - Home"/>
+    <script>document.write(`<img src="../_static/favicon.png" class="logo__image only-dark" alt="Elements of Computing - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Elements of Computing
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../how-to.html">How to Interact With This Book</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01-Python-Refresh/00-Python.html">Python Refresh</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/01-comments-variables-assignment.html">Comments, Variables &amp; Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/02-data-types-io.html">Data Types &amp; I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/03-operators.html">Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/04-data-structures.html">Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/05-control-flow.html">Control Flow, Iteration &amp; Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/06-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02-Structured-Data/00-overview.html">Data Structures &amp; Sources</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/01-structured-data.html">Structured Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/02-loading-data.html">Loading Data</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02-Structured-Data/03-web-apis.html">Web APIs</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02-Structured-Data/04-sb-open-data.html">South Bend Open Data Portal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02-Structured-Data/05-census-bureau.html">U.S. Census Bureau</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/06-pdfs.html">Working With PDFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/07-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03-RBDMS/00-overview.html">Introduction to Relational Databases</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/01-from-table-to-database.html">From Table To Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/02-terminology.html">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/03-erd.html">Entity Relationship Diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/04-rs.html">Relational Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/05-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-overview.html">SQL Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-sql-setup.html">Getting Started With SQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-sql-basics.html">Basic Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-sql-joins-views.html">Joins &amp; Views</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">From SQL to Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-application.html">Application</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/kwaldenphd/elements-of-computing/blob/main/book/04-SQL/04-sql-python.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/04-SQL/04-sql-python.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>From SQLite to Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#establishing-a-connection">Establishing a Connection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-sql-query-syntax">Modifying SQL Query Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-pandas-dataframe">Creating a Pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-considerations">Additional Considerations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="from-sqlite-to-python">
+<h1>From SQLite to Python<a class="headerlink" href="#from-sqlite-to-python" title="Permalink to this heading">#</a></h1>
+<p>Imagine we want to work with a relational database from within Python.</p>
+<p>We could work in SQL using a combination of queries and joins to create a new table with specific fields we want to work with, then export that table as a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file and load it into Python. But we also have the option to interact with a SQL-based relational database from within Python, using a couple of key packages.</p>
+<section id="establishing-a-connection">
+<h2>Establishing a Connection<a class="headerlink" href="#establishing-a-connection" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> module “provides a SQL interface” from within Python (<a class="reference external" href="https://docs.python.org/3/library/sqlite3.html"><code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> documentation</a>), letting us establish a connection with a SQL database from within Python and then we can interact with the database using modified SQL commands.</p>
+<p>The basic steps for <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code>:</p>
+<ul class="simple">
+<li><p>Install and import <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> module</p></li>
+<li><p>Establish a <code class="docutils literal notranslate"><span class="pre">connection</span></code> with the database</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">cursor</span></code> object</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">execute()</span></code> method in combination with the <code class="docutils literal notranslate"><span class="pre">cursor</span></code> object to execute SQL queries</p></li>
+<li><p>Close the connection using <code class="docutils literal notranslate"><span class="pre">close()</span></code> when done working with the database</p></li>
+</ul>
+<p>To express this programmatically in Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># install sqlite3 module
+!pip install sqlite3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import sqlite3 module</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="c1"># establish connection to database</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;data.db&quot;</span><span class="p">)</span>
+
+<span class="c1"># creates the cursor object</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="c1"># closes the connection</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="modifying-sql-query-syntax">
+<h2>Modifying SQL Query Syntax<a class="headerlink" href="#modifying-sql-query-syntax" title="Permalink to this heading">#</a></h2>
+<p>Now we can use our <code class="docutils literal notranslate"><span class="pre">cursor</span></code> object to interact with the database using modified SQL syntax. The basic template for <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> syntax:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SQL QUERY/COMMANDS GO HERE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ALTERNATE WORKFLOW:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">sql_command</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SQL QUERY/COMMANDS GO HERE;&quot;&quot;&quot;</span>
+
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql_command</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">cursor.execute()</span></code> followed by the SQL command (in quotation marks) lets us use SQL statements on our database from within Python.</p>
+<ul class="simple">
+<li><p>Alternatively, saving the SQL query as a string (with three double quotation marks and a semi colon) and running <code class="docutils literal notranslate"><span class="pre">cursor.execute()</span></code> on the string variable.</p></li>
+</ul>
+<blockquote>Check out the <a href = "https://docs.python.org/3/library/sqlite3.html"><code>sqlite3</code> documentation</a> to learn more about the module's functionality and syntax.</blockquote>
+<p>For example, let’s say we wanted to select the unique player ids from the <code class="docutils literal notranslate"><span class="pre">Player_Birthplaces</span></code> table in our database. Remember the original SQL syntax for this query:</p>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="c1">-- select unique values from table field</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">playerID</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">players</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The modified syntax for this query in Python using <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import sqlite3 module</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="c1"># establish connection to database</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;data.db&quot;</span><span class="p">)</span>
+
+<span class="c1"># creates the cursor object</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="c1"># creates a new variable player ids</span>
+<span class="n">player_ids</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT DISTINCT playerID FROM players&quot;</span><span class="p">)</span>
+
+<span class="c1"># get the query return</span>
+<span class="n">player_id_results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="c1"># print the list of unique player ids now contained in the player_id_results variable</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">player_id_results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>ALTERNATE WORKFLOW:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import sqlite3 module</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="c1"># establish connection to database</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;data.db&quot;</span><span class="p">)</span>
+
+<span class="c1"># creates the cursor object</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="c1"># save query as string</span>
+<span class="n">sql_command</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT playerID FROM birthplaces;&quot;&quot;&quot;</span>
+
+<span class="c1"># creates a new variable player ids</span>
+<span class="n">player_ids</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql_command</span><span class="p">)</span>
+
+<span class="c1"># get the query return</span>
+<span class="n">player_id_results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="c1"># print the list of unique player ids now contained in the player_id_results variable</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">player_id_results</span><span class="p">)</span>
+
+<span class="c1"># closes the connection</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">cursor.execute()</span></code> function runs the <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">DISTINCT</span></code> statement. The new <code class="docutils literal notranslate"><span class="pre">player_ids</span></code> variable contains the <code class="docutils literal notranslate"><span class="pre">playerID</span></code> column from the <code class="docutils literal notranslate"><span class="pre">players</span></code> table as a list in Python.</p>
+<p>Another example using the <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> statement for filtering. The original SQL query:</p>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="c1">-- select all values from table where specific condition is met</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">locations</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">country</span><span class="o">=</span><span class="s1">&#39;DO&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>This query returns all columns from the <code class="docutils literal notranslate"><span class="pre">locations</span></code> table where data in the <code class="docutils literal notranslate"><span class="pre">country</span></code> field is equal to <code class="docutils literal notranslate"><span class="pre">DO</span></code>. The modified syntax for this query in Python using <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># establish connection to database</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;data.db&quot;</span><span class="p">)</span>
+
+<span class="c1"># creates the cursor object</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="c1"># creates a new variable for query results</span>
+<span class="n">do</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM locations WHERE country=&#39;DO&#39;&quot;</span><span class="p">)</span>
+
+<span class="c1"># get the query return</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="c1"># print the new do_players variable</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+<span class="c1"># closes the connection</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>ALTERNATIVE WORKFLOW</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import sqlite3 module</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="c1"># establish connection to database</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;data.db&quot;</span><span class="p">)</span>
+
+<span class="c1"># creates the cursor object</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="c1"># save query as string</span>
+<span class="n">sql_command</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM locations WHERE country=&#39;DO&#39;;&quot;&quot;&quot;</span>
+
+<span class="c1"># creates a new variable player ids</span>
+<span class="n">do</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql_command</span><span class="p">)</span>
+
+<span class="c1"># get the query return</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="c1"># print the list of unique player ids now contained in the player_id_results variable</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+<span class="c1"># closes the connection</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s say we wanted to just see a query result and not load it to a new variable. A modified version of the previous example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># creates a new variable for query results</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM locations WHERE country=&#39;DO&#39;&quot;</span><span class="p">)</span>
+
+<span class="c1"># set a row count variable</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># for loop that prints row contents and reassigns count value</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+  <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="c1"># print statement that takes final count value (i.e. the number of rows) and prints that total</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="s1">&#39;rows&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this example, the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop iterates over the rows in the database and uses the <code class="docutils literal notranslate"><span class="pre">count</span></code> variable to track how many rows in the database meet the <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> condition.</p>
+</section>
+<section id="creating-a-pandas-dataframe">
+<h2>Creating a Pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#creating-a-pandas-dataframe" title="Permalink to this heading">#</a></h2>
+<p>The previous section of the lab included sample code for a query that returns all columns from the <code class="docutils literal notranslate"><span class="pre">locations</span></code> table where data in the <code class="docutils literal notranslate"><span class="pre">country</span></code> field is equal to <code class="docutils literal notranslate"><span class="pre">DO</span></code>.</p>
+<p>In this example, the query results are being stored to the <code class="docutils literal notranslate"><span class="pre">results</span></code> variable as a list with sublists or nested lists. We can use <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> to create a Pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> from that list with sublists.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import pandas</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># establish connection to database</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;data.db&quot;</span><span class="p">)</span>
+
+<span class="c1"># creates the cursor object</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="c1"># creates a new variable for query results</span>
+<span class="n">do</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM locations WHERE country=&#39;DO&#39;&quot;</span><span class="p">)</span>
+
+<span class="c1"># get the query return</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="c1"># closes the connection</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># create dataframe</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+<span class="c1"># show df</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>ALTERNATIVE WORKFLOW:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import sqlite3 module</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="c1"># establish connection to database</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;data.db&quot;</span><span class="p">)</span>
+
+<span class="c1"># creates the cursor object</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="c1"># save query as string</span>
+<span class="n">sql_command</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM locations WHERE country=&#39;DO&#39;;&quot;&quot;&quot;</span>
+
+<span class="c1"># creates a new variable player ids</span>
+<span class="n">do</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql_command</span><span class="p">)</span>
+
+<span class="c1"># get the query return</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="c1"># closes the connection</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># create dataframe</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+<span class="c1"># show df</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>From there, a single line of code will save the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> as a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># save to csv</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;output.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># runs query</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql_command</span><span class="p">)</span>
+
+<span class="c1"># store column names as list</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">column</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">results</span><span class="o">.</span><span class="n">description</span><span class="p">]</span>
+
+<span class="c1"># create dataframe with query results and column names</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span><span class="n">data</span><span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">fetchall</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
+
+<span class="c1"># close connection</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="additional-considerations">
+<h2>Additional Considerations<a class="headerlink" href="#additional-considerations" title="Permalink to this heading">#</a></h2>
+<p>Why would we want to work with a relational database from within Python? The short answer is program performance and memory load. Storing your data in an SQLite database and loading query results into Python requires significantly less memory than storing all the database data in Python. Less stored data = lower memory needs = improved program performance.</p>
+<p>Interacting with a database from Python can also be a workflow consideration. Imagine your company has data stored in a relational database system (Oracle, AWS, Microsft Access, etc.) and there are specific aggregations or calculations that need to be performed on that data regularly (say, for quarterly or annual reports). Provided the underlying data structure remains largely consistent (this is  true for most proprietary/commercial database systems), you could write a program in Python to automatically generate those aggregations and calculations.</p>
+</section>
+<section id="application">
+<h2>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h2>
+<p>Q6: Take at least 3 of the queries you wrote in previous sections and modify them to run within a Python environment. Include code + comments.</p>
+<ul class="simple">
+<li><p>For this question, your program needs to:</p>
+<ul>
+<li><p>Establish a connection to the database</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlite3.connect()</span></code></p></li>
+</ul>
+</li>
+<li><p>Create the cursor object</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection.cursor()</span></code></p></li>
+</ul>
+</li>
+<li><p>Include modified query syntax</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cursor.execute()</span></code></p></li>
+</ul>
+</li>
+<li><p>Get query return and store to variable</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cursor.fetchall()</span></code></p></li>
+</ul>
+</li>
+<li><p>Close connection</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cursor.close()</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Q7: For at least one of the Q6 queries, create a Pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> from the query results and write to a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file. Include code + comments.</p>
+<ul class="simple">
+<li><p>For this question, your program needs to:</p>
+<ul>
+<li><p>Create the dataframe</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.DataFrame()</span></code></p></li>
+</ul>
+</li>
+<li><p>Save as CSV</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.to_csv()</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./04-SQL"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03-sql-joins-views.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Joins &amp; Views</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05-application.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Application</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#establishing-a-connection">Establishing a Connection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-sql-query-syntax">Modifying SQL Query Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-pandas-dataframe">Creating a Pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-considerations">Additional Considerations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href="https://americanstudies.nd.edu/faculty/katherine-walden/">Dr. Katherine Walden</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
