@@ -1,1 +1,0 @@
-# From SQLite to Python

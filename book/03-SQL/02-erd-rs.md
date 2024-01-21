@@ -1,1 +1,0 @@
-# Entity Relationship Diagrams & Relational Schema
