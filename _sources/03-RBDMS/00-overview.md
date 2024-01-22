@@ -24,7 +24,7 @@ This chapter will work with four tables. [Link to access via Google Drive](https
 - `teams`
 - `locations`
 
-SCREENSHOT - IMG1
+<p align="center"><img src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/sql1.jpg?raw=true" width="1000"></p>
 
 You can copy the project to your own Drive workspace and/or download individual sheets as `.csv` files.
 
