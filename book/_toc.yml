@@ -72,3 +72,14 @@ chapters:
     title: From SQL to Python
   - file: 04-SQL/09-application
     title: Application
+- file: 05-pandas-gis/00-overview
+  title: Getting Started With Geospatial Data in Python
+  sections:
+  - file: 05-pandas-gis/01-formats-structures
+    title: A Brief Introduction to Geospatial Data
+  - file: 05-pandas-gis/02-workflows
+    title: Geospatial Data Workflows
+  - file: 05-pandas-gis/03-geopandas
+    title: Getting Started With `GeoPandas`
+  - file: 05-pandas-gis/04-application
+    title: Application
