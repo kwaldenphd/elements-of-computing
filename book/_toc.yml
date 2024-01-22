@@ -51,15 +51,24 @@ chapters:
   - file: 03-RBDMS/05-application
     title: Application
 - file: 04-SQL/00-overview
-  title: SQL Overview
+  title: Introduction to SQL
   sections:
   - file: 04-SQL/01-sql-setup
-    title: Getting Started With SQL 
+    title: Background & Setup  
   - file: 04-SQL/02-sql-basics
     title: Basic Syntax
-  - file: 04-SQL/03-sql-joins-views
+    sections:
+    - file: 04-SQL/03-select-sort
+      title: Selecting & Sorting
+    - file: 04-SQL/04-filtering
+      title: Filtering & Conditions
+    - file: 04-SQL/05-subqueries-wildcards
+      title: Subqueries & Wildcards
+    - file: 04-SQL/06-aggregating-calculating
+      title: Aggregating & Calculating
+  - file: 04-SQL/07-sql-joins-views
     title: Joins & Views
-  - file: 04-SQL/04-sql-python
+  - file: 04-SQL/08-sql-python
     title: From SQL to Python
-  - file: 04-SQL/05-application
+  - file: 04-SQL/09-application
     title: Application

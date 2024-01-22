@@ -129,6 +129,10 @@ FROM PCL;
 
 ## Application
 
+Q1: Write a query that gets average birth year from the `players` table, for players born after 1985. Test your query using DB Browser. Include code + comments.
+
+Q2: Write a SQL query that returns a unique list of team names from the `teams` table, sorted in reverse alphabetical order. Test your query using DB Browser. Include code + comments.
+
 Q3: Write an SQL query that joins the Transactions and Team_Locations tables and returns all matching columns from the Transactions table. What kind of join is this? What data does this query return? Test your query using DB Browser. Include code + comments.
 
 Q4: Write an SQL query to return the data from the `players` table, sorted in chronological order by birth year and reverse alphabetical order by country. Test your query using DB Browser. Include code + comments.
