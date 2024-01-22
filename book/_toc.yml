@@ -38,7 +38,7 @@ chapters:
   - file: 02-Structured-Data/07-application
     title: Application
 - file: 03-RBDMS/00-overview
-  title: Introduction to Relational Databases
+  title: Getting Started With Relational Databases
   sections: 
   - file: 03-RBDMS/01-from-table-to-database 
     title: From Table To Database 
@@ -51,7 +51,7 @@ chapters:
   - file: 03-RBDMS/05-application
     title: Application
 - file: 04-SQL/00-overview
-  title: Introduction to SQL
+  title: Getting Started With SQL
   sections:
   - file: 04-SQL/01-sql-setup
     title: Background & Setup  
@@ -73,7 +73,7 @@ chapters:
   - file: 04-SQL/09-application
     title: Application
 - file: 05-pandas-gis/00-overview
-  title: Getting Started With Geospatial Data in Python
+  title: Getting Started With Geospatial Data
   sections:
   - file: 05-pandas-gis/01-formats-structures
     title: A Brief Introduction to Geospatial Data
@@ -83,3 +83,5 @@ chapters:
     title: Getting Started With `GeoPandas`
   - file: 05-pandas-gis/04-application
     title: Application
+- file: 06-pandas-eda/00-overview
+  title: Reshaping Data With Pandas 
