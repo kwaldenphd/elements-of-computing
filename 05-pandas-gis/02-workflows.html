@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Relational Database Terminology &#8212; Elements of Computing</title>
+    <title>Geospatial Data Workflows &#8212; Elements of Computing</title>
   
   
   
@@ -63,11 +63,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '03-RBDMS/02-terminology';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '05-pandas-gis/02-workflows';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Entity Relationship Diagrams" href="03-erd.html" />
-    <link rel="prev" title="From Table to Database" href="01-from-table-to-database.html" />
+    <link rel="next" title="Geospatial Data, Python &amp; Pandas" href="03-geopandas.html" />
+    <link rel="prev" title="A Brief Introduction to Geospatial Data" href="01-formats-structures.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -132,6 +132,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -199,12 +201,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/07-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-overview.html">Introduction to Relational Databases</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="01-from-table-to-database.html">From Table To Database</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Terminology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03-erd.html">Entity Relationship Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04-rs.html">Relational Schema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05-application.html">Application</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03-RBDMS/00-overview.html">Introduction to Relational Databases</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/01-from-table-to-database.html">From Table To Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/02-terminology.html">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/03-erd.html">Entity Relationship Diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/04-rs.html">Relational Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/05-application.html">Application</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../04-SQL/00-overview.html">Introduction to SQL</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -221,11 +223,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../04-SQL/09-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../05-pandas-gis/00-overview.html">Getting Started With Geospatial Data in Python</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/01-formats-structures.html">A Brief Introduction to Geospatial Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/02-workflows.html">Geospatial Data Workflows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/03-geopandas.html">Getting Started With `GeoPandas`</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/04-application.html">Application</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-overview.html">Getting Started With Geospatial Data in Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-formats-structures.html">A Brief Introduction to Geospatial Data</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Geospatial Data Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-geopandas.html">Getting Started With `GeoPandas`</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-application.html">Application</a></li>
 </ul>
 </li>
 </ul>
@@ -282,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/03-RBDMS/02-terminology.md" target="_blank"
+      <li><a href="../_sources/05-pandas-gis/02-workflows.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,7 +368,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Relational Database Terminology</h1>
+    <h1>Geospatial Data Workflows</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,8 +378,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">Tables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geocoding">Geocoding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-files">Boundary Files</a></li>
 </ul>
             </nav>
         </div>
@@ -389,66 +391,43 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="relational-database-terminology">
-<h1>Relational Database Terminology<a class="headerlink" href="#relational-database-terminology" title="Permalink to this heading">#</a></h1>
-<p align="center"><a href="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_1.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_1.png?raw=true" /></a></p>
-<p>Image from Library Carpentry’s <a class="reference external" href="https://librarycarpentry.org/lc-sql/01-introduction/index.html">Introduction to SQL tutorial</a>.</p>
-<p>A <em><strong>database</strong></em> is an information structure composed of identically structured records, which can be created, modified, and accessed individually…Each record of a database contains segments called fields. The set of all records sharing the same field structure is called a table. Databases structured as a single table are called flat file databases; those with multiple interlocking tables are relational databases.</p>
-<p>As described in Library Carpentry’s <a class="reference external" href="https://librarycarpentry.org/lc-sql/01-introduction/index.html">Introduction to SQL tutorial</a>, “Relational databases consist of one or more tables of data. These tables have fields (columns) and records (rows). Every field has a data type. Every value in the same field of each record has the same type. These tables can be linked to each other when a field in one table can be matched to a field in another table.”</p>
-<p>Linking our individual data tables in a relational database will enable us to answer the question about Puerto Rican players in Indiana without having to change the underlying data structure.</p>
-<section id="tables">
-<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">#</a></h2>
-<p>In <em>Inventing the Medium</em>, Janet Murray describes a table as “one of the basic building blocks of information design, an extension of the list through spatialization and the bases for database design.” We’ve worked with tabular data (i.e. data organized in a table) previously when working with CSV files.</p>
-<p align="center"><a href="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_1.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_1.png?raw=true" /></a></p>
-<p>Image from Library Carpentry’s <a class="reference external" href="https://librarycarpentry.org/lc-sql/01-introduction/index.html">Introduction to SQL tutorial</a>.</p>
-<p>In tabular data structures, columns headers describe the data contained in corresponding columns, or fields. Each row contains as record with data in separate column cells, or fields. These building blocks of data structured as records with fields organized in a table are the foundation of a relational database.</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Term</p></th>
-<th class="head"><p>Definition</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Data</strong></p></td>
-<td><p>Any collection of symbolic units, often quantitative, collected or presented for the purpose of analysis. Data becomes most useful when structured by semantic segmentation into labeled units</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Record</strong></p></td>
-<td><p>An entry in a database representing a single item, made up of discrete fields</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Fields</strong></p></td>
-<td><p>In a database, a field is a segment of a record with a fixed length and data type that corresponds to a single semantic unit, like a name or address</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Table</strong></p></td>
-<td><p>One of the basic building blocks of information design</p></td>
-</tr>
-</tbody>
-</table>
+  <section id="geospatial-data-workflows">
+<h1>Geospatial Data Workflows<a class="headerlink" href="#geospatial-data-workflows" title="Permalink to this heading">#</a></h1>
+<p>Calculating latitude and longitude or drawing polygons from scratch is outside the scope of this course. But thankfully many resources exist to help with these workflows.</p>
+<section id="geocoding">
+<h2>Geocoding<a class="headerlink" href="#geocoding" title="Permalink to this heading">#</a></h2>
+<blockquote>"Geocoding is the process of transforming a description of a location—such as a pair of coordinates, an address, or a name of a place—to a location on the earth's surface." (ArcGIS Desktop, "<a href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/geocoding/what-is-geocoding.htm">What is geocoding?</a>")</blockquote>
+<p>In a scenario where you need to add latitude and longitude, there are a number of free online resources and Python libraries that support geocoding.</p>
+<p>Free online geocoding services:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://geocode.localfocus.nl/">LocalFocus data journalism batch geocoder</a></p></li>
+<li><p><a class="reference external" href="https://geoservices.tamu.edu/Services/Geocode/">Texas A&amp;M Geocoding Services</a></p>
+<ul>
+<li><p><em>Requires creating a free account</em></p></li>
+</ul>
+</li>
+</ul>
+<p>There are also Python libraries that support geocoding.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://geopy.readthedocs.io/en/stable/"><code class="docutils literal notranslate"><span class="pre">GeoPy</span></code></a></p></li>
+<li><p><a class="reference external" href="https://geocoder.readthedocs.io/providers/Mapbox.html"><code class="docutils literal notranslate"><span class="pre">Geocoder</span></code></a> (requires a free Mapbox API key)</p></li>
+<li><p>Abdishakur, <a class="reference external" href="https://towardsdatascience.com/geocode-with-python-161ec1e62b89">“Geocode with Python”</a> <em>Towards Data Science</em> (15 September 2019)</p></li>
+</ul>
 </section>
-<section id="data-types">
-<h2>Data Types<a class="headerlink" href="#data-types" title="Permalink to this heading">#</a></h2>
-<p>Data types commonly recognized in relational database systems include…</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
-<th class="head"><p>Example</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>String</p></td>
-<td><p>Used to store text or a string of non-integer characters</p></td>
-<td><p>“This classroom is in Bond Hall” or “student”</p></td>
-</tr>
-<tr class="row-odd"><td><p>Integer</p></td>
-<td><p>Used to store positive or negative whole numbers</p></td>
-<td><p>-25, 0, 25</p></td>
-</tr>
-<tr class="row-even"><td><p>Double</p></td>
-<td><p>Used to store precise numerical values that include decimal points</p></td>
-<td><p>3.14159265359</p></td>
-</tr>
-</tbody>
-</table>
+<section id="boundary-files">
+<h2>Boundary Files<a class="headerlink" href="#boundary-files" title="Permalink to this heading">#</a></h2>
+<p>Many civic and government data intermediaries publish <code class="docutils literal notranslate"><span class="pre">boundary</span> <span class="pre">files</span></code>, or geospatial data files that include metadata for area polygons.</p>
+<p>This data is typically some type of JSON structure, and published in a few common file types.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">KML</span></code> (keyhole markup language, includes tags with elements and attributes)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GeoJSON</span></code> (geospatial JSON data)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SHP</span></code> (shapefile, a proprietary format)</p></li>
+</ul>
+<p>A few resources that are good starting points:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sjcindiana.com/1743/GIS--County-Mapping">St. Joseph County GIS Hub</a></p></li>
+<li><p><a class="reference external" href="https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html">U.S. Census Bureau Cartographic Boundary Files</a></p></li>
+</ul>
 </section>
 </section>
 
@@ -465,7 +444,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./03-RBDMS"
+            path: "./05-pandas-gis"
         },
         predefinedOutput: true
     }
@@ -483,20 +462,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="01-from-table-to-database.html"
+       href="01-formats-structures.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">From Table to Database</p>
+        <p class="prev-next-title">A Brief Introduction to Geospatial Data</p>
       </div>
     </a>
     <a class="right-next"
-       href="03-erd.html"
+       href="03-geopandas.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Entity Relationship Diagrams</p>
+        <p class="prev-next-title">Geospatial Data, Python &amp; Pandas</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -516,8 +495,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">Tables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geocoding">Geocoding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-files">Boundary Files</a></li>
 </ul>
   </nav></div>
 

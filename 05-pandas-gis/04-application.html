@@ -66,6 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '05-pandas-gis/04-application';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Geospatial Data, Python &amp; Pandas" href="03-geopandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../how-to.html">How to Interact With This Book</a></li>
 
 <li class="toctree-l1 has-children"><a class="reference internal" href="../01-Python-Refresh/00-Python.html">Python Refresh</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -219,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../04-SQL/07-sql-joins-views.html">Joins &amp; Views</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../04-SQL/08-sql-python.html">From SQL to Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../04-SQL/09-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-overview.html">Getting Started With Geospatial Data in Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-formats-structures.html">A Brief Introduction to Geospatial Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-workflows.html">Geospatial Data Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-geopandas.html">Getting Started With `GeoPandas`</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Application</a></li>
 </ul>
 </li>
 </ul>
@@ -373,6 +381,15 @@ document.write(`
                   
   <section id="application">
 <h1>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h1>
+<p><a class="reference external" href="https://colab.research.google.com/drive/1vYSi18sXN626pFbT7GlHU7TXZLdOtxVJ?usp=sharing">Click here</a> for a Jupyter Notebook template for this chapter’s application problems.</p>
+<p>Q1A: Find a civic data attribute dataset that has a geospatial component. This could be involve neighborhoods, districts, zip codes, addresses, etc. Answer to this question notes the attribute dataset you’re working with. Include a link if possible.</p>
+<p>Q1B: Determine what type of geospatial information is contianed in your dataset (point or polygon). Note this information in your answer to this question.</p>
+<p>Q1C: Identify and work on next steps for connecting your attribute data to geospatial data. This might involve geocoding address data, or locating a boundary file with polygon information. Answer to this question describes next steps, specific resources, etc. If working with a boundary file, include a source link.</p>
+<p>Q1D: Work on a Python program that connects your attribute and geospatial data to create a <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code>.</p>
+<ul class="simple">
+<li><p><em><a class="reference external" href="https://geopandas.org/en/stable/gallery/create_geopandas_from_pandas.html">GeoPandas documentation for converting a Pandas DataFrame with latitude/longitude to a <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code></a></em></p></li>
+</ul>
+<p>Q1E: What challenges did you encounter? How did you approach solving them?</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -405,6 +422,15 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="03-geopandas.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Geospatial Data, Python &amp; Pandas</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
