@@ -63,11 +63,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '03-RBDMS/05-application';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '04-SQL/09-application';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="SQL Overview" href="../04-SQL/00-overview.html" />
-    <link rel="prev" title="Relational Schema" href="04-rs.html" />
+    <link rel="prev" title="From SQLite to Python" href="08-sql-python.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -199,26 +198,26 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/07-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-overview.html">Introduction to Relational Databases</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="01-from-table-to-database.html">From Table To Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02-terminology.html">Terminology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03-erd.html">Entity Relationship Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04-rs.html">Relational Schema</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03-RBDMS/00-overview.html">Introduction to Relational Databases</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/01-from-table-to-database.html">From Table To Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/02-terminology.html">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/03-erd.html">Entity Relationship Diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/04-rs.html">Relational Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/05-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-overview.html">Introduction to SQL</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-sql-setup.html">Background &amp; Setup</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="02-sql-basics.html">Basic Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="03-select-sort.html">Selecting &amp; Sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-filtering.html">Filtering &amp; Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-subqueries-wildcards.html">Subqueries &amp; Wildcards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-aggregating-calculating.html">Aggregating &amp; Calculating</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07-sql-joins-views.html">Joins &amp; Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-sql-python.html">From SQL to Python</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Application</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../04-SQL/00-overview.html">Introduction to SQL</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../04-SQL/01-sql-setup.html">Background &amp; Setup</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../04-SQL/02-sql-basics.html">Basic Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../04-SQL/03-select-sort.html">Selecting &amp; Sorting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../04-SQL/04-filtering.html">Filtering &amp; Conditions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../04-SQL/05-subqueries-wildcards.html">Subqueries &amp; Wildcards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../04-SQL/06-aggregating-calculating.html">Aggregating &amp; Calculating</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../04-SQL/07-sql-joins-views.html">Joins &amp; Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../04-SQL/08-sql-python.html">From SQL to Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../04-SQL/09-application.html">Application</a></li>
 </ul>
 </li>
 </ul>
@@ -275,7 +274,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/03-RBDMS/05-application.md" target="_blank"
+      <li><a href="../_sources/04-SQL/09-application.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,9 +345,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -364,15 +361,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question #1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question #2</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -384,41 +372,62 @@ document.write(`
                   
   <section id="application">
 <h1>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h1>
-<section id="question-1">
-<h2>Question #1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h2>
-<p>Q1A: What entities are in the <code class="docutils literal notranslate"><span class="pre">players</span></code>, <code class="docutils literal notranslate"><span class="pre">teams</span></code>, <code class="docutils literal notranslate"><span class="pre">locations</span></code> and <code class="docutils literal notranslate"><span class="pre">transactions</span></code> tables? List the entitites by table and include some explanation of your thought process. If you’re getting stuck, try describing the data included in each table using a sentence. Where are the nouns in each sentence?</p>
-<p>Q1B: What attributes are in the <code class="docutils literal notranslate"><span class="pre">players</span></code>, <code class="docutils literal notranslate"><span class="pre">teams</span></code>, <code class="docutils literal notranslate"><span class="pre">locations</span></code> and <code class="docutils literal notranslate"><span class="pre">transactions</span></code> tables? What entities do these attributes describe? List the attributes by entity and table and include some explanation of your thought process. If you’re getting stuck, go back to your list of entities from Q1A. What non-entity information in each table might describe an entity?</p>
-<p>Q1C: What relationships do you see within and across entities in the <code class="docutils literal notranslate"><span class="pre">players</span></code>, <code class="docutils literal notranslate"><span class="pre">teams</span></code>, <code class="docutils literal notranslate"><span class="pre">locations</span></code> and <code class="docutils literal notranslate"><span class="pre">transactions</span></code> tables? What entities do these relationships connect? Include some explanation of your thought process. If you’re getting stuck, go back to your list of entities from Q1B. How do these entities connect?</p>
-<p>Q1D: Include the cardinality for the relationships you identified in Q1C. Include some explanation of your thought process.</p>
-<p>Q1E: Build an ERD for the <code class="docutils literal notranslate"><span class="pre">players</span></code>, <code class="docutils literal notranslate"><span class="pre">teams</span></code>, <code class="docutils literal notranslate"><span class="pre">locations</span></code> and <code class="docutils literal notranslate"><span class="pre">transactions</span></code> tables. Include your diagram as well as an explanation of your process.</p>
-<p>You can draw these by hand or use a drawing tool.</p>
-<p>Free tools you can use to create ERDs:</p>
+<p><a class="reference external" href="https://colab.research.google.com/drive/1oxQZ20oju13Peb04Jim97hGtVv0kgFMO?usp=sharing">Click here</a> for a Jupyter Notebook template for this chapter’s application problems.</p>
+<p>For questions that involve SQL queries, include your query in a code cell.</p>
+<p>Q1: Write a query that gets average birth year from the <code class="docutils literal notranslate"><span class="pre">players</span></code> table, for players born after 1985. Test your query using DB Browser. Include code + comments.</p>
+<p>Q2: Write a SQL query that returns a unique list of team names from the <code class="docutils literal notranslate"><span class="pre">teams</span></code> table, sorted in reverse alphabetical order. Test your query using DB Browser. Include code + comments.</p>
+<p>Q3: Write an SQL query that joins the Transactions and Team_Locations tables and returns all matching columns from the Transactions table. What kind of join is this? What data does this query return? Test your query using DB Browser. Include code + comments.</p>
+<p>Q4: Write an SQL query to return the data from the <code class="docutils literal notranslate"><span class="pre">players</span></code> table, sorted in chronological order by birth year and reverse alphabetical order by country. Test your query using DB Browser. Include code + comments.</p>
+<p>Q5: Write an SQL query to return all data from the <code class="docutils literal notranslate"><span class="pre">players</span></code> table for players born in cities that start with the letter “S”. Test your query using DB Browser. Include code + comments.</p>
+<p>Q6: Take at least 3 of the queries you wrote in previous sections and modify them to run within a Python environment. Include code + comments.</p>
 <ul class="simple">
-<li><p>Free generic drawing tools:</p>
+<li><p>For this question, your program needs to:</p>
 <ul>
-<li><p><a class="reference external" href="https://docs.google.com/drawings">Google Drawings</a> <em>Google Drive tool</em></p></li>
-<li><p><a class="reference external" href="https://www.microsoft.com/en-us/p/paint-3d/9nblggh5fv99">Microsoft Paint</a> <em>Windows users</em></p></li>
-<li><p><a class="reference external" href="https://paintbrush.sourceforge.io/">MacOS Paintbrush</a> <em>Mac users</em></p></li>
+<li><p>Establish a connection to the database</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlite3.connect()</span></code></p></li>
 </ul>
 </li>
-<li><p>Free online database-specific tools:</p>
+<li><p>Create the cursor object</p>
 <ul>
-<li><p><a class="reference external" href="https://erdplus.com/">ERDPlus</a></p>
-<ul>
-<li><p><em>Prof. Walden’s go-to tool!</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection.cursor()</span></code></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.lucidchart.com/pages/?anonId=0.1c8414ae17e41a83751">LucidChart</a></p></li>
-<li><p><a class="reference external" href="https://online.visual-paradigm.com/diagrams/solutions/free-erd-tool/">Visual Paradigm Online</a></p></li>
+<li><p>Include modified query syntax</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cursor.execute()</span></code></p></li>
+</ul>
+</li>
+<li><p>Get query return and store to variable</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cursor.fetchall()</span></code></p></li>
+</ul>
+</li>
+<li><p>Close connection</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cursor.close()</span></code></p></li>
 </ul>
 </li>
 </ul>
-</section>
-<section id="question-2">
-<h2>Question #2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h2>
-<p>Q2A: What fields in our tables are functioning as keys? Which ones are primary keys and which ones are foreign keys? Include some explanation of your thought process.</p>
-<p>Q2B: Build a relational schema for a relational database that includes the <code class="docutils literal notranslate"><span class="pre">players</span></code>, <code class="docutils literal notranslate"><span class="pre">teams</span></code>, <code class="docutils literal notranslate"><span class="pre">locations,</span></code> and <code class="docutils literal notranslate"><span class="pre">transactions</span></code> tables. Include your diagram as well as an explanation of your process.</p>
-</section>
+</li>
+</ul>
+<p>Q7: For at least one of the Q6 queries, create a Pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> from the query results and write to a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file. Include code + comments.</p>
+<ul class="simple">
+<li><p>For this question, your program needs to:</p>
+<ul>
+<li><p>Create the dataframe</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.DataFrame()</span></code></p></li>
+</ul>
+</li>
+<li><p>Save as CSV</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.to_csv()</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
@@ -434,7 +443,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./03-RBDMS"
+            path: "./04-SQL"
         },
         predefinedOutput: true
     }
@@ -452,22 +461,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="04-rs.html"
+       href="08-sql-python.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Relational Schema</p>
+        <p class="prev-next-title">From SQLite to Python</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../04-SQL/00-overview.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">SQL Overview</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -476,21 +476,7 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question #1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question #2</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
+                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
