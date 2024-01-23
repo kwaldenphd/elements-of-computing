@@ -19,7 +19,7 @@ All figures shown in this lab are from the `pandas` "Getting Started" tutorials.
 
 ## Chapter Contents
 
-```{table of contents}
+```{tableofcontents}
 ```
 
 ## Application
