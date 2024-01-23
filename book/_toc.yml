@@ -6,6 +6,7 @@ root: intro
 chapters:
 - file: how-to
 - file: 01-Python-Refresh/00-Python
+  title: 1. Python Refresh
   sections:
   - file: 01-Python-Refresh/01-comments-variables-assignment
     title: Comments, Variables & Assignment
@@ -20,7 +21,7 @@ chapters:
   - file: 01-Python-Refresh/06-application
     title: Application
 - file: 02-Structured-Data/00-overview
-  title: Data Structures & Sources
+  title: 2. Data Structures & Sources
   sections:
   - file: 02-Structured-Data/01-structured-data
     title: Structured Data
@@ -38,7 +39,7 @@ chapters:
   - file: 02-Structured-Data/07-application
     title: Application
 - file: 03-RBDMS/00-overview
-  title: Getting Started With Relational Databases
+  title: 3. Relational Databases
   sections: 
   - file: 03-RBDMS/01-from-table-to-database 
     title: From Table To Database 
@@ -51,7 +52,7 @@ chapters:
   - file: 03-RBDMS/05-application
     title: Application
 - file: 04-SQL/00-overview
-  title: Getting Started With SQL
+  title: 4. SQL
   sections:
   - file: 04-SQL/01-sql-setup
     title: Background & Setup  
@@ -73,7 +74,7 @@ chapters:
   - file: 04-SQL/09-application
     title: Application
 - file: 05-pandas-gis/00-overview
-  title: Getting Started With Geospatial Data
+  title: 5. Geospatial Data
   sections:
   - file: 05-pandas-gis/01-formats-structures
     title: A Brief Introduction to Geospatial Data
@@ -84,4 +85,57 @@ chapters:
   - file: 05-pandas-gis/04-application
     title: Application
 - file: 06-pandas-eda/00-overview
-  title: Reshaping Data With Pandas 
+  title: 6. Reshaping Data 
+  sections:
+  - file: 06-pandas-eda/01-pandas-basics 
+    title: Interacting With a DataFrame
+    sections:
+    - file: 06-pandas-eda/02-selecting
+      title: Selecting
+    - file: 06-pandas-eda/03-sorting
+      title: Sorting
+    - file: 06-pandas-eda/04-filtering
+      title: Filtering
+    - file: 06-pandas-eda/05-time-series
+      title: Time Series Data
+  - file: 06-pandas-eda/07-aggregating-calculating 
+    title: Aggregating & Calculating 
+    - file: 06-pandas-eda/08-summary-statistics
+      title: Summary & Descriptive Statistics 
+    - file: 06-pandas-eda/09-calculation
+      title: Making Calculations     
+    - file: 06-pandas-eda/10-grouping
+      title: Grouping & Counting
+  - file: 06-pandas-eda/11-reshaping 
+    title: Reshaping
+    sections:
+    - file: 06-pandas-eda/12-pivot
+      title: Pivot   
+    - file: 06-pandas-eda/13-pivot-table
+      title: Pivot Table
+    - file: 06-pandas-eda/14-melt
+      title: Melt
+    - file: 06-pandas-eda/15-transpose
+      title: Transpose
+    - file: 06-pandas-eda/16-explode
+      title: Explode
+  - file: 06-pandas-eda/17-merging-joining 
+    title: Merging & Joining
+    sections:
+    - file: 06-pandas-eda/18-merge
+      title: Merge   
+    - file: 06-pandas-eda/19-concat
+      title: Concat
+  - file: 06-pandas-eda/20-indexing 
+    title: Labels & Indexing
+  - file: 06-pandas-eda/21-putting-it-all-together 
+    title: Putting It All Together
+    sections:
+    - file: 06-pandas-eda/22-case-study
+      title: Case Study: U.S. Census Bureau   
+    - file: 06-pandas-eda/23-application
+      title: Application
+
+
+
+
