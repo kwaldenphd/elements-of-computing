@@ -12,7 +12,7 @@ The author consulted the following resources when developing this chapter:
 
 ## Chapter Contents
 
-```{table of contents}
+```{tableofcontents}
 ```
 
 ## Application
