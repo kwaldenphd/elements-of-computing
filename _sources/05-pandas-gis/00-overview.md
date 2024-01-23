@@ -1,4 +1,4 @@
-# Getting Started With Geospatial Data in Python
+# Getting Started With Geospatial Data
 
 This chapter provides an introduction to geospatial data, including structures and formats, with a focus on Python programming workflows.
 
