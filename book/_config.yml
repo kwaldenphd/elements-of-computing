@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Elements of Computing
-author: <a href="https://americanstudies.nd.edu/faculty/katherine-walden/">Dr. Katherine Walden</a>
+author: <a href="https://americanstudies.nd.edu/faculty/katherine-walden/">Katherine Walden</a>
 copyright: "2024"
 logo: favicon.png
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
