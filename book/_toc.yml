@@ -133,6 +133,6 @@ chapters:
     title: Putting It All Together
     sections:
     - file: 06-pandas-eda/22-case-study
-      title: Case Study: U.S. Census Bureau   
+      title: U.S. Census Bureau Case Study 
     - file: 06-pandas-eda/23-application
       title: Application
