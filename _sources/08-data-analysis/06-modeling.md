@@ -1,4 +1,4 @@
-# Python Modeling Resources
+# More Advanced Modeling Workflows 
 
 <p align="center"><img class="aligncenter" src="https://pickl.ai/blog/wp-content/uploads/2023/08/Statistical-Modeling-Techniques-1024x742.jpg" /></a></p>
 

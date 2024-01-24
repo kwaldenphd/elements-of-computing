@@ -1,8 +1,8 @@
-# Introduction to Data Analysis in Python
+# Introduction to Data Communication in Python
 
-A deep dive into statistical methods and data modeling is outside the scope of this course. But this chapter provides an introduction to how we can start to think about types of data and operations we can perform on structured data.
+This chapter provides an introduction to data communication principles and Python workflows. It starts with an overview of data visualization principles, then focuses on Python data visualization workflows.
 
-It covers summary and descriptive statistics, focusing on Pandas workflows in Python. It also provides a brief introduction to the Python resources that can be used to implement more complex analysis workflows like natural language processing, regression and linear models, survival and duration analysis, multivariate statistics, and clustering and classification algorithms.
+For Python workflows, the chapter starts with `matplotlib` fundamentals before moving to plotting with `pandas` and `DataFrames`, including a brief introduction to `seaborn`. 
 
 ## Chapter Contents
 
@@ -11,4 +11,4 @@ It covers summary and descriptive statistics, focusing on Pandas workflows in Py
 
 ## Application
 
-[Click here](https://colab.research.google.com/drive/1VyH2LzZG6WFwWZD-TdCCCnPVPkowGFLT?usp=sharing) for a Jupyter Notebook template for this chapter's application problems.
+[Click here](https://colab.research.google.com/drive/1Oz7GGpg5jqchdPTk7_4IrYKf8EuyDoM-?usp=sharing) for a Jupyter Notebook template for this chapter's application problems.

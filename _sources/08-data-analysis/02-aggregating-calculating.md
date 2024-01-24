@@ -4,5 +4,5 @@ We already started to see some of this functionality with `timeseries` data, but
 
 ## This Section's Contents
 
-```{table of contents}
+```{tableofcontents}
 ```
