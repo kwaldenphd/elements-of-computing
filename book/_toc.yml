@@ -84,55 +84,103 @@ chapters:
     title: Getting Started With `GeoPandas`
   - file: 05-pandas-gis/04-application
     title: Application
-- file: 06-pandas-eda/00-overview
-  title: 6. Reshaping Data 
+- file: 06-data-wrangling/00-overview
+  title: 6. Data Wrangling 
   sections:
-  - file: 06-pandas-eda/01-pandas-basics 
+  - file: 06-data-wrangling/01-pandas-basics 
     title: Interacting With a DataFrame
     sections:
-    - file: 06-pandas-eda/02-selecting
+    - file: 06-data-wrangling/02-selecting
       title: Selecting
-    - file: 06-pandas-eda/03-sorting
+    - file: 06-data-wrangling/03-sorting
       title: Sorting
-    - file: 06-pandas-eda/04-filtering
+    - file: 06-data-wrangling/04-filtering
       title: Filtering
-    - file: 06-pandas-eda/05-time-series
+    - file: 06-data-wrangling/05-time-series
       title: Time Series Data
-  - file: 06-pandas-eda/07-aggregating-calculating 
+  - file: 06-data-wrangling/06-aggregating-calculating 
     title: Aggregating & Calculating 
     sections:
-    - file: 06-pandas-eda/08-summary-statistics
+    - file: 06-data-wrangling/07-summary-statistics
       title: Summary & Descriptive Statistics 
-    - file: 06-pandas-eda/09-calculation
+    - file: 06-data-wrangling/08-calculation
       title: Making Calculations     
-    - file: 06-pandas-eda/10-grouping
+    - file: 06-data-wrangling/09-grouping
       title: Grouping & Counting
-  - file: 06-pandas-eda/11-reshaping 
+  - file: 06-data-wrangling/10-reshaping 
     title: Reshaping
     sections:
-    - file: 06-pandas-eda/12-pivot
+    - file: 06-data-wrangling/11-pivot
       title: Pivot   
-    - file: 06-pandas-eda/13-pivot-table
+    - file: 06-data-wrangling/12-pivot-table
       title: Pivot Table
-    - file: 06-pandas-eda/14-melt
+    - file: 06-data-wrangling/13-melt
       title: Melt
-    - file: 06-pandas-eda/15-transpose
+    - file: 06-data-wrangling/14-transpose
       title: Transpose
-    - file: 06-pandas-eda/16-explode
+    - file: 06-data-wrangling/15-explode
       title: Explode
-  - file: 06-pandas-eda/17-merging-joining 
+  - file: 06-data-wrangling/16-merging-joining 
     title: Merging & Joining
     sections:
-    - file: 06-pandas-eda/18-merge
+    - file: 06-data-wrangling/17-merge
       title: Merge   
-    - file: 06-pandas-eda/19-concat
+    - file: 06-data-wrangling/18-concat
       title: Concat
-  - file: 06-pandas-eda/20-indexing 
+  - file: 06-data-wrangling/19-indexing 
     title: Labels & Indexing
-  - file: 06-pandas-eda/21-putting-it-all-together 
+  - file: 06-data-wrangling/20-putting-it-all-together 
     title: Putting It All Together
     sections:
-    - file: 06-pandas-eda/22-case-study
+    - file: 06-data-wrangling/21-case-study
       title: U.S. Census Bureau Case Study 
-  - file: 06-pandas-eda/23-application
+  - file: 06-data-wrangling/22-application
     title: Application
+    
+- file: 07-tidy-data/00-overview 
+  title: Introduction to Tidy Data 
+  sections:
+  - file: 07-tidy-data/01-principles
+    title: Tidy Data Principles 
+  - file: 07-tidy-data/02-messy-data 
+    title: Dealing With Messy Data 
+  - file: 07-tidy-data/03-open-refine
+    title: Getting Started With OpenRefine 
+    sections:
+    - file: 07-tidy-data/04-loading-data 
+      title: Loading Data in OpenRefine 
+    - file: 07-tidy-data/05-using-open-refine 
+      title: Using OpenRefine 
+  - file: 07-tidy-data/06-spreadsheet-programs 
+    title: Getting Started With Spreadsheet Programs 
+    sections:
+    - file: 07-tidy-data/07-excel
+      title: Data Cleaning in Excel 
+    - file: 07-tidy-data/08-google-sheets 
+      title: Data Cleaning in Google Sheets 
+      sections:
+      - file: 07-tidy-data/09-gs-sorting-filtering 
+        title: Sorting & Filtering in Google Sheets 
+      - file: 07-tidy-data/10-gs-find-replace 
+        title: Find & Replace in Google Sheets 
+      - file: 07-tidy-data/11-gs-export
+        title: Exporting From Google Sheets 
+      - file: 07-tidy-data/12-gs-application
+        title: Application 
+    - file: 07-tidy-data/13-data-entry
+      title: Data Entry Workflows 
+      sections:
+      - file: 07-tidy-data/14-survey
+        title: Survey & Form Workflows 
+      - file: 07-tidy-data/15-validation
+        title: Validation & Spreadsheet Programs 
+        sections:
+        - file: 07-tidy-data/16-excel
+          title: Data Validation in Microsoft Excel 
+        - file: 07-tidy-data/17-gs 
+          title: Data Validation in Google Sheets 
+        - file: 07-tidy-data/18-application 
+          title: Application 
+    - file: 07-tidy-data/19-application 
+      title: Application
+        
