@@ -138,7 +138,7 @@ chapters:
     title: Application
     
 - file: 07-tidy-data/00-overview 
-  title: Introduction to Tidy Data 
+  title: 7. Tidy Data 
   sections:
   - file: 07-tidy-data/01-principles
     title: Tidy Data Principles 
