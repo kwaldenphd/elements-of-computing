@@ -19,16 +19,13 @@ Because these questions are open-ended, a checklist of syntax or operations that
 - Interacting
   * *Could include selecting, sorting, filtering, changing data types, etc.*
 
-- Aggregating
-  * *Could include summary and descriptive statistics, arithmetic operations, split-apply-combine workflows (`.groupby`, `.value_counts`), etc*
-
 - Reshaping
   * *A variety of options here: pivot, melt, pivot_table, transpose, or explode*
 
 - Combining
   * *Could include concat or merge*
 
-You don't need to include all the syntax we've encountered in these chapters. But your programs (taken together) need to include syntax from these four big bucket areas.
+You don't need to include all the syntax we've encountered in these chapters. But your programs (taken together) need to include syntax from these three big bucket areas.
 
 ## Questions 
 
@@ -40,6 +37,4 @@ You don't need to include all the syntax we've encountered in these chapters. Bu
 
 **Q1C: Develop a Python program that implements your Q1B outline. Answer to this question includes code + comments.**
 
-**Q1D: Calculate at least 3 summary or descriptive statistics for your dataset. At least one of these programs should include a `.groupby()` or filtering operation. Answer to this question includes code + comments.**
-
-**Q1E: What challenges did you encounter? How did you approach solving them?**
+**Q1D: What challenges did you encounter? How did you approach solving them?**
