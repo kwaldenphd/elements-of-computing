@@ -1,0 +1,805 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Case Study: American Community Survey Data &#8212; Elements of Computing</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '06-data-wrangling/21-case-study';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Application" href="22-application.html" />
+    <link rel="prev" title="Putting It All Together" href="20-putting-it-all-together.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/favicon.png" class="logo__image only-light" alt="Elements of Computing - Home"/>
+    <script>document.write(`<img src="../_static/favicon.png" class="logo__image only-dark" alt="Elements of Computing - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Elements of Computing
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../how-to.html">How to Interact With This Book</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01-Python-Refresh/00-Python.html">1. Python Refresh</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/01-comments-variables-assignment.html">Comments, Variables &amp; Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/02-data-types-io.html">Data Types &amp; I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/03-operators.html">Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/04-data-structures.html">Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/05-control-flow.html">Control Flow, Iteration &amp; Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/06-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02-Structured-Data/00-overview.html">2. Data Structures &amp; Sources</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/01-structured-data.html">Structured Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/02-loading-data.html">Loading Data</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02-Structured-Data/03-web-apis.html">Web APIs</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02-Structured-Data/04-sb-open-data.html">South Bend Open Data Portal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02-Structured-Data/05-census-bureau.html">U.S. Census Bureau</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/06-pdfs.html">Working With PDFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/07-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03-RBDMS/00-overview.html">3. Relational Databases</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/01-from-table-to-database.html">From Table To Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/02-terminology.html">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/03-erd.html">Entity Relationship Diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/04-rs.html">Relational Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/05-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04-SQL/00-overview.html">4. SQL</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../04-SQL/01-sql-setup.html">Background &amp; Setup</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../04-SQL/02-sql-basics.html">Basic Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../04-SQL/03-select-sort.html">Selecting &amp; Sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04-SQL/04-filtering.html">Filtering &amp; Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04-SQL/05-subqueries-wildcards.html">Subqueries &amp; Wildcards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04-SQL/06-aggregating-calculating.html">Aggregating &amp; Calculating</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../04-SQL/07-sql-joins-views.html">Joins &amp; Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04-SQL/08-sql-python.html">From SQL to Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04-SQL/09-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../05-pandas-gis/00-overview.html">5. Geospatial Data</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/01-formats-structures.html">A Brief Introduction to Geospatial Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/02-workflows.html">Geospatial Data Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/03-geopandas.html">Getting Started With `GeoPandas`</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/04-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-overview.html">6. Data Wrangling</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="01-pandas-basics.html">Interacting With a DataFrame</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02-selecting.html">Selecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-sorting.html">Sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-filtering.html">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-time-series.html">Time Series Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="06-aggregating-calculating.html">Aggregating &amp; Calculating</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="07-summary-statistics.html">Summary &amp; Descriptive Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-calculation.html">Making Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-grouping.html">Grouping &amp; Counting</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="10-reshaping.html">Reshaping</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="11-pivot.html">Pivot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-pivot-table.html">Pivot Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-melt.html">Melt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-transpose.html">Transpose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15-explode.html">Explode</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="16-merging-joining.html">Merging &amp; Joining</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="17-merge.html">Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18-concat.html">Concat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="19-indexing.html">Labels &amp; Indexing</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="20-putting-it-all-together.html">Putting It All Together</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">U.S. Census Bureau Case Study</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="22-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../07-tidy-data/00-overview.html">7. Tidy Data</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../07-tidy-data/01-principles.html">Tidy Data Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07-tidy-data/02-messy-data.html">Dealing With Messy Data</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../07-tidy-data/03-open-refine.html">Getting Started With OpenRefine</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../07-tidy-data/04-loading-data.html">Loading Data in OpenRefine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../07-tidy-data/05-using-open-refine.html">Using OpenRefine</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../07-tidy-data/06-spreadsheet-programs.html">Spreadsheet Programs</a></li>
+
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/kwaldenphd/elements-of-computing/blob/main/book/06-data-wrangling/21-case-study.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/06-data-wrangling/21-case-study.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Case Study: American Community Survey Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-building-an-outline">Step #1: Building an Outline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-splitting-column-headers">Step #2: Splitting Column Headers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-transposing-the-dataframe">Step #3: Transposing the DataFrame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-reassign-header-subset-the-data">Step #4: Reassign Header &amp; Subset the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-reindexing">Step #5: Reindexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-melting-variable-labels">Step #6: Melting Variable Labels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-subsetting-filtering">Step #7: Subsetting &amp; Filtering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap Up</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="case-study-american-community-survey-data">
+<h1>Case Study: American Community Survey Data<a class="headerlink" href="#case-study-american-community-survey-data" title="Permalink to this heading">#</a></h1>
+<p>Let’s look at an example of how we might utilize these workflows on an actual dataset, specifically educational outcome attribute data from the American Community Survey.</p>
+<ul class="simple">
+<li><p><a href="https://data.census.gov/table/ACSST5Y2022.S1501?t=Education:Educational Attainment&g=050XX00US18141,18141$8600000&moe=false">Link to the ACS dataset</a></p>
+<ul>
+<li><p><em>Note: I’m working with 2022’s 5 year estimate, which I’ve renamed <code class="docutils literal notranslate"><span class="pre">data.csv</span></code>.</em></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span><span class="o">,</span> <span class="nn">re</span> <span class="c1"># import statements</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data.csv&quot;</span><span class="p">)</span> <span class="c1"># load data</span>
+<span class="n">df</span> <span class="c1"># show output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A rich dataset, but not in particularly usable shape at the moment.</p>
+<section id="step-1-building-an-outline">
+<h2>Step #1: Building an Outline<a class="headerlink" href="#step-1-building-an-outline" title="Permalink to this heading">#</a></h2>
+<p>A good starting point is sketching out how you want the data to look at the end of reshaping operations. We can start thinking of this as the data processing version of pseudocode.</p>
+<p>For this dataset, you might want something like…</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Area</p></th>
+<th class="head"><p>Gender</p></th>
+<th class="head"><p>Variable</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>geographic unit</em></p></td>
+<td><p><em>gender breakdown</em></p></td>
+<td><p><em>specific field</em></p></td>
+<td><p><em>amount or measure</em></p></td>
+</tr>
+</tbody>
+</table>
+<p>Based on where the data is now, some things we might need to do…</p>
+<ul class="simple">
+<li><p>Break out the current column headers</p></li>
+<li><p>Make the updated column headers their own columns</p></li>
+<li><p>Probably relabel the columns to more user-friendly labels</p></li>
+</ul>
+<p>Let’s dig in!</p>
+</section>
+<section id="step-2-splitting-column-headers">
+<h2>Step #2: Splitting Column Headers<a class="headerlink" href="#step-2-splitting-column-headers" title="Permalink to this heading">#</a></h2>
+<p>Let’s start splitting the column labels into a hierarchical index.</p>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">!!</span></code> as a separator for regular expression string methods.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://colab.research.google.com/drive/1Rd9KMoJ2AdtwVMNXwibakUbMGxz5Z6nM?usp=sharing#scrollTo=c1TKLsmiSS9N">Click here</a> for a Jupyter Notebook that provides a deep dive into regular expressions (regex) and string methods in Python.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;!!&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># split column headers into multi-level index based on separator</span>
+<span class="n">df</span> <span class="c1"># show output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we have a multi-index and can start to reshape this data.</p>
+</section>
+<section id="step-3-transposing-the-dataframe">
+<h2>Step #3: Transposing the DataFrame<a class="headerlink" href="#step-3-transposing-the-dataframe" title="Permalink to this heading">#</a></h2>
+<p>Now, we can use <code class="docutils literal notranslate"><span class="pre">.transpose</span></code> to invert columns and rows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span> <span class="c1"># transpose</span>
+<span class="n">df</span> <span class="c1"># show output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’re making progress!</p>
+</section>
+<section id="step-4-reassign-header-subset-the-data">
+<h2>Step #4: Reassign Header &amp; Subset the Data<a class="headerlink" href="#step-4-reassign-header-subset-the-data" title="Permalink to this heading">#</a></h2>
+<p>We need the first row of data to serve as column headers. We can do this by subsetting our dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">header</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># isolate first row to be new header</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="c1"># subset dataframe (everything past the first row)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">header</span> <span class="c1"># reassign headers</span>
+<span class="n">df</span> <span class="c1"># show output</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-reindexing">
+<h2>Step #5: Reindexing<a class="headerlink" href="#step-5-reindexing" title="Permalink to this heading">#</a></h2>
+<p>Right now, the area and coverage are part of a row multi-index. We can reset the index to make these columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span> <span class="c1"># reset index</span>
+<span class="n">df</span> <span class="c1"># show output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We might also want to relabel some columns at this point.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;area&#39;</span> <span class="c1"># rename columns</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;coverage&#39;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;type&#39;</span>
+<span class="n">df</span> <span class="c1"># show updated df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-6-melting-variable-labels">
+<h2>Step #6: Melting Variable Labels<a class="headerlink" href="#step-6-melting-variable-labels" title="Permalink to this heading">#</a></h2>
+<p>If our desired structure is</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Area</p></th>
+<th class="head"><p>Gender</p></th>
+<th class="head"><p>Variable</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>geographic unit</em></p></td>
+<td><p><em>gender breakdown</em></p></td>
+<td><p><em>specific field</em></p></td>
+<td><p><em>amount or measure</em></p></td>
+</tr>
+</tbody>
+</table>
+<p><br>Then now might be a good time to melt the column labels.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;coverage&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">])</span> <span class="c1"># melt variable column</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;variable&#39;</span>
+<span class="n">df</span> <span class="c1"># show output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-7-subsetting-filtering">
+<h2>Step #7: Subsetting &amp; Filtering<a class="headerlink" href="#step-7-subsetting-filtering" title="Permalink to this heading">#</a></h2>
+<p>Last but not least, we might want to subset our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> for meaningful columns, and remove rows with <code class="docutils literal notranslate"><span class="pre">NaN</span></code> values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;coverage&#39;</span><span class="p">,</span> <span class="s1">&#39;variable&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]]</span> <span class="c1"># subset columns</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span> <span class="c1"># remove rows with NaN in value</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># reset index</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;ZCTA5 &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="c1"># clean up area column to be able to join on zip code</span>
+<span class="n">df</span> <span class="c1"># show output</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="wrap-up">
+<h2>Wrap Up<a class="headerlink" href="#wrap-up" title="Permalink to this heading">#</a></h2>
+<p>Voila! Let’s see all of those steps together:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span><span class="o">,</span> <span class="nn">re</span> <span class="c1"># import statements</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data.csv&quot;</span><span class="p">)</span> <span class="c1"># load data</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;!!&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># split column headers into multi-level index based on separator</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span> <span class="c1"># transpose</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># isolate first row to be new header</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="c1"># subset dataframe (everything past the first row)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">header</span> <span class="c1"># reassign headers</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span> <span class="c1"># reset index</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;area&#39;</span> <span class="c1"># rename columns</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;coverage&#39;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;type&#39;</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;coverage&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">])</span> <span class="c1"># melt variable column</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;variable&#39;</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;coverage&#39;</span><span class="p">,</span> <span class="s1">&#39;variable&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]]</span> <span class="c1"># subset columns</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span> <span class="c1"># remove rows with NaN in value</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># reset index</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;ZCTA5 &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="c1"># clean up area column to be able to join on zip code</span>
+
+<span class="n">df</span> <span class="c1"># show output</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./06-data-wrangling"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="20-putting-it-all-together.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Putting It All Together</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="22-application.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Application</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-building-an-outline">Step #1: Building an Outline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-splitting-column-headers">Step #2: Splitting Column Headers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-transposing-the-dataframe">Step #3: Transposing the DataFrame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-reassign-header-subset-the-data">Step #4: Reassign Header &amp; Subset the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-reindexing">Step #5: Reindexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-melting-variable-labels">Step #6: Melting Variable Labels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-subsetting-filtering">Step #7: Subsetting &amp; Filtering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap Up</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href="https://americanstudies.nd.edu/faculty/katherine-walden/">Dr. Katherine Walden</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
