@@ -24,7 +24,7 @@ Distinctions across data types become especially relevant when making visualiati
 
 ## Analysis Workflows
 
-<p align="center"><img class="aligncenter" src="https://miro.medium.com/v2/resize:fit:1400/1*l7U1ugLRag4maxLdCqeVYA.png" /></a></p>
+<p align="center"><img class="aligncenter" src="https://pbs.twimg.com/media/F3LfKnXaoAAaolF.png" /></a></p>
 
 When we start making choices about aggregating our data, one of the first steps is deciding what aspects of our data (or `variables`) we want to work with.
 

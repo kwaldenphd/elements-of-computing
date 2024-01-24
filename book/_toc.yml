@@ -71,7 +71,9 @@ chapters:
     title: Joins & Views
   - file: 04-SQL/08-sql-python
     title: From SQL to Python
-  - file: 04-SQL/09-application
+  - file: 04-SQL/09-other-workflows 
+    title: Other Database Workflows
+  - file: 04-SQL/10-application
     title: Application
 - file: 05-pandas-gis/00-overview
   title: 5. Geospatial Data
@@ -192,4 +194,57 @@ chapters:
   - file: 08-data-analysis/06-modeling
     title: More Advanced Modeling Workflows
   - file: 08-data-analysis/07-application 
+    title: Application 
+- file: 09-data-viz/00-overview 
+  title: 9. Data Visualization 
+  sections:
+  - file: 09-data-viz/01-principles 
+    title: Data Visualization Principles 
+  - file: 09-data-viz/02-chart-type 
+    title: Choosing a Chart Type 
+  - file: 09-data-viz/03-visual-cues
+    title: Working With Visual Cues 
+  - file: 09-data-viz/04-essential-components
+    title: Essential Components 
+  - file: 09-data-viz/05-additional-resources 
+    title: Additional Resources
+- file: 10-matplotlib/00-overview
+  title: 10. Matplotlib 
+  sections:
+  - file: 10-matplotlib/01-matplotlib-intro 
+    title: Introduction to Matplotlib 
+  - file: 10-matplotlib/02-matplotlib-basics 
+    title: Matplotlib Basics 
+  - file: 10-matplotlib/03-customizing-matplotlib 
+    title: Customizing in Matplotlib 
+    sections:
+    - file: 10-matplotlib/04-colormaps 
+      title: Colormaps 
+    - file: 10-matplotlib/05-style-sheets 
+      title: Style Sheets 
+    - file: 10-matplotlib/06-legends 
+      title: Legends 
+  - file: 10-matplotlib/07-other-plot-types 
+    title: Other Plot Types 
+    sections: 
+    - file: 10-matplotlib/08-scatterplots
+      title: Scatterplots 
+    - file: 10-matplotlib/09-histograms
+      title: Histograms 
+    - file: 10-matplotlib/10-bar-charts
+      title: Bar Charts 
+    - file: 10-matplotlib/11-pie-charts 
+      title: Pie Charts 
+    - file: 10-matplotlib/12-box-plots
+      title: Box Plots 
+    - file: 10-matplotlib/13-subplots
+      title: Subplots 
+  - file: 10-matplotlib/14-saving-exporting 
+    title: Saving & Exporting 
+  - file: 10-matplotlib/15-additional-resources 
+    title: Additional Resources 
+    sections:
+    - file: 10-matplotlib/16-ooo
+      title: Object-Oriented Workflows 
+  - file: 10-matplotlib/17-application 
     title: Application 
