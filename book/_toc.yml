@@ -167,20 +167,19 @@ chapters:
         title: Exporting From Google Sheets 
       - file: 07-tidy-data/12-gs-application
         title: Application 
-    - file: 07-tidy-data/13-data-entry
-      title: Data Entry Workflows 
+  - file: 07-tidy-data/13-data-entry
+    title: Data Entry Workflows 
+    sections:
+    - file: 07-tidy-data/14-survey
+      title: Survey & Form Workflows 
+    - file: 07-tidy-data/15-validation
+      title: Validation & Spreadsheet Programs 
       sections:
-      - file: 07-tidy-data/14-survey
-        title: Survey & Form Workflows 
-      - file: 07-tidy-data/15-validation
-        title: Validation & Spreadsheet Programs 
-        sections:
-        - file: 07-tidy-data/16-excel
-          title: Data Validation in Microsoft Excel 
-        - file: 07-tidy-data/17-gs 
-          title: Data Validation in Google Sheets 
-        - file: 07-tidy-data/18-application 
-          title: Application 
-    - file: 07-tidy-data/19-application 
-      title: Application
-        
+      - file: 07-tidy-data/16-excel
+        title: Data Validation in Microsoft Excel 
+      - file: 07-tidy-data/17-gs 
+        title: Data Validation in Google Sheets 
+      - file: 07-tidy-data/18-application 
+        title: Application 
+  - file: 07-tidy-data/19-application 
+    title: Application      
