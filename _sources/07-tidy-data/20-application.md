@@ -1,6 +1,6 @@
 # Application
 
-[Click here](https://docs.google.com/document/d/1zRGhTwuTrj0hUpLZABRg1w7JPznE0hE06wo1414lng8/edit?usp=sharing) for a Google Doc template for this chapter's application problems.
+[Click here](https://docs.google.com/document/d/1zRGhTwuTrj0hUpLZABRg1w7JPznE0hE06wo1414lng8/copy) for a Google Doc template for this chapter's application problems.
 
 To include screenshots in your doc:
 - [Tutorial for adding images/tables/drawings to a Google Doc](https://www.techrepublic.com/article/how-to-add-images-tables-and-drawings-to-a-google-doc-file/)
