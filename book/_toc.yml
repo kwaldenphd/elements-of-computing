@@ -253,10 +253,11 @@ chapters:
   sections:
   - file: 11-pandas-plotting/01-pandas-plotting 
     title: Overview 
-  - file: 11-pandas-plotting/02-customizing 
-    title: Customizing Your Plot 
-  - file: 11-pandas-plotting/03-matplotlib-syntax 
-    title: Using Matplotlib Syntax 
+    sections: 
+    - file: 11-pandas-plotting/02-customizing 
+      title: Customizing Your Plot 
+    - file: 11-pandas-plotting/03-matplotlib-syntax 
+      title: Using Matplotlib Syntax 
   - file: 11-pandas-plotting/04-other-plot-types 
     title: Other Plot Types 
     sections:
@@ -267,7 +268,7 @@ chapters:
     - file: 11-pandas-plotting/07-box-plots 
       title: Box Plots 
     - file: 11-pandas-plotting/08-area-plots 
-      title: 11-pandas-plotting/09-area-plots 
+      title: Area Plots 
     - file: 11-pandas-plotting/09-pie-charts 
       title: Pie Charts 
   - file: 11-pandas-plotting/10-missing-data 
@@ -278,3 +279,42 @@ chapters:
     title: Plotting With Seaborn 
   - file: 11-pandas-plotting/13-application 
     title: Application 
+- file: 12-interactive-viz/00-overview 
+  title: 12. Interactive Visualization
+  sections:
+  - file: 12-interactive-viz/01-plotly-intro 
+    title: Introduction to Plotly 
+  - file: 12-interactive-viz/02-plotly-mechanics 
+    title: Plotly Mechanics 
+  - file: 12-interactive-viz/03-plotly-express
+    title: Plotly Express Workflows 
+  - file: 12-interactive-viz/04-other-plot-types 
+    title: Other Plot Types 
+    sections:
+    - file: 12-interactive-viz/05-line-plots 
+      title: Line Plots 
+    - file: 12-interactive-viz/06-bar-charts 
+      title: Bar Charts 
+    - file: 12-interactive-viz/07-pie-charts 
+      title: Pie Charts 
+      sections:
+      - file: 12-interactive-viz/08-donut-charts 
+        title: Donut Charts 
+      - file: 12-interactive-viz/09-sunburst-charts 
+        title: Sunburst Charts 
+    - file: 12-interactive-viz/10-bubble-charts 
+      title: Bubble Charts 
+    - file: 12-interactive-viz/11-tables 
+      title: Tables 
+    - file: 12-interactive-viz/12-additional-resources 
+  - file: 12-interactive-viz/13-categorical-data 
+    title: Working With Categorical Data 
+  - file: 12-interactive-viz/14-exporting 
+    title: Saving & Exporting 
+  - file: 12-interactive-viz/15-user-interaction 
+    title: User Interactivity 
+    sections:
+    - file: 12-interactive-viz/16-dash
+      title: Dash 
+  - file: 12-interactive-viz/17-application 
+    title: Application
