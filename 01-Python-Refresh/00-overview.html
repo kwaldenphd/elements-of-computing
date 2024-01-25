@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Plotting With Pandas &#8212; Elements of Computing</title>
+    <title>Python Refresh &#8212; Elements of Computing</title>
   
   
   
@@ -70,13 +70,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '11-pandas-plotting/00-overview';</script>
-    <link rel="canonical" href="https://kwaldenphd/github.io/elements-of-computing/11-pandas-plotting/00-overview.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = '01-Python-Refresh/00-overview';</script>
+    <link rel="canonical" href="https://kwaldenphd/github.io/elements-of-computing/01-Python-Refresh/00-overview.html" />
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Ploting in Pandas" href="01-pandas-plotting.html" />
-    <link rel="prev" title="Application" href="../10-matplotlib/17-application.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -142,6 +140,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -176,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../how-to.html">How to Interact With This Book</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../05-pandas-gis/00-overview.html">5. Geospatial Data</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/01-formats-structures.html">A Brief Introduction to Geospatial Data</a></li>
@@ -285,24 +285,24 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../10-matplotlib/17-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">11. Plotting With Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="01-pandas-plotting.html">Overview</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="02-customizing.html">Customizing Your Plot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03-matplotlib-syntax.html">Using Matplotlib Syntax</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../11-pandas-plotting/00-overview.html">11. Plotting With Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../11-pandas-plotting/01-pandas-plotting.html">Overview</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/02-customizing.html">Customizing Your Plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/03-matplotlib-syntax.html">Using Matplotlib Syntax</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="04-other-plot-types.html">Other Plot Types</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="05-bar-charts.html">Bar Charts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="06-histograms.html">Histograms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="07-box-plots.html">Box Plots</a></li>
-<li class="toctree-l3"><a class="reference internal" href="08-area-plots.html">Area Plots</a></li>
-<li class="toctree-l3"><a class="reference internal" href="09-pie-charts.html">Pie Charts</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../11-pandas-plotting/04-other-plot-types.html">Other Plot Types</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/05-bar-charts.html">Bar Charts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/06-histograms.html">Histograms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/07-box-plots.html">Box Plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/08-area-plots.html">Area Plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/09-pie-charts.html">Pie Charts</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="10-missing-data.html">Handling Missing Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="11-case-study.html">City of South Bend Budget Data Case Study</a></li>
-<li class="toctree-l2"><a class="reference internal" href="12-seaborn.html">Plotting With Seaborn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="13-application.html">Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11-pandas-plotting/10-missing-data.html">Handling Missing Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11-pandas-plotting/11-case-study.html">City of South Bend Budget Data Case Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11-pandas-plotting/12-seaborn.html">Plotting With Seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11-pandas-plotting/13-application.html">Application</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../12-interactive-viz/00-overview.html">12. Interactive Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -409,7 +409,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/11-pandas-plotting/00-overview.md" target="_blank"
+      <li><a href="../_sources/01-Python-Refresh/00-overview.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -493,7 +493,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Plotting With Pandas</h1>
+    <h1>Python Refresh</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -504,8 +504,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-contents">Chapter Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-table-of-contents">Chapter Table of Contents</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
 </ul>
             </nav>
@@ -518,53 +517,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="plotting-with-pandas">
-<h1>Plotting With <code class="docutils literal notranslate"><span class="pre">Pandas</span></code><a class="headerlink" href="#plotting-with-pandas" title="Permalink to this heading">#</a></h1>
-<p>This chapter covers how to generate <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plots for data stored in a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. It provides an overview of how to generate a variety of common plot types, including line plots, bar charts, histograms, box plots, area plots, scatter plots, and pie charts. It also covers how <code class="docutils literal notranslate"><span class="pre">pandas</span></code>’s plotting function handles missing data.</p>
-<p>It provides a comparison of the <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> plotting packages and provides an introduction to <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> with sample code.</p>
+  <section id="python-refresh">
+<h1>Python Refresh<a class="headerlink" href="#python-refresh" title="Permalink to this heading">#</a></h1>
+<p>This chapter provides an overview of foundational programming syntax in Python, including data types and structures, operators, and control flow.</p>
 <section id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
-<p>The author consulted the following resources when writing  this tutorial:</p>
-<ul class="simple">
-<li><p>Chapter 4.14 “Visualization With Seaborn” from Jake VanderPlas, <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/04.14-visualization-with-seaborn.html"><em>Python Data Science Handbook: Essential Tools for Working with Data</em></a> (O’Reilly, 2016)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/visualization.html">User Guide, “Visualization”</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <a class="reference external" href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html">Getting Started, “Plotting”</a></p></li>
-<li><p>Chapter 9 “Plotting and Visualization” from Wes McKinney, <a class="reference external" href="https://www.oreilly.com/library/view/python-for-data/9781491957653/"><em>Python for Data Analysis: Data Wrangling With pandas, Numpy, and IPython</em></a> (O’Reilly, 2017)</p></li>
-<li><p>Chapter 15 “Generating Data” from Eric Matthes, <a class="reference external" href="https://ehmatthes.github.io/pcc/"><em>Python Crash Course: A Hands-On, Project-Based Introduction to Programming</em></a> (No Starch Press, 2019).</p></li>
-<li><p><a class="reference external" href="https://seaborn.pydata.org/introduction.html"><code class="docutils literal notranslate"><span class="pre">seaborn</span></code> package documentation</a></p></li>
-</ul>
+<p><a class="reference external" href="https://github.com/kwaldenphd/Python/blob/main/acknowledgements.md">Click here</a> for a full list of acknowledgements for this chapter.</p>
 </section>
-<section id="chapter-contents">
-<h2>Chapter Contents<a class="headerlink" href="#chapter-contents" title="Permalink to this heading">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="01-pandas-plotting.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04-other-plot-types.html">Other Plot Types</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="05-bar-charts.html">Bar Charts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06-histograms.html">Histograms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07-box-plots.html">Box Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="08-area-plots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="09-pie-charts.html">Pie Charts</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="10-missing-data.html">Handling Missing Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-case-study.html">City of South Bend Budget Data Case Study</a></li>
-<li class="toctree-l1"><a class="reference internal" href="12-seaborn.html">Plotting With Seaborn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="13-application.html">Application</a></li>
-</ul>
-</div>
-</section>
-<section id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
-<p>This chapter uses two datasets:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://raw.githubusercontent.com/kwaldenphd/more-with-matplotlib/main/data/air_quality_no2.csv">Air quality data</a></p></li>
-<li><p><a class="reference external" href="https://data-southbend.opendata.arcgis.com/search?q=budget">City of South Bend budget data</a></p></li>
-</ul>
+<section id="chapter-table-of-contents">
+<h2>Chapter Table of Contents<a class="headerlink" href="#chapter-table-of-contents" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="application">
 <h2>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://colab.research.google.com/drive/1Oz7GGpg5jqchdPTk7_4IrYKf8EuyDoM-?usp=sharing">Click here</a> for a Jupyter Notebook template for this chapter’s application problems.</p>
+<p><a class="reference external" href="https://colab.research.google.com/drive/14Zpi8TabYz-AzqbJZkeK14lhD1i_spze?usp=sharing">Click here</a> for a Jupyter Notebook template for this chapter’s application problems.</p>
 </section>
 </section>
 
@@ -581,7 +546,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./11-pandas-plotting"
+            path: "./01-Python-Refresh"
         },
         predefinedOutput: true
     }
@@ -598,24 +563,6 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../10-matplotlib/17-application.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Application</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="01-pandas-plotting.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ploting in Pandas</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -633,8 +580,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-contents">Chapter Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-table-of-contents">Chapter Table of Contents</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
 </ul>
   </nav></div>
