@@ -52,7 +52,7 @@ chapters:
   - file: 03-RBDMS/05-application
     title: Application
 - file: 04-SQL/00-overview
-  title: 4. sql
+  title: 4. SQL
   sections:
   - file: 04-SQL/01-sql-setup
     title: Background & Setup  
@@ -70,7 +70,7 @@ chapters:
   - file: 04-SQL/07-sql-joins-views
     title: Joins & Views
   - file: 04-SQL/08-sql-python
-    title: From sql to Python
+    title: From SQL to Python
   - file: 04-SQL/09-other-workflows 
     title: Other Database Workflows
   - file: 04-SQL/10-application
