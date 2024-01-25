@@ -66,6 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '13-mapping/00-overview';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="A Brief Introduction to Geospatial Data" href="01-formats-structures.html" />
+    <link rel="prev" title="Application" href="../12-interactive-viz/17-application.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -131,8 +133,6 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -175,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../how-to.html">How to Interact With This Book</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../01-Python-Refresh/00-Python.html">1. Python Refresh</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/01-comments-variables-assignment.html">Comments, Variables &amp; Assignment</a></li>
@@ -374,6 +374,30 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../12-interactive-viz/17-application.html">Application</a></li>
 </ul>
 </li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">13. Mapping</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="01-formats-structures.html">Data Formats &amp; Structures</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="02-geopandas.html">Working With GeoPandas</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="03-geopandas-data.html">Loading Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-geopandas-viz.html">Visualizing Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05-interactive.html">Interactive Maps</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="06-outline-maps.html">Outline Maps</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="07-outline-point.html">Outline Maps &amp; Point Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="08-outline-choropleth.html">Outline Maps &amp; Polygon Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="09-tile-maps.html">Tile Maps</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="10-base-layer.html">Tile Maps &amp; Base Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="11-tile-point.html">Tile Maps &amp; Point Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="12-tile-choropleth.html">Tile Maps &amp; Polygon Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="13-application.html">Application</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -522,9 +546,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-contents">Chapter Contents</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mapbox-access-token">Mapbox Access Token</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
 </ul>
             </nav>
@@ -539,13 +563,35 @@ document.write(`
                   
   <section id="mapping">
 <h1>Mapping<a class="headerlink" href="#mapping" title="Permalink to this heading">#</a></h1>
-<p>OVERVIEW</p>
-<section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
-<p>ACKNOWLEDGEMENTS</p>
-</section>
+<p>Up to this point, we have been working with data plotted on a 2D cartesian coordinate system, with x and y axes. For our purposes, it’s most useful to think of maps in the same way–as data plotted on a coordinate system. Except for maps, that coordinate system is typically some type of latitude or longitude based projection, and the data to be plotted includes explicit location information (rather than a numerical or categorical field that can be mapped to an axis).</p>
+<p>This chapter focuses on workflows for visualizing geospatial data in Python. It covers static visualization workflows with <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> and interactive visualization workflows with <code class="docutils literal notranslate"><span class="pre">plotly</span></code>.</p>
 <section id="chapter-contents">
 <h2>Chapter Contents<a class="headerlink" href="#chapter-contents" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01-formats-structures.html">Data Formats &amp; Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-geopandas.html">Working With GeoPandas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03-geopandas-data.html">Loading Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-geopandas-viz.html">Visualizing Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="05-interactive.html">Interactive Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="06-outline-maps.html">Outline Maps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07-outline-point.html">Outline Maps &amp; Point Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-outline-choropleth.html">Outline Maps &amp; Polygon Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="09-tile-maps.html">Tile Maps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="10-base-layer.html">Tile Maps &amp; Base Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-tile-point.html">Tile Maps &amp; Point Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-tile-choropleth.html">Tile Maps &amp; Polygon Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="13-application.html">Application</a></li>
+</ul>
+</div>
 </section>
 <section id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
@@ -555,6 +601,25 @@ document.write(`
 <li><p><a href="https://data.census.gov/table/ACSST5Y2022.S1501?t=Education:Educational Attainment&g=050XX00US18141,18141$8600000&moe=false">Educational outcome attribute data from the American Community Survey</a></p></li>
 <li><p><a class="reference external" href="https://data-southbend.opendata.arcgis.com/datasets/SouthBend::parks-locations-and-features/about">Park location and feature data from the City of South Bend</a></p></li>
 </ul>
+</section>
+<section id="mapbox-access-token">
+<h2>Mapbox Access Token<a class="headerlink" href="#mapbox-access-token" title="Permalink to this heading">#</a></h2>
+<p>Later in this chapter, we’ll be working with features of the Mapbox API that require an access token.</p>
+<p>Sign up for a free Mapbox account:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://account.mapbox.com/auth/signup/">https://account.mapbox.com/auth/signup/</a></p></li>
+</ul>
+<p>Once you have signed up and logged in, click <code class="docutils literal notranslate"><span class="pre">Token</span></code> in the top level menu (between <code class="docutils literal notranslate"><span class="pre">Dashboard</span></code> and <code class="docutils literal notranslate"><span class="pre">Statistics</span></code>).</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://account.mapbox.com/access-tokens/">https://account.mapbox.com/access-tokens/</a></p></li>
+</ul>
+<p>Click the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">token</span></code> button to create a new access token:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://account.mapbox.com/access-tokens/create">https://account.mapbox.com/access-tokens/create</a></p></li>
+</ul>
+<p>Choose a descriptive name for your token (“Elements of Computing” works fine). The default settings for which boxes are checked/unchecked are fine.</p>
+<p>Click the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">token</span></code> button at the bottom of the page.</p>
+<p>Save this token value (string of numbers and letters) for later in the chapter.</p>
 </section>
 <section id="application">
 <h2>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h2>
@@ -592,6 +657,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../12-interactive-viz/17-application.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Application</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="01-formats-structures.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">A Brief Introduction to Geospatial Data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -608,9 +691,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-contents">Chapter Contents</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mapbox-access-token">Mapbox Access Token</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
 </ul>
   </nav></div>

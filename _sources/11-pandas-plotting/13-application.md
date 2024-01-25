@@ -18,7 +18,7 @@
 **Q1B: Develop an outline for your data visualization workflow. This could be a list with bullet points, a narrative, or a visual diagram (or a combination of these elements). Answer to this question includes a desired final data structure.**
 - *NOTE: No code is required as part of this answer.*
 
-**Q1C: Develop a Python program that uses Pandas plotting functions to generate at least three different plot types. Answer to this question includes code + comments.**
+**Q1C: Develop a Python program that uses Pandas plotting functions to generate at least three different plot types using your Q1A dataset and Q1B workflows. Answer to this question includes code + comments.**
 - *I encourage folks to use this question to explore visualizations you might use for the final project.*
 
 For each plot type (as appropriate), include the following elements or components:
