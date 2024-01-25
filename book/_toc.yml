@@ -318,3 +318,36 @@ chapters:
       title: Dash 
   - file: 12-interactive-viz/17-application 
     title: Application
+- file: 13-mapping/00-overview 
+  title: 13. Mapping 
+  sections: 
+  - file: 13-mapping/01-formats-structures 
+    title: Data Formats & Structures
+  - file: 13-mapping/02-geopandas
+    title: Working With GeoPandas 
+    sections:
+    - file: 13-mapping/03-geopandas-data 
+      title: Loading Data 
+    - file: 13-mapping/04-geopandas-viz
+      title: Visualizing Data 
+  - file: 13-mapping/05-interactive 
+    title: Interactive Maps
+    sections: 
+    - file: 13-mapping/06-outline-maps 
+      title: Outline Maps 
+      sections: 
+      - file: 13-mapping/07-outline-point 
+        title: Outline Maps & Point Data 
+      - file: 13-mapping/08-outline-choropleth 
+        title: Outline Maps & Polygon Data 
+    - file: 13-mapping/09-tile-maps 
+      title: Tile Maps 
+      sections:
+      - file: 13-mapping/10-base-layer 
+        title: Tile Maps & Base Layers 
+      - file: 13-mapping/11-tile-point 
+        title: Tile Maps & Point Data 
+      - file: 13-mapping/12-tile-choropleth 
+        title: Tile Maps & Polygon Data 
+  - file: 13-mapping/13-application 
+    title: Application  
