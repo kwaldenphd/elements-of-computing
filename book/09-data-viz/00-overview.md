@@ -1,4 +1,4 @@
-# Introduction to Data Visualization in Python
+# Introduction to Data Visualization
 
 This chapter provides an introduction to data communication principles and data visualization best practices.
 
@@ -6,4 +6,8 @@ This chapter provides an introduction to data communication principles and data 
 
 ```{tableofcontents}
 ```
+
+## Application
+
+There are no direct application questions for this chapter.
 

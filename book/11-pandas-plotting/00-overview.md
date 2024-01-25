@@ -27,4 +27,4 @@ This chapter uses two datasets:
 
 ## Application
 
-[Click here](https://colab.research.google.com/drive/1Oz7GGpg5jqchdPTk7_4IrYKf8EuyDoM-?usp=sharing) for a Jupyter Notebook template for this chapter's application problems.
+[Click here](https://colab.research.google.com/drive/1cOshaiEA5eHhJDOi22_x3GRHsxqC0L3_?usp=sharing) for a Jupyter Notebook template for this chapter's application problems.

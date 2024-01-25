@@ -1,5 +1,7 @@
 # Application
 
+[Click here](https://docs.google.com/document/d/19MKZm6q_taSeLN1Rz4R_B6y4aQ9fSVnERBKdy3J01Rw/copy) for a Google Doc template for this chapter's application problems.
+
 ## Question #1
 
 Q1A: What entities are in the `players`, `teams`, `locations` and `transactions` tables? List the entitites by table and include some explanation of your thought process. If you're getting stuck, try describing the data included in each table using a sentence. Where are the nouns in each sentence?

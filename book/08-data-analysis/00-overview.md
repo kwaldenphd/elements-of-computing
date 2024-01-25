@@ -1,8 +1,6 @@
-# Introduction to Data Communication in Python
+# Data Analysis
 
-This chapter provides an introduction to data communication principles and Python workflows. It starts with an overview of data visualization principles, then focuses on Python data visualization workflows.
-
-For Python workflows, the chapter starts with `matplotlib` fundamentals before moving to plotting with `pandas` and `DataFrames`, including a brief introduction to `seaborn`. 
+A thorough examination of statistical methods and advanced analysis workflows is beyond the scope of this course. This chapter provides an introduction to summary/descriptive statistics workflows in Python, focusing on `Pandas`. It also provides an introduction to more advanced Python resources and workflows for modeling and analysis. 
 
 ## Chapter Contents
 
@@ -11,4 +9,4 @@ For Python workflows, the chapter starts with `matplotlib` fundamentals before m
 
 ## Application
 
-[Click here](https://colab.research.google.com/drive/1Oz7GGpg5jqchdPTk7_4IrYKf8EuyDoM-?usp=sharing) for a Jupyter Notebook template for this chapter's application problems.
+[Click here](https://colab.research.google.com/drive/1VyH2LzZG6WFwWZD-TdCCCnPVPkowGFLT?usp=sharing) for a Jupyter Notebook template for this chapter's application problems.
