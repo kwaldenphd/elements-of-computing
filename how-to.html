@@ -179,7 +179,6 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">How to Interact With This Book</a></li>
-
 <li class="toctree-l1 has-children"><a class="reference internal" href="01-Python-Refresh/00-Python.html">1. Python Refresh</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="01-Python-Refresh/01-comments-variables-assignment.html">Comments, Variables &amp; Assignment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-Python-Refresh/02-data-types-io.html">Data Types &amp; I/O</a></li>
@@ -331,6 +330,24 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="10-matplotlib/17-application.html">Application</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="11-pandas-plotting/00-overview.html">11. Plotting With Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="11-pandas-plotting/01-pandas-plotting.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11-pandas-plotting/02-customizing.html">Customizing Your Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11-pandas-plotting/03-matplotlib-syntax.html">Using Matplotlib Syntax</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="11-pandas-plotting/04-other-plot-types.html">Other Plot Types</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="11-pandas-plotting/05-bar-charts.html">Bar Charts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-pandas-plotting/06-histograms.html">Histograms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-pandas-plotting/07-box-plots.html">Box Plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-pandas-plotting/08-area-plots.html">11-pandas-plotting/09-area-plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-pandas-plotting/09-pie-charts.html">Pie Charts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="11-pandas-plotting/10-missing-data.html">Handling Missing Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11-pandas-plotting/11-case-study.html">City of South Bend Budget Data Case Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11-pandas-plotting/12-seaborn.html">Plotting With Seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11-pandas-plotting/13-application.html">Application</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -479,16 +496,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">How to Interact With This Book</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-rocket-aria-hidden-true-i-open-jupyter-notebook-in-the-cloud"><i aria-hidden="true" class="fa fa-rocket"></i> Open Jupyter Notebook in the Cloud</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-jupyter-notebook">Download Jupyter Notebook</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-download-aria-hidden-true-i-download-jupyter-notebook"><i aria-hidden="true" class="fa fa-download"></i> Download Jupyter Notebook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fas-fa-expand-aria-hidden-true-i-make-full-screen"><i aria-hidden="true" class="fas fa-expand"></i> Make Full Screen</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -502,7 +513,7 @@ document.write(`
   <section id="how-to-interact-with-this-book">
 <h1>How to Interact With This Book<a class="headerlink" href="#how-to-interact-with-this-book" title="Permalink to this heading">#</a></h1>
 <p>This book was created with <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Book</a>, an open-source project for designing online interactive books that contain code and other computational material.</p>
-<p>Below the interactive features of this Jupyter Book are explained in further detail. Most interactive features can be found in the toolbar at the top of the page.</p>
+<p>There are a few different key ways to interact with and use this book. The toolbar at the top of the page is a starting point.</p>
 <section id="i-class-fa-fa-rocket-aria-hidden-true-i-open-jupyter-notebook-in-the-cloud">
 <h2><i class="fa fa-rocket" aria-hidden="true"></i> Open Jupyter Notebook in the Cloud<a class="headerlink" href="#i-class-fa-fa-rocket-aria-hidden-true-i-open-jupyter-notebook-in-the-cloud" title="Permalink to this heading">#</a></h2>
 <p>You can open most pages from this book in the cloud and run the code live. Hover over the rocket icon <i class="fa fa-rocket" aria-hidden="true"></i>  at the top of the page and click “Colab” to open a version of the same page in Google Colab.</p>
@@ -510,10 +521,10 @@ document.write(`
 <li><p><em>Note: Make sure you save the file to your Drive. Otherwise changes will not be saved.</em></p></li>
 </ul>
 </section>
-</section>
-<section id="download-jupyter-notebook">
-<h1>Download Jupyter Notebook<a class="headerlink" href="#download-jupyter-notebook" title="Permalink to this heading">#</a></h1>
+<section id="i-class-fa-fa-download-aria-hidden-true-i-download-jupyter-notebook">
+<h2><i class="fa fa-download" aria-hidden="true"></i> Download Jupyter Notebook<a class="headerlink" href="#i-class-fa-fa-download-aria-hidden-true-i-download-jupyter-notebook" title="Permalink to this heading">#</a></h2>
 <p>You can download any Jupyter notebook page from this book as a Jupyter notebook file (.ipynb). Hover over the download icon <i class="fa fa-download" aria-hidden="true"></i> and click “.ipynb”</p>
+</section>
 <section id="i-class-fas-fa-expand-aria-hidden-true-i-make-full-screen">
 <h2><i class="fas fa-expand" aria-hidden="true"></i> Make Full Screen<a class="headerlink" href="#i-class-fas-fa-expand-aria-hidden-true-i-make-full-screen" title="Permalink to this heading">#</a></h2>
 <p>To make any page from this book full screen, click the full screen <i class="fas fa-expand" aria-hidden="true"></i> icon at the top of the page.</p>
@@ -584,16 +595,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">How to Interact With This Book</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-rocket-aria-hidden-true-i-open-jupyter-notebook-in-the-cloud"><i aria-hidden="true" class="fa fa-rocket"></i> Open Jupyter Notebook in the Cloud</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-jupyter-notebook">Download Jupyter Notebook</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-download-aria-hidden-true-i-download-jupyter-notebook"><i aria-hidden="true" class="fa fa-download"></i> Download Jupyter Notebook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fas-fa-expand-aria-hidden-true-i-make-full-screen"><i aria-hidden="true" class="fas fa-expand"></i> Make Full Screen</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
