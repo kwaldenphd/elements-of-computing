@@ -4,4 +4,9 @@ Prof. Walden is exploring a new way of sharing instructional materials this seme
 
 The `How-To` page is a good place to start in terms of how to use this book.
 
-Use the table of contents on the left-hand side of the page to get started.
+Use the table of contents below or the menu on the left-hand side of the page to get started.
+
+## Contents 
+
+```{tableofcontents}
+```
