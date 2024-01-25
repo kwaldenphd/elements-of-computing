@@ -5,75 +5,75 @@ format: jb-book
 root: intro
 chapters:
 - file: how-to
-- file: 01-Python-Refresh/00-Python
+- file: 01-python-refresh/00-overview
   title: 1. Python Refresh
   sections:
-  - file: 01-Python-Refresh/01-comments-variables-assignment
+  - file: 01-python-refresh/01-comments-variables-assignment
     title: Comments, Variables & Assignment
-  - file: 01-Python-Refresh/02-data-types-io
+  - file: 01-python-refresh/02-data-types-io
     title: Data Types & I/O
-  - file: 01-Python-Refresh/03-operators
+  - file: 01-python-refresh/03-operators
     title: Operators
-  - file: 01-Python-Refresh/04-data-structures
+  - file: 01-python-refresh/04-data-structures
     title: Data Structures
-  - file: 01-Python-Refresh/05-control-flow
+  - file: 01-python-refresh/05-control-flow
     title: Control Flow, Iteration & Loops
-  - file: 01-Python-Refresh/06-application
+  - file: 01-python-refresh/06-application
     title: Application
-- file: 02-Structured-Data/00-overview
+- file: 02-structured-data/00-overview
   title: 2. Data Structures & Sources
   sections:
-  - file: 02-Structured-Data/01-structured-data
+  - file: 02-structured-data/01-structured-data
     title: Structured Data
-  - file: 02-Structured-Data/02-loading-data
+  - file: 02-structured-data/02-loading-data
     title: Loading Data
-  - file: 02-Structured-Data/03-web-apis
+  - file: 02-structured-data/03-web-apis
     title: Web APIs
     sections:
-    - file: 02-Structured-Data/04-sb-open-data
+    - file: 02-structured-data/04-sb-open-data
       title: South Bend Open Data Portal
-    - file: 02-Structured-Data/05-census-bureau
+    - file: 02-structured-data/05-census-bureau
       title: U.S. Census Bureau
-  - file: 02-Structured-Data/06-pdfs
+  - file: 02-structured-data/06-pdfs
     title: Working With PDFs
-  - file: 02-Structured-Data/07-application
+  - file: 02-structured-data/07-application
     title: Application
-- file: 03-RBDMS/00-overview
+- file: 03-rbdms/00-overview
   title: 3. Relational Databases
   sections: 
-  - file: 03-RBDMS/01-from-table-to-database 
+  - file: 03-rbdms/01-from-table-to-database 
     title: From Table To Database 
-  - file: 03-RBDMS/02-terminology
+  - file: 03-rbdms/02-terminology
     title: Terminology 
-  - file: 03-RBDMS/03-erd
+  - file: 03-rbdms/03-erd
     title: Entity Relationship Diagrams
-  - file: 03-RBDMS/04-rs
+  - file: 03-rbdms/04-rs
     title: Relational Schema
-  - file: 03-RBDMS/05-application
+  - file: 03-rbdms/05-application
     title: Application
-- file: 04-SQL/00-overview
-  title: 4. SQL
+- file: 04-sql/00-overview
+  title: 4. sql
   sections:
-  - file: 04-SQL/01-sql-setup
+  - file: 04-sql/01-sql-setup
     title: Background & Setup  
-  - file: 04-SQL/02-sql-basics
+  - file: 04-sql/02-sql-basics
     title: Basic Syntax
     sections:
-    - file: 04-SQL/03-select-sort
+    - file: 04-sql/03-select-sort
       title: Selecting & Sorting
-    - file: 04-SQL/04-filtering
+    - file: 04-sql/04-filtering
       title: Filtering & Conditions
-    - file: 04-SQL/05-subqueries-wildcards
+    - file: 04-sql/05-subqueries-wildcards
       title: Subqueries & Wildcards
-    - file: 04-SQL/06-aggregating-calculating
+    - file: 04-sql/06-aggregating-calculating
       title: Aggregating & Calculating
-  - file: 04-SQL/07-sql-joins-views
+  - file: 04-sql/07-sql-joins-views
     title: Joins & Views
-  - file: 04-SQL/08-sql-python
-    title: From SQL to Python
-  - file: 04-SQL/09-other-workflows 
+  - file: 04-sql/08-sql-python
+    title: From sql to Python
+  - file: 04-sql/09-other-workflows 
     title: Other Database Workflows
-  - file: 04-SQL/10-application
+  - file: 04-sql/10-application
     title: Application
 - file: 05-pandas-gis/00-overview
   title: 5. Geospatial Data
