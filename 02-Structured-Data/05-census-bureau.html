@@ -75,6 +75,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Working With Documents" href="06-pdfs.html" />
+    <link rel="prev" title="City of South Bend Open Data Portal" href="04-sb-open-data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -140,8 +142,6 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -176,24 +176,68 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../how-to.html">How to Interact With This Book</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../05-pandas-gis/00-overview.html">5. Geospatial Data</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01-Python-Refresh/00-overview.html">1. Python Refresh</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/01-comments-variables-assignment.html">Comments, Variables &amp; Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/02-data-types-io.html">Data Types &amp; I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/03-operators.html">Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/04-data-structures.html">Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/05-control-flow.html">Control Flow, Iteration &amp; Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/06-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-overview.html">2. Data Structures &amp; Sources</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-structured-data.html">Structured Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-loading-data.html">Loading Data</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="03-web-apis.html">Web APIs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="04-sb-open-data.html">South Bend Open Data Portal</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">U.S. Census Bureau</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="06-pdfs.html">Working With PDFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03-RBDMS/00-overview.html">3. Relational Databases</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/01-from-table-to-database.html">From Table To Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/02-terminology.html">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/03-erd.html">Entity Relationship Diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/04-rs.html">Relational Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-RBDMS/05-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04-SQL/00-overview.html">4. sql</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../04-SQL/01-sql-setup.html">Background &amp; Setup</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../04-SQL/02-sql-basics.html">Basic Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../04-SQL/03-select-sort.html">Selecting &amp; Sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04-SQL/04-filtering.html">Filtering &amp; Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04-SQL/05-subqueries-wildcards.html">Subqueries &amp; Wildcards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04-SQL/06-aggregating-calculating.html">Aggregating &amp; Calculating</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../04-SQL/07-sql-joins-views.html">Joins &amp; Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04-SQL/08-sql-python.html">From sql to Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04-SQL/09-other-workflows.html">Other Database Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04-SQL/10-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../05-pandas-gis/00-overview.html">5. Geospatial Data</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/01-formats-structures.html">A Brief Introduction to Geospatial Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/02-workflows.html">Geospatial Data Workflows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/03-geopandas.html">Getting Started With `GeoPandas`</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../05-pandas-gis/04-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../06-data-wrangling/00-overview.html">6. Data Wrangling</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../06-data-wrangling/01-pandas-basics.html">Interacting With a DataFrame</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06-data-wrangling/00-overview.html">6. Data Wrangling</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../06-data-wrangling/01-pandas-basics.html">Interacting With a DataFrame</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../06-data-wrangling/02-selecting.html">Selecting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../06-data-wrangling/03-sorting.html">Sorting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../06-data-wrangling/04-filtering.html">Filtering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../06-data-wrangling/05-time-series.html">Time Series Data</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../06-data-wrangling/06-reshaping.html">Reshaping</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../06-data-wrangling/06-reshaping.html">Reshaping</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../06-data-wrangling/07-pivot.html">Pivot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../06-data-wrangling/08-pivot-table.html">Pivot Table</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../06-data-wrangling/09-melt.html">Melt</a></li>
@@ -201,33 +245,42 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../06-data-wrangling/11-explode.html">Explode</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../06-data-wrangling/12-merging-joining.html">Merging &amp; Joining</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../06-data-wrangling/12-merging-joining.html">Merging &amp; Joining</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../06-data-wrangling/13-merge.html">Merge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../06-data-wrangling/14-concat.html">Concat</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../06-data-wrangling/15-indexing.html">Labels &amp; Indexing</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../06-data-wrangling/16-putting-it-all-together.html">Putting It All Together</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../06-data-wrangling/16-putting-it-all-together.html">Putting It All Together</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../06-data-wrangling/17-case-study.html">U.S. Census Bureau Case Study</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../06-data-wrangling/18-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../07-tidy-data/00-overview.html">7. Tidy Data</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../07-tidy-data/00-overview.html">7. Tidy Data</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../07-tidy-data/01-principles.html">Tidy Data Principles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../07-tidy-data/02-messy-data.html">Dealing With Messy Data</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../07-tidy-data/03-open-refine.html">Getting Started With OpenRefine</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../07-tidy-data/03-open-refine.html">Getting Started With OpenRefine</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../07-tidy-data/04-loading-data.html">Loading Data in OpenRefine</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../07-tidy-data/05-using-open-refine.html">Using OpenRefine</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../07-tidy-data/06-spreadsheet-programs.html">Spreadsheet Programs</a></li>
-
-<li class="toctree-l2 has-children"><a class="reference internal" href="../07-tidy-data/13-data-entry.html">Data Entry Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../07-tidy-data/06-spreadsheet-programs.html">Getting Started With Spreadsheet Programs</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../07-tidy-data/07-excel.html">Data Cleaning in Excel</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../07-tidy-data/08-google-sheets.html">Data Cleaning in Google Sheets</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../07-tidy-data/09-gs-sorting-filtering.html">Sorting &amp; Filtering in Google Sheets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../07-tidy-data/10-gs-find-replace.html">Find &amp; Replace in Google Sheets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../07-tidy-data/11-gs-export.html">Exporting From Google Sheets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../07-tidy-data/12-gs-application.html">Application</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../07-tidy-data/13-data-entry.html">Data Entry Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../07-tidy-data/14-survey.html">Surveys &amp; Forms</a></li>
 
-<li class="toctree-l3 has-children"><a class="reference internal" href="../07-tidy-data/15-validation.html">Validation &amp; Spreadsheet Programs</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../07-tidy-data/15-validation.html">Validation &amp; Spreadsheet Programs</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../07-tidy-data/16-excel.html">Data Validation in Microsoft Excel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../07-tidy-data/17-gs.html">Data Validation in Google Sheets</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../07-tidy-data/18-application.html">Application</a></li>
@@ -235,12 +288,14 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../07-tidy-data/19-text-processing.html">Text Processing Workflows</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="../07-tidy-data/20-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../08-data-analysis/00-overview.html">8. Data Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../08-data-analysis/00-overview.html">8. Data Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../08-data-analysis/01-terms.html">Core Concepts</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../08-data-analysis/02-aggregating-calculating.html">Aggregating &amp; Calculating</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../08-data-analysis/02-aggregating-calculating.html">Aggregating &amp; Calculating</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../08-data-analysis/03-summary-statistics.html">Summary &amp; Descriptive Statistics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../08-data-analysis/04-calculation.html">Making Calculations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../08-data-analysis/05-grouping.html">Grouping &amp; Counting</a></li>
@@ -250,7 +305,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../08-data-analysis/07-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../09-data-viz/00-overview.html">9. Data Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../09-data-viz/00-overview.html">9. Data Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../09-data-viz/01-principles.html">Data Visualization Principles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09-data-viz/02-chart-type.html">Choosing a Chart Type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09-data-viz/03-visual-cues.html">Working With Visual Cues</a></li>
@@ -258,16 +313,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../09-data-viz/05-additional-resources.html">Additional Resources</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../10-matplotlib/00-overview.html">10. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10-matplotlib/00-overview.html">10. Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../10-matplotlib/01-matplotlib-intro.html">Introduction to Matplotlib</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../10-matplotlib/02-matplotlib-basics.html">Matplotlib Basics</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../10-matplotlib/03-customizing-matplotlib.html">Customizing in Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../10-matplotlib/03-customizing-matplotlib.html">Customizing in Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../10-matplotlib/04-colormaps.html">Colormaps</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../10-matplotlib/05-style-sheets.html">Style Sheets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../10-matplotlib/06-legends.html">Legends</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../10-matplotlib/07-other-plot-types.html">Other Plot Types</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../10-matplotlib/07-other-plot-types.html">Other Plot Types</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../10-matplotlib/08-scatterplots.html">Scatterplots</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../10-matplotlib/09-histograms.html">Histograms</a></li>
 
@@ -278,20 +333,20 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../10-matplotlib/14-saving-exporting.html">Saving &amp; Exporting</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../10-matplotlib/15-additional-resources.html">Additional Resources</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../10-matplotlib/15-additional-resources.html">Additional Resources</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../10-matplotlib/16-ooo.html">Object-Oriented Workflows</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../10-matplotlib/17-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../11-pandas-plotting/00-overview.html">11. Plotting With Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../11-pandas-plotting/01-pandas-plotting.html">Overview</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../11-pandas-plotting/00-overview.html">11. Plotting With Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../11-pandas-plotting/01-pandas-plotting.html">Overview</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/02-customizing.html">Customizing Your Plot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/03-matplotlib-syntax.html">Using Matplotlib Syntax</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../11-pandas-plotting/04-other-plot-types.html">Other Plot Types</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../11-pandas-plotting/04-other-plot-types.html">Other Plot Types</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/05-bar-charts.html">Bar Charts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/06-histograms.html">Histograms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/07-box-plots.html">Box Plots</a></li>
@@ -305,14 +360,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../11-pandas-plotting/13-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../12-interactive-viz/00-overview.html">12. Interactive Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../12-interactive-viz/00-overview.html">12. Interactive Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../12-interactive-viz/01-plotly-intro.html">Introduction to Plotly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../12-interactive-viz/02-plotly-mechanics.html">Plotly Mechanics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../12-interactive-viz/03-plotly-express.html">Plotly Express Workflows</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../12-interactive-viz/04-other-plot-types.html">Other Plot Types</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../12-interactive-viz/04-other-plot-types.html">Other Plot Types</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../12-interactive-viz/05-line-plots.html">Line Plots</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../12-interactive-viz/06-bar-charts.html">Bar Charts</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../12-interactive-viz/07-pie-charts.html">Pie Charts</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../12-interactive-viz/07-pie-charts.html">Pie Charts</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../12-interactive-viz/08-donut-charts.html">Donut Charts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../12-interactive-viz/09-sunburst-charts.html">Sunburst Charts</a></li>
 </ul>
@@ -324,27 +379,27 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../12-interactive-viz/13-categorical-data.html">Working With Categorical Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../12-interactive-viz/14-exporting.html">Saving &amp; Exporting</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../12-interactive-viz/15-user-interaction.html">User Interactivity</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../12-interactive-viz/15-user-interaction.html">User Interactivity</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../12-interactive-viz/16-dash.html">Dash</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../12-interactive-viz/17-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../13-mapping/00-overview.html">13. Mapping</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../13-mapping/00-overview.html">13. Mapping</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../13-mapping/01-formats-structures.html">Data Formats &amp; Structures</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../13-mapping/02-geopandas.html">Working With GeoPandas</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../13-mapping/02-geopandas.html">Working With GeoPandas</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../13-mapping/03-geopandas-data.html">Loading Data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../13-mapping/04-geopandas-viz.html">Visualizing Data</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../13-mapping/05-interactive.html">Interactive Maps</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../13-mapping/06-outline-maps.html">Outline Maps</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../13-mapping/05-interactive.html">Interactive Maps</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../13-mapping/06-outline-maps.html">Outline Maps</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../13-mapping/07-outline-point.html">Outline Maps &amp; Point Data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../13-mapping/08-outline-choropleth.html">Outline Maps &amp; Polygon Data</a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../13-mapping/09-tile-maps.html">Tile Maps</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../13-mapping/09-tile-maps.html">Tile Maps</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../13-mapping/10-base-layer.html">Tile Maps &amp; Base Layers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../13-mapping/11-tile-point.html">Tile Maps &amp; Point Data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../13-mapping/12-tile-choropleth.html">Tile Maps &amp; Polygon Data</a></li>
@@ -677,6 +732,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="04-sb-open-data.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">City of South Bend Open Data Portal</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="06-pdfs.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Working With Documents</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               

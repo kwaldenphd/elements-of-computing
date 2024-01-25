@@ -6,7 +6,7 @@ There are two options for the next section of the chapter- working in Google She
 
 For either option, the workflow loads individual tables into a workbook and uses spreadsheet program tools to interact with and clean (or "tidy") the data.
 
-# Section Table of Contents
+## Section Table of Contents
 
 ```{tableofcontents}
 ```
