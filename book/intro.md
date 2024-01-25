@@ -8,10 +8,10 @@ Use the table of contents below or the menu on the left-hand side of the page to
 
 ## Contents 
 
-1. [Python Refresh](01-python-refresh/00-overview.md)
-2. [Data Structures & Sources](02-structured-data/00-overview.md)
-3. [Relational Databases](03-rbdms/00-overview.md)
-4. [SQL](04-sql/00-overview.md)
+1. [Python Refresh](01-Python-Refresh/00-overview.md)
+2. [Data Structures & Sources](02-Structured-Data/00-overview.md)
+3. [Relational Databases](03-RBDMS/00-overview.md)
+4. [SQL](04-SQL/00-overview.md)
 5. [Geospatial Data](05-pandas-gis/00-overview.md)
 6. [Data Wrangling](06-data-wrangling/00-overview.md)
 7. [Tidy Data](07-tidy-data/00-overview.md)
