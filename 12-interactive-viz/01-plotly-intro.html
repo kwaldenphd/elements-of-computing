@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Interactive Visualization in Python &#8212; Elements of Computing</title>
+    <title>Introduction to plotly &#8212; Elements of Computing</title>
   
   
   
@@ -63,9 +63,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '11-interactive-viz/00-overview';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '12-interactive-viz/01-plotly-intro';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plotly Mechanics" href="02-plotly-mechanics.html" />
+    <link rel="prev" title="Interactive Visualization in Python" href="00-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -131,8 +133,6 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -175,9 +175,8 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../how-to.html">How to Interact With This Book</a></li>
-
 <li class="toctree-l1 has-children"><a class="reference internal" href="../01-Python-Refresh/00-Python.html">1. Python Refresh</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/01-comments-variables-assignment.html">Comments, Variables &amp; Assignment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/02-data-types-io.html">Data Types &amp; I/O</a></li>
@@ -329,6 +328,52 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../10-matplotlib/17-application.html">Application</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../11-pandas-plotting/00-overview.html">11. Plotting With Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../11-pandas-plotting/01-pandas-plotting.html">Overview</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/02-customizing.html">Customizing Your Plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/03-matplotlib-syntax.html">Using Matplotlib Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../11-pandas-plotting/04-other-plot-types.html">Other Plot Types</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/05-bar-charts.html">Bar Charts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/06-histograms.html">Histograms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/07-box-plots.html">Box Plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/08-area-plots.html">Area Plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11-pandas-plotting/09-pie-charts.html">Pie Charts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../11-pandas-plotting/10-missing-data.html">Handling Missing Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11-pandas-plotting/11-case-study.html">City of South Bend Budget Data Case Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11-pandas-plotting/12-seaborn.html">Plotting With Seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11-pandas-plotting/13-application.html">Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-overview.html">12. Interactive Visualization</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Introduction to Plotly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-plotly-mechanics.html">Plotly Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-plotly-express.html">Plotly Express Workflows</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="04-other-plot-types.html">Other Plot Types</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05-line-plots.html">Line Plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-bar-charts.html">Bar Charts</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="07-pie-charts.html">Pie Charts</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="08-donut-charts.html">Donut Charts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="09-sunburst-charts.html">Sunburst Charts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="10-bubble-charts.html">Bubble Charts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-tables.html">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-additional-resources.html">Additional Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="13-categorical-data.html">Working With Categorical Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14-exporting.html">Saving &amp; Exporting</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="15-user-interaction.html">User Interactivity</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="16-dash.html">Dash</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="17-application.html">Application</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -383,7 +428,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/11-interactive-viz/00-overview.md" target="_blank"
+      <li><a href="../_sources/12-interactive-viz/01-plotly-intro.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -467,7 +512,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Interactive Visualization in Python</h1>
+    <h1>Introduction to plotly</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -477,8 +522,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-contents">Chapter Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-plotly">Installing <code class="docutils literal notranslate"><span class="pre">plotly</span></code></a></li>
 </ul>
             </nav>
         </div>
@@ -490,15 +534,43 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="interactive-visualization-in-python">
-<h1>Interactive Visualization in Python<a class="headerlink" href="#interactive-visualization-in-python" title="Permalink to this heading">#</a></h1>
-<p>This chapter provides an introduction to interactive visualiation in Python, focusing on <code class="docutils literal notranslate"><span class="pre">plotly</span></code>, with a brief introduction to <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Widgets</span></code> and <code class="docutils literal notranslate"><span class="pre">Dash</span></code>.</p>
-<section id="chapter-contents">
-<h2>Chapter Contents<a class="headerlink" href="#chapter-contents" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="application">
-<h2>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://colab.research.google.com/drive/1Oz7GGpg5jqchdPTk7_4IrYKf8EuyDoM-?usp=sharing">Click here</a> for a Jupyter Notebook template for this chapter’s application problems.</p>
+  <section id="introduction-to-plotly">
+<h1>Introduction to <code class="docutils literal notranslate"><span class="pre">plotly</span></code><a class="headerlink" href="#introduction-to-plotly" title="Permalink to this heading">#</a></h1>
+<p>“Plotly is a technical computing company headquartered in Montreal, Quebec, that develops online data analytics and visualization tools. Plotly provides online graphing, analytics, and statistics tools for individuals and collaboration, as well as scientific graphing libraries for Python, R, MATLAB, Perl, Julia, Arduino, and REST” (<a class="reference external" href="https://en.wikipedia.org/wiki/Plotly">Wikipedia</a>).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">plotly</span></code> Python graphing library is supported by the Plotly company. Plotly relies on Python and the Django framework, using JavaScript, D3.js, HTML, and CSS for its front-end. Plotly files are stored on Amazon Web Services’ Simple Storage Service (S3). The company was founded in 2012 and went on to be a featured startup at 2013 PyCon, sponsoring the SciPy conference in 2018. During Series A funding, Plotly raised $5.5 million, supported by MHS Capital, Siemens Venture Capital, Rho Ventures, Real Ventures, and Silicon Valley Bank.</p>
+<p>Plotly offers a range of products, some of which are free or open-source, and others that are subscription based.</p>
+<ul class="simple">
+<li><p><em><strong>Dash</strong></em>: an open-source web application framework for Python, R, and Julia</p></li>
+<li><p><em><strong>Chart Studio</strong></em>: a graphical user interface for analyzing and visualizing data; single-user version is free, enterprise deployments have a pricing model</p></li>
+<li><p><em><strong>API libraries</strong></em>: open-source graphing libraries for Python, R, and Julia</p></li>
+<li><p><em><strong>Plotly Apps</strong></em>: Google Chrome app</p></li>
+<li><p><em><strong>PLotly.js</strong></em>: open-source JavaScript graphic and dashboard library</p></li>
+<li><p><em><strong>Plotly Enterprise</strong></em>: pricing model for local Plotly installation and deployment</p></li>
+</ul>
+<p>In recent years, Plotly has moved into machine learning and artificial intelligence app support and artificial intelligence supply chain technology and continues to expand its enterprise pricing options.</p>
+<ul class="simple">
+<li><p>For more on Plotly history: <a class="reference external" href="https://plotly.com/about-us/">Plotly, “About Us”</a></p></li>
+<li><p>For more on Plotly products:</p>
+<ul>
+<li><p><a class="reference external" href="https://plotly.com/dash/">Dash Enterprise</a></p></li>
+<li><p><a class="reference external" href="https://plotly.com/consulting-and-oem/">Consulting and Training</a></p></li>
+<li><p><a class="reference external" href="https://plotly.com/chart-studio/">Chart Studio</a></p></li>
+</ul>
+</li>
+</ul>
+<p>Plotly’s enterprise products are used by corporations that include NVIDIA, Tesla, Shell, Citi Bank, and Amgen. Plotly’s Chart Studio product is used by a range of journalism outfits and companies, including S&amp;P Global, The Washington Post, Wired, Tesla, and Medium.</p>
+<section id="installing-plotly">
+<h2>Installing <code class="docutils literal notranslate"><span class="pre">plotly</span></code><a class="headerlink" href="#installing-plotly" title="Permalink to this heading">#</a></h2>
+<p>To install <code class="docutils literal notranslate"><span class="pre">plotly</span></code>:</p>
+<ul class="simple">
+<li><p>using <code class="docutils literal notranslate"><span class="pre">pip</span></code>: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">plotly</span></code></p></li>
+<li><p>using <code class="docutils literal notranslate"><span class="pre">conda</span></code>: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">plotly</span></code></p></li>
+</ul>
+<p>A couple Jupyter-notebook specific installs:</p>
+<ul class="simple">
+<li><p>using Jupyter Notebook: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&quot;notebook&gt;=5.3&quot;</span> <span class="pre">&quot;ipywidgets&gt;=7.2&quot;</span></code></p></li>
+<li><p>using <code class="docutils literal notranslate"><span class="pre">conda</span></code> in Jupyter Notebook: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">&quot;notebook&gt;=5.3&quot;</span> <span class="pre">&quot;ipywidgets&gt;=7.2&quot;</span></code></p></li>
+</ul>
 </section>
 </section>
 
@@ -515,7 +587,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./11-interactive-viz"
+            path: "./12-interactive-viz"
         },
         predefinedOutput: true
     }
@@ -532,6 +604,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="00-overview.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Interactive Visualization in Python</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02-plotly-mechanics.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Plotly Mechanics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -548,8 +638,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-contents">Chapter Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-plotly">Installing <code class="docutils literal notranslate"><span class="pre">plotly</span></code></a></li>
 </ul>
   </nav></div>
 
