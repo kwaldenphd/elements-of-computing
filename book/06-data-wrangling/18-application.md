@@ -2,14 +2,6 @@
 
 [Click here](https://colab.research.google.com/drive/1vYSi18sXN626pFbT7GlHU7TXZLdOtxVJ?usp=sharing) for a Jupyter Notebook template for this chapter's application problems.
 
-## Submitting Additional Data Files 
-
-- Option #1: Upload the additional files as part of the Canvas submission
-  * If working in Google Docs and submitting a link, you’ll need a second submission for the file.
-- Option #2: Put any CSV or JSON files in Google Drive and/or import to Google Sheets, check sharing permissions, and submit the URL.
-  * This may require a second Canvas submission.
-- Option #3: Put materials (Google Doc, Colab link, data file) in a Google Drive folder, check sharing permissions, and submit the URL on Canvas.
-
 ## Code Checklist
 
 Because these questions are open-ended, a checklist of syntax or operations that need to show up in this submission. If the datasets you've chosen or the workflows you're digging into across these questions don't include these operations, reach out to the instructor.

@@ -2,14 +2,6 @@
 
 [Click here](https://colab.research.google.com/drive/1Oz7GGpg5jqchdPTk7_4IrYKf8EuyDoM-?usp=sharing) for a Jupyter Notebook template for this chapter's application problems.
 
-## Submitting Additional Data Files 
-
-- Option #1: Upload the additional files as part of the Canvas submission
-  * If working in Google Docs and submitting a link, you’ll need a second submission for the file.
-- Option #2: Put any CSV or JSON files in Google Drive and/or import to Google Sheets, check sharing permissions, and submit the URL.
-  * This may require a second Canvas submission.
-- Option #3: Put materials (Google Doc, Colab link, data file) in a Google Drive folder, check sharing permissions, and submit the URL on Canvas.
-
 ## Question
 
 **Q1A: Identify a civic dataset that you want to analyze. Answer to this question notes and briefly describes the dataset you're working with. Include a link if possible.**
