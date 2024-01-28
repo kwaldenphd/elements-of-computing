@@ -22,9 +22,17 @@ Folks working in and around digital studies, digital humanities, or other kinds 
 
 This material is licensed under a CC BY-NC-SA license. This license enables reusers to distribute, remix, adapt, and build upon the material in any medium or format for noncommercial purposes only, and only so long as attribution is given to the creator. If you remix, adapt, or build upon the material, you must license the modified material under identical terms.
 
-## Suggested Citation
+### Suggested Citation
 
 <blockquote>Katherine Walden, <em>Elements of Computing II</em>, Version 1 (2024), <a href="https://doi.org/10.5281/zenodo.10574258">https://doi.org/10.5281/zenodo.10574258</a>.</blockquote>
+
+### Acknowledgements
+
+Chapter-specific acknowledgements are included in the relevant sections.
+
+The larger course framework draws on the teaching practice and instructional resources of a fabulous group of folks (in no particular order): [Dr. Samuel Rebelsky](https://www.grinnell.edu/user/rebelsky), [Dr. Janet Davis](https://www.whitman.edu/academics/majors-and-minors/computer-science/faculty-and-staff/janet-davis), [Dr. Liz Rodrigues](https://www.grinnell.edu/user/rodrigue8), [Dr. Lindsay K. Mattock](https://www.lindsaymattock.net/), [Dr. Miriam Posner](https://miriamposner.com/), [Dr. Anelise Hanson-Shout](https://www.bates.edu/faculty-expertise/profile/anelise-h-shrout/), [Dr. David Eichmann](https://slis.uiowa.edu/people/david-eichmann), [Megan Adams](https://ischool.wisc.edu/staff/adams-megan/), [Jarren Santos](https://www.linkedin.com/in/jarrenls/), [Ben Chiewphasa](https://benchiewphasa.com/).
+
+Making these teaching resource available via Jupyter Book takes inspiration from [Melanie Walsh](https://melaniewalsh.org/)'s [*Introduction to Cultural Analytics & Python*](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html) textbook.
 
 ## Getting Started 
 
