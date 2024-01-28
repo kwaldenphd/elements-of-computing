@@ -23,7 +23,7 @@ Python's [`jupyter-book`](https://jupyterbook.org/en/stable/intro.html#install-j
 Those `.html` files live in the [`gh-pages`](https://github.com/kwaldenphd/elements-of-computing/tree/gh-pages) branch of this repository.
 
 A few notes on how the repository is structured:
-- [`/book`](https://github.com/kwaldenphd/elements-of-computing/tree/main/book) has images, data, `.md`, * `.ipynb` files, organized by folder
+- [`/book`](https://github.com/kwaldenphd/elements-of-computing/tree/main/book) has `.md`, & `.ipynb` files, organized in folders
 - [`/book/_toc.yml`](https://github.com/kwaldenphd/elements-of-computing/blob/main/book/_toc.yml) structures the table of contents that shows up on the left-hand side of site pages
 - [`/book/_config.yml`](https://github.com/kwaldenphd/elements-of-computing/blob/main/book/_config.yml) sets up key features and functionality for the site
 - [`/book/data`](https://github.com/kwaldenphd/elements-of-computing/tree/main/book/data) contains data files
