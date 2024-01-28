@@ -38,18 +38,18 @@ chapters:
     title: Working With PDFs
   - file: 02-Structured-Data/07-application
     title: Application
-- file: 03-RBDMS/00-overview
+- file: 03-rdbms/00-overview
   title: 3. Relational Databases
   sections: 
-  - file: 03-RBDMS/01-from-table-to-database 
+  - file: 03-rdbms/01-from-table-to-database 
     title: From Table To Database 
-  - file: 03-RBDMS/02-terminology
+  - file: 03-rdbms/02-terminology
     title: Terminology 
-  - file: 03-RBDMS/03-erd
+  - file: 03-rdbms/03-erd
     title: Entity Relationship Diagrams
-  - file: 03-RBDMS/04-rs
+  - file: 03-rdbms/04-rs
     title: Relational Schema
-  - file: 03-RBDMS/05-application
+  - file: 03-rdbms/05-application
     title: Application
 - file: 04-SQL/00-overview
   title: 4. SQL
