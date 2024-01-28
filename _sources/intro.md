@@ -46,7 +46,7 @@ Use the table of contents below or the menu on the left-hand side of the page to
 
 1. [Python Refresh](01-Python-Refresh/00-overview.md)
 2. [Data Structures & Sources](02-Structured-Data/00-overview.md)
-3. [Relational Databases](03-RBDMS/00-overview.md)
+3. [Relational Databases](03-rdbms/00-overview.md)
 4. [SQL](04-SQL/00-overview.md)
 5. [Data Wrangling](05-data-wrangling/00-overview.md)
 6. [Tidy Data](06-tidy-data/00-overview.md)
