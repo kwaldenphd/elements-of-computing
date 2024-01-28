@@ -5,7 +5,7 @@
 Start by watching a 4 minute video overview of APIs.
 - [YouTube link](https://youtu.be/qW1qhb8r8xI?si=q8jdyE6oZEsH4xFR)
 
-<p align="center"><a href="https://github.com/kwaldenphd/apis-python/blob/main/Figure_1.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/apis-python/blob/main/Figure_1.jpg?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch2/api0.jpg?raw=true" width="500"></p>
 
 We're focusing on web APIs, which allow for information or functionality to be manipulated by other programs via the internet. Web APIs are a popular workflow for making data available from large-scale repositories. A few examples...
 

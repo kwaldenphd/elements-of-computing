@@ -6,19 +6,19 @@ When working with relational database systems, we can use SQL to write queries. 
 
 ## DB Browser Setup
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/sql-queries-joins/blob/main/screenshots/Figure_4.jpg?raw=true" /></p>
+<p align="center"><img class="aligncenter" src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch4/fig1.png?raw=true" /></p>
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/sql-queries-joins/blob/main/screenshots/Figure_5.jpg?raw=true" /></p>
+<p align="center"><img class="aligncenter" src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch4/fig2.png?raw=true" /></p>
 
 In the DB Browser program, select the `Open Database` icon. Open the `.db` file from the previous section.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/sql-queries-joins/blob/main/screenshots/Figure_6.jpg?raw=true" /></p>
+<p align="center"><img class="aligncenter" src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch4/fig4.jpg?raw=true" /></p>
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/sql-queries-joins/blob/main/screenshots/Figure_7.jpg?raw=true" /></p>
+<p align="center"><img class="aligncenter" src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch4/fig5.jpg?raw=true" /></p>
 
 Click the `Execute SQL` tab. The top text-box on the left-hand pane in the program (immediately below `SQL 1`) is where we will type SQL statements.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/sql-queries-joins/blob/main/screenshots/Figure_8.jpg?raw=true" /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/sql-queries-joins/blob/main/screenshots/fig6.jpg?raw=true" /></p>
 
 Once we start adding SQL syntax, we can run all (or a selection) using the single arrow icon (left of the two arrows, immediate right of print). 
 - We can use the other arrow (right of the two arrows) to run a single line.

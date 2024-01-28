@@ -1,6 +1,7 @@
 # Relational Database Terminology
 
-<p align="center"><a href="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_1.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_1.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch3/table.png?raw=true" width="1000"></p>
+
 
 Image from Library Carpentry's [Introduction to SQL tutorial](https://librarycarpentry.org/lc-sql/01-introduction/index.html).
 
@@ -13,10 +14,6 @@ Linking our individual data tables in a relational database will enable us to an
 ## Tables
 
 In *Inventing the Medium*, Janet Murray describes a table as "one of the basic building blocks of information design, an extension of the list through spatialization and the bases for database design." We've worked with tabular data (i.e. data organized in a table) previously when working with CSV files.
-
-<p align="center"><a href="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_1.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_1.png?raw=true" /></a></p>
-
-Image from Library Carpentry's [Introduction to SQL tutorial](https://librarycarpentry.org/lc-sql/01-introduction/index.html).
 
 In tabular data structures, columns headers describe the data contained in corresponding columns, or fields. Each row contains as record with data in separate column cells, or fields. These building blocks of data structured as records with fields organized in a table are the foundation of a relational database. 
 
