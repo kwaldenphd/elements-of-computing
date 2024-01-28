@@ -75,279 +75,268 @@ chapters:
     title: Other Database Workflows
   - file: 04-SQL/10-application
     title: Application
-- file: 05-pandas-gis/00-overview
-  title: 5. Geospatial Data
+- file: 05-data-wrangling/00-overview
+  title: 5. Data Wrangling 
   sections:
-  - file: 05-pandas-gis/01-formats-structures
-    title: A Brief Introduction to Geospatial Data
-  - file: 05-pandas-gis/02-workflows
-    title: Geospatial Data Workflows
-  - file: 05-pandas-gis/03-geopandas
-    title: Getting Started With `GeoPandas`
-  - file: 05-pandas-gis/04-application
-    title: Application
-- file: 06-data-wrangling/00-overview
-  title: 6. Data Wrangling 
-  sections:
-  - file: 06-data-wrangling/01-pandas-basics 
+  - file: 05-data-wrangling/01-pandas-basics 
     title: Interacting With a DataFrame
     sections:
-    - file: 06-data-wrangling/02-selecting
+    - file: 05-data-wrangling/02-selecting
       title: Selecting
-    - file: 06-data-wrangling/03-sorting
+    - file: 05-data-wrangling/03-sorting
       title: Sorting
-    - file: 06-data-wrangling/04-filtering
+    - file: 05-data-wrangling/04-filtering
       title: Filtering
-    - file: 06-data-wrangling/05-time-series
+    - file: 05-data-wrangling/05-time-series
       title: Time Series Data
-  - file: 06-data-wrangling/06-reshaping 
+  - file: 05-data-wrangling/06-reshaping 
     title: Reshaping
     sections:
-    - file: 06-data-wrangling/07-pivot
+    - file: 05-data-wrangling/07-pivot
       title: Pivot   
-    - file: 06-data-wrangling/08-pivot-table
+    - file: 05-data-wrangling/08-pivot-table
       title: Pivot Table
-    - file: 06-data-wrangling/09-melt
+    - file: 05-data-wrangling/09-melt
       title: Melt
-    - file: 06-data-wrangling/10-transpose
+    - file: 05-data-wrangling/10-transpose
       title: Transpose
-    - file: 06-data-wrangling/11-explode
+    - file: 05-data-wrangling/11-explode
       title: Explode
-  - file: 06-data-wrangling/12-merging-joining 
+  - file: 05-data-wrangling/12-merging-joining 
     title: Merging & Joining
     sections:
-    - file: 06-data-wrangling/13-merge
+    - file: 05-data-wrangling/13-merge
       title: Merge   
-    - file: 06-data-wrangling/14-concat
+    - file: 05-data-wrangling/14-concat
       title: Concat
-  - file: 06-data-wrangling/15-indexing 
+  - file: 05-data-wrangling/15-indexing 
     title: Labels & Indexing
-  - file: 06-data-wrangling/16-putting-it-all-together 
+  - file: 05-data-wrangling/16-putting-it-all-together 
     title: Putting It All Together
     sections:
-    - file: 06-data-wrangling/17-case-study
+    - file: 05-data-wrangling/17-case-study
       title: U.S. Census Bureau Case Study 
-  - file: 06-data-wrangling/18-application
+  - file: 05-data-wrangling/18-application
     title: Application    
-- file: 07-tidy-data/00-overview 
-  title: 7. Tidy Data 
+- file: 06-tidy-data/00-overview 
+  title: 6. Tidy Data 
   sections:
-  - file: 07-tidy-data/01-principles
+  - file: 06-tidy-data/01-principles
     title: Tidy Data Principles 
-  - file: 07-tidy-data/02-messy-data 
+  - file: 06-tidy-data/02-messy-data 
     title: Dealing With Messy Data 
-  - file: 07-tidy-data/03-open-refine
+  - file: 06-tidy-data/03-open-refine
     title: Getting Started With OpenRefine 
     sections:
-    - file: 07-tidy-data/04-loading-data 
+    - file: 06-tidy-data/04-loading-data 
       title: Loading Data in OpenRefine 
-    - file: 07-tidy-data/05-using-open-refine 
+    - file: 06-tidy-data/05-using-open-refine 
       title: Using OpenRefine 
-  - file: 07-tidy-data/06-spreadsheet-programs 
+  - file: 06-tidy-data/06-spreadsheet-programs 
     title: Getting Started With Spreadsheet Programs 
     sections:
-    - file: 07-tidy-data/07-excel
+    - file: 06-tidy-data/07-excel
       title: Data Cleaning in Excel 
-    - file: 07-tidy-data/08-google-sheets 
+    - file: 06-tidy-data/08-google-sheets 
       title: Data Cleaning in Google Sheets 
       sections:
-      - file: 07-tidy-data/09-gs-sorting-filtering 
+      - file: 06-tidy-data/09-gs-sorting-filtering 
         title: Sorting & Filtering in Google Sheets 
-      - file: 07-tidy-data/10-gs-find-replace 
+      - file: 06-tidy-data/10-gs-find-replace 
         title: Find & Replace in Google Sheets 
-      - file: 07-tidy-data/11-gs-export
+      - file: 06-tidy-data/11-gs-export
         title: Exporting From Google Sheets 
-      - file: 07-tidy-data/12-gs-application
+      - file: 06-tidy-data/12-gs-application
         title: Application 
-  - file: 07-tidy-data/13-data-entry
+  - file: 06-tidy-data/13-data-entry
     title: Data Entry Workflows 
     sections:
-    - file: 07-tidy-data/14-survey
+    - file: 06-tidy-data/14-survey
       title: Survey & Form Workflows 
-    - file: 07-tidy-data/15-validation
+    - file: 06-tidy-data/15-validation
       title: Validation & Spreadsheet Programs 
       sections:
-      - file: 07-tidy-data/16-excel
+      - file: 06-tidy-data/16-excel
         title: Data Validation in Microsoft Excel 
-      - file: 07-tidy-data/17-gs 
+      - file: 06-tidy-data/17-gs 
         title: Data Validation in Google Sheets 
-      - file: 07-tidy-data/18-application 
+      - file: 06-tidy-data/18-application 
         title: Application 
-  - file: 07-tidy-data/19-text-processing
+  - file: 06-tidy-data/19-text-processing
     title: Text Processing Workflows
-  - file: 07-tidy-data/20-application 
+  - file: 06-tidy-data/20-application 
     title: Application      
-- file: 08-data-analysis/00-overview 
-  title: 8. Data Analysis 
+- file: 07-data-analysis/00-overview 
+  title: 7. Data Analysis 
   sections: 
-  - file: 08-data-analysis/01-terms
+  - file: 07-data-analysis/01-terms
     title: Core Concepts
-  - file: 08-data-analysis/02-aggregating-calculating 
+  - file: 07-data-analysis/02-aggregating-calculating 
     title: Aggregating & Calculating 
     sections:
-    - file: 08-data-analysis/03-summary-statistics
+    - file: 07-data-analysis/03-summary-statistics
       title: Summary & Descriptive Statistics 
-    - file: 08-data-analysis/04-calculation
+    - file: 07-data-analysis/04-calculation
       title: Making Calculations     
-    - file: 08-data-analysis/05-grouping
+    - file: 07-data-analysis/05-grouping
       title: Grouping & Counting
-  - file: 08-data-analysis/06-modeling
+  - file: 07-data-analysis/06-modeling
     title: More Advanced Modeling Workflows
-  - file: 08-data-analysis/07-application 
+  - file: 07-data-analysis/07-application 
     title: Application 
-- file: 09-data-viz/00-overview 
-  title: 9. Data Visualization 
+- file: 08-data-viz/00-overview 
+  title: 8. Data Visualization 
   sections:
-  - file: 09-data-viz/01-principles 
+  - file: 08-data-viz/01-principles 
     title: Data Visualization Principles 
-  - file: 09-data-viz/02-chart-type 
+  - file: 08-data-viz/02-chart-type 
     title: Choosing a Chart Type 
-  - file: 09-data-viz/03-visual-cues
+  - file: 08-data-viz/03-visual-cues
     title: Working With Visual Cues 
-  - file: 09-data-viz/04-essential-components
+  - file: 08-data-viz/04-essential-components
     title: Essential Components 
-  - file: 09-data-viz/05-additional-resources 
+  - file: 08-data-viz/05-additional-resources 
     title: Additional Resources
-- file: 10-matplotlib/00-overview
-  title: 10. Matplotlib 
+- file: 09-matplotlib/00-overview
+  title: 9. Matplotlib 
   sections:
-  - file: 10-matplotlib/01-matplotlib-intro 
+  - file: 09-matplotlib/01-matplotlib-intro 
     title: Introduction to Matplotlib 
-  - file: 10-matplotlib/02-matplotlib-basics 
+  - file: 09-matplotlib/02-matplotlib-basics 
     title: Matplotlib Basics 
-  - file: 10-matplotlib/03-customizing-matplotlib 
+  - file: 09-matplotlib/03-customizing-matplotlib 
     title: Customizing in Matplotlib 
     sections:
-    - file: 10-matplotlib/04-colormaps 
+    - file: 09-matplotlib/04-colormaps 
       title: Colormaps 
-    - file: 10-matplotlib/05-style-sheets 
+    - file: 09-matplotlib/05-style-sheets 
       title: Style Sheets 
-    - file: 10-matplotlib/06-legends 
+    - file: 09-matplotlib/06-legends 
       title: Legends 
-  - file: 10-matplotlib/07-other-plot-types 
+  - file: 09-matplotlib/07-other-plot-types 
     title: Other Plot Types 
     sections: 
-    - file: 10-matplotlib/08-scatterplots
+    - file: 09-matplotlib/08-scatterplots
       title: Scatterplots 
-    - file: 10-matplotlib/09-histograms
+    - file: 09-matplotlib/09-histograms
       title: Histograms 
-    - file: 10-matplotlib/10-bar-charts
+    - file: 09-matplotlib/10-bar-charts
       title: Bar Charts 
-    - file: 10-matplotlib/11-pie-charts 
+    - file: 09-matplotlib/11-pie-charts 
       title: Pie Charts 
-    - file: 10-matplotlib/12-box-plots
+    - file: 09-matplotlib/12-box-plots
       title: Box Plots 
-    - file: 10-matplotlib/13-subplots
+    - file: 09-matplotlib/13-subplots
       title: Subplots 
-  - file: 10-matplotlib/14-saving-exporting 
+  - file: 09-matplotlib/14-saving-exporting 
     title: Saving & Exporting 
-  - file: 10-matplotlib/15-additional-resources 
+  - file: 09-matplotlib/15-additional-resources 
     title: Additional Resources 
     sections:
-    - file: 10-matplotlib/16-ooo
+    - file: 09-matplotlib/16-ooo
       title: Object-Oriented Workflows 
-  - file: 10-matplotlib/17-application 
+  - file: 09-matplotlib/17-application 
     title: Application 
-- file: 11-pandas-plotting/00-overview
-  title: 11. Plotting With Pandas 
+- file: 10-pandas-plotting/00-overview
+  title: 10. Plotting With Pandas 
   sections:
-  - file: 11-pandas-plotting/01-pandas-plotting 
+  - file: 10-pandas-plotting/01-pandas-plotting 
     title: Overview 
     sections: 
-    - file: 11-pandas-plotting/02-customizing 
+    - file: 10-pandas-plotting/02-customizing 
       title: Customizing Your Plot 
-    - file: 11-pandas-plotting/03-matplotlib-syntax 
+    - file: 10-pandas-plotting/03-matplotlib-syntax 
       title: Using Matplotlib Syntax 
-  - file: 11-pandas-plotting/04-other-plot-types 
+  - file: 10-pandas-plotting/04-other-plot-types 
     title: Other Plot Types 
     sections:
-    - file: 11-pandas-plotting/05-bar-charts 
+    - file: 10-pandas-plotting/05-bar-charts 
       title: Bar Charts 
-    - file: 11-pandas-plotting/06-histograms
+    - file: 10-pandas-plotting/06-histograms
       title: Histograms 
-    - file: 11-pandas-plotting/07-box-plots 
+    - file: 10-pandas-plotting/07-box-plots 
       title: Box Plots 
-    - file: 11-pandas-plotting/08-area-plots 
+    - file: 10-pandas-plotting/08-area-plots 
       title: Area Plots 
-    - file: 11-pandas-plotting/09-pie-charts 
+    - file: 10-pandas-plotting/09-pie-charts 
       title: Pie Charts 
-  - file: 11-pandas-plotting/10-missing-data 
+  - file: 10-pandas-plotting/10-missing-data 
     title: Handling Missing Data 
-  - file: 11-pandas-plotting/11-case-study 
+  - file: 10-pandas-plotting/11-case-study 
     title: City of South Bend Budget Data Case Study 
-  - file: 11-pandas-plotting/12-seaborn 
+  - file: 10-pandas-plotting/12-seaborn 
     title: Plotting With Seaborn 
-  - file: 11-pandas-plotting/13-application 
+  - file: 10-pandas-plotting/13-application 
     title: Application 
-- file: 12-interactive-viz/00-overview 
-  title: 12. Interactive Visualization
+- file: 11-interactive-viz/00-overview 
+  title: 11. Interactive Visualization
   sections:
-  - file: 12-interactive-viz/01-plotly-intro 
+  - file: 11-interactive-viz/01-plotly-intro 
     title: Introduction to Plotly 
-  - file: 12-interactive-viz/02-plotly-mechanics 
+  - file: 11-interactive-viz/02-plotly-mechanics 
     title: Plotly Mechanics 
-  - file: 12-interactive-viz/03-plotly-express
+  - file: 11-interactive-viz/03-plotly-express
     title: Plotly Express Workflows 
-  - file: 12-interactive-viz/04-other-plot-types 
+  - file: 11-interactive-viz/04-other-plot-types 
     title: Other Plot Types 
     sections:
-    - file: 12-interactive-viz/05-line-plots 
+    - file: 11-interactive-viz/05-line-plots 
       title: Line Plots 
-    - file: 12-interactive-viz/06-bar-charts 
+    - file: 11-interactive-viz/06-bar-charts 
       title: Bar Charts 
-    - file: 12-interactive-viz/07-pie-charts 
+    - file: 11-interactive-viz/07-pie-charts 
       title: Pie Charts 
       sections:
-      - file: 12-interactive-viz/08-donut-charts 
+      - file: 11-interactive-viz/08-donut-charts 
         title: Donut Charts 
-      - file: 12-interactive-viz/09-sunburst-charts 
+      - file: 11-interactive-viz/09-sunburst-charts 
         title: Sunburst Charts 
-    - file: 12-interactive-viz/10-bubble-charts 
+    - file: 11-interactive-viz/10-bubble-charts 
       title: Bubble Charts 
-    - file: 12-interactive-viz/11-tables 
+    - file: 11-interactive-viz/11-tables 
       title: Tables 
-    - file: 12-interactive-viz/12-additional-resources 
-  - file: 12-interactive-viz/13-categorical-data 
+    - file: 11-interactive-viz/12-additional-resources 
+  - file: 11-interactive-viz/13-categorical-data 
     title: Working With Categorical Data 
-  - file: 12-interactive-viz/14-exporting 
+  - file: 11-interactive-viz/14-exporting 
     title: Saving & Exporting 
-  - file: 12-interactive-viz/15-user-interaction 
+  - file: 11-interactive-viz/15-user-interaction 
     title: User Interactivity 
     sections:
-    - file: 12-interactive-viz/16-dash
+    - file: 11-interactive-viz/16-dash
       title: Dash 
-  - file: 12-interactive-viz/17-application 
+  - file: 11-interactive-viz/17-application 
     title: Application
-- file: 13-mapping/00-overview 
-  title: 13. Mapping 
+- file: 12-mapping/00-overview 
+  title: 12. Mapping 
   sections: 
-  - file: 13-mapping/01-formats-structures 
+  - file: 12-mapping/01-formats-structures 
     title: Data Formats & Structures
-  - file: 13-mapping/02-geopandas
+  - file: 12-mapping/02-geopandas
     title: Working With GeoPandas 
     sections:
-    - file: 13-mapping/03-geopandas-data 
+    - file: 12-mapping/03-geopandas-data 
       title: Loading Data 
-    - file: 13-mapping/04-geopandas-viz
+    - file: 12-mapping/04-geopandas-viz
       title: Visualizing Data 
-  - file: 13-mapping/05-interactive 
+  - file: 12-mapping/05-interactive 
     title: Interactive Maps
     sections: 
-    - file: 13-mapping/06-outline-maps 
+    - file: 12-mapping/06-outline-maps 
       title: Outline Maps 
       sections: 
-      - file: 13-mapping/07-outline-point 
+      - file: 12-mapping/07-outline-point 
         title: Outline Maps & Point Data 
-      - file: 13-mapping/08-outline-choropleth 
+      - file: 12-mapping/08-outline-choropleth 
         title: Outline Maps & Polygon Data 
-    - file: 13-mapping/09-tile-maps 
+    - file: 12-mapping/09-tile-maps 
       title: Tile Maps 
       sections:
-      - file: 13-mapping/10-base-layer 
+      - file: 12-mapping/10-base-layer 
         title: Tile Maps & Base Layers 
-      - file: 13-mapping/11-tile-point 
+      - file: 12-mapping/11-tile-point 
         title: Tile Maps & Point Data 
-      - file: 13-mapping/12-tile-choropleth 
+      - file: 12-mapping/12-tile-choropleth 
         title: Tile Maps & Polygon Data 
-  - file: 13-mapping/13-application 
+  - file: 12-mapping/13-application 
     title: Application  

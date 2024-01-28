@@ -12,17 +12,18 @@ Our next step is to possible sources or resources that might provide this data. 
 
 We could start by looking up the records for an individual player to see what information is available. Let's take a look at the [individual player page on Baseball Reference](https://www.baseball-reference.com/players/s/samarje01.shtml) for former Notre Dame baseball and football player Jeff Samardzija.
 
-<p align="center"><a href="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_2.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_2.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch3/fig1.png?raw=true" width="1000"></p>
 
-<p align="center"><a href="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_3.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_3.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch3/fig2.png?raw=true" width="1000"></p>
+
 
 We can get some pieces of information from this page, like player birthplace and teams played for. But not all of that information is located in a table structure. And the table structure that is present doesn't lend itself to answering our specific research question.
 
 We could also look at the individual team page for a team located in Indiana. Let's take a look at the [2019 season team page](https://www.baseball-reference.com/register/team.cgi?id=a87c825c) for the South Bend Cubs.
 
-<p align="center"><a href="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_4.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_4.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch3/fig3.png?raw=true" width="1000"></p>
 
-<p align="center"><a href="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_5.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/data-models/blob/main/figures/Figure_5.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch3/fig4.png?raw=true" width="1000"></p>
 
 We can get some pieces of information from this page, like the team location and roster. But again, not all of that information is located in a table structure. And the table structure that is present doesn't lend itself to answering our specific research questions.
 

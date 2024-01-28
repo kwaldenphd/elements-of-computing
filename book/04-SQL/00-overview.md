@@ -23,9 +23,9 @@ Peer review and editing was provided by Spring 2021 graduate teaching assistants
 
 ## Data
 
-We'll be working with a relational database file that includes the `players`, `teams`, `locations`, and `transactions` tables. Google Drive access links are included below.
-- [`data.db`](https://drive.google.com/file/d/1x7pQc6Q44FNqPwysrHRWms4hni4rxZOH/view?usp=sharing)
-- [`data.sql`](https://drive.google.com/file/d/1seqKJRecxNC4DxqoWZmsHxvheGtLNDYn/view?usp=sharing)
+We'll be working with a relational database file that includes the `players`, `teams`, `locations`, and `transactions` tables. Download link options are included below.
+- [`data.db`](https://raw.githubusercontent.com/kwaldenphd/elements-of-computing/main/book/data/ch4/data.db)
+- [`data.sql`](https://raw.githubusercontent.com/kwaldenphd/elements-of-computing/main/book/data/ch4/data.sql)
 
 ## Software
 

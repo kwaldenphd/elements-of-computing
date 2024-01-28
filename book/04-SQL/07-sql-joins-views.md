@@ -28,7 +28,7 @@ The process of building a relational database in which you identify primary and 
 
 According to W3Schools'[SQL Joins page](https://www.w3schools.com/sql/sql_join.asp), "A JOIN clause is used to combine rows from two or more tables, based on a related column between them."
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/sql-queries-joins/blob/main/screenshots/Figure_3.jpg?raw=true" /></p>
+<p align="center"><img class="aligncenter" src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch4/joins1.jpg?raw=true" /></p>
 
 Image credit: W3 Schools, ["Different Types of SQL Joins"](https://www.w3schools.com/sql/sql_join.asp) (n.d.)
 
@@ -40,7 +40,7 @@ There are four main types of `JOIN` functions.
 
 We can express these `JOIN` functions programmatically in SQL.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/sql-queries-joins/blob/main/screenshots/Figure_2.png?raw=true"/></p>
+<p align="center"><img class="aligncenter" src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch4/joins2.png?raw=true" /></p>
 
 Image credit: C.L. Moffatt, ["Visual  Representations of SQL Joins"](https://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins) *Code Project* (3 February 2009).
 

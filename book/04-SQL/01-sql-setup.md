@@ -39,19 +39,19 @@ There are multiple workflows for creating a database from scratch, including usi
 
 If you end up wanting or needing to create a relational database from scratch, Prof. Walden is happy to share additional resources.
 
-But for our purposes, we'll start with a relational database file that includes the `players`, `teams`, `locations`, and `transactions` tables. Google Drive access links are included below.
-- [`data.db`](https://drive.google.com/file/d/1x7pQc6Q44FNqPwysrHRWms4hni4rxZOH/view?usp=sharing)
-- [`data.sql`](https://drive.google.com/file/d/1seqKJRecxNC4DxqoWZmsHxvheGtLNDYn/view?usp=sharing)
+But for our purposes, we'll start with a relational database file that includes the `players`, `teams`, `locations`, and `transactions` tables. 
+- [`data.db`](https://raw.githubusercontent.com/kwaldenphd/elements-of-computing/main/book/data/ch4/data.db)
+- [`data.sql`](https://raw.githubusercontent.com/kwaldenphd/elements-of-computing/main/book/data/ch4/data.sql)
 
 ### Foreign Key Settings
 
 Before we open our database file, we have to change a foreign key constraint within the DB Browser application.
 
-<p align="center"><a href="https://github.com/kwaldenphd/sqlite-intro/blob/main/screenshots/Figure_4.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/sqlite-intro/blob/main/screenshots/Figure_4.png?raw=true" /></a></p>
+<p align="center"><img class="aligncenter" src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch4/fig1.png?raw=true" /></p>
 
 Select the `Edit Pragmas` tab.
 
-<p align="center"><a href="https://github.com/kwaldenphd/sqlite-intro/blob/main/screenshots/Figure_7.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/sqlite-intro/blob/main/screenshots/Figure_7.png?raw=true" /></a></p>
+<p align="center"><img class="aligncenter" src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch4/fig2.png?raw=true" /></p>
 
 Uncheck the box next to `Foreign Keys`. Click `Save`. 
 
@@ -59,7 +59,7 @@ We can now load the sample database file.
 
 ### Loading Our Data
 
-<p align="center"><a href="https://github.com/kwaldenphd/sqlite-intro/blob/main/screenshots/Figure_1.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/sqlite-intro/blob/main/screenshots/Figure_1.png?raw=true" /></a></p>
+<p align="center"><img class="aligncenter" src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch4/fig3.png?raw=true" /></p>
 
 You should now be seeing the GUI (graphical user interface) window for the DB Browser application. Click the `Open Database` icon in the top-left hand menu bar, or select `Open Database` under `Files`. 
 
