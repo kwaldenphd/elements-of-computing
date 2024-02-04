@@ -61,7 +61,7 @@ The three main cardinal relationships:
 - `many-many`
   * *students as a group are associated with multiple faculty members, and faculty members in turn are associated with multiple students*
 
-<p align="center"><img src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch3/cardinality.png?raw=true" width="1000"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch3/cardinality.PNG?raw=true" width="1000"></p>
 
 Cardinality is indicated through symbols added to the connecting lines of a relationship.
 

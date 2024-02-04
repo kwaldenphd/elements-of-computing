@@ -18,7 +18,7 @@ In the DB Browser program, select the `Open Database` icon. Open the `.db` file 
 
 Click the `Execute SQL` tab. The top text-box on the left-hand pane in the program (immediately below `SQL 1`) is where we will type SQL statements.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/sql-queries-joins/blob/main/screenshots/fig6.jpg?raw=true" /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src=https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch4/fig6.jpg?raw=true" /></p>
 
 Once we start adding SQL syntax, we can run all (or a selection) using the single arrow icon (left of the two arrows, immediate right of print). 
 - We can use the other arrow (right of the two arrows) to run a single line.
