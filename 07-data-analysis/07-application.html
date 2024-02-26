@@ -244,8 +244,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../05-data-wrangling/15-indexing.html">Labels &amp; Indexing</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../05-data-wrangling/16-putting-it-all-together.html">Putting It All Together</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/17-case-study.html">U.S. Census Bureau Case Study</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../05-data-wrangling/16-putting-it-all-together.html">Putting It All Together</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../05-data-wrangling/18-application.html">Application</a></li>
@@ -591,6 +590,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
 </ul>
             </nav>
         </div>
@@ -605,10 +605,11 @@ document.write(`
   <section id="application">
 <h1>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h1>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1VyH2LzZG6WFwWZD-TdCCCnPVPkowGFLT?usp=sharing">Click here</a> for a Jupyter Notebook template for this chapter’s application problems.</p>
+<p>All the materials to reproduce your work (notebook and data files, API call, etc) should be included in the assignment Google Drive folder.</p>
 <section id="question-1">
 <h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h2>
-<p><strong>Q1A: Identify a civic dataset that you want to analyze. Answer to this question notes and briefly describes the dataset you’re working with. Include a link if possible.</strong></p>
-<p><strong>Q1B: Develop an outline for your data analysis workflow. This could be a list with bullet points, a narrative, or a visual diagram (or a combination of these elements). Answer to this question includes a desired final data structure.</strong></p>
+<p><strong>Q1A: Identify an aspect of your final project data (or another civic dataset) that you want to analyze. Answer to this question briefly describes the data you’re working with and what aspects of it you want to analyze.</strong></p>
+<p><strong>Q1B: Develop an outline for your data analysis workflow. This could be a list with bullet points, a narrative, or a visual diagram (or a combination of these elements). Answer to this question includes notes on a desired final data structure and preliminary outputs.</strong></p>
 <ul class="simple">
 <li><p><em>NOTE: No code is required as part of this answer.</em></p></li>
 </ul>
@@ -617,8 +618,8 @@ document.write(`
 </section>
 <section id="question-2">
 <h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h2>
-<p><strong>Q2A: Using your Q1 dataset (or another civic dataset), identify one of the more advanced modeling workflows you want to explore. Answer to this question briefly describes what workflow you’re wanting to explore (regression, classification, etc) and how it’s a good fit for your dataset.</strong></p>
-<p><strong>Q2B: Using the resources linked in the modeling section of this chapter as a starting point, develop an outline for this data analysis workflow. This could be a list with bullet points, a narrative, or a visual diagram (or a combination of these elements). Answer to this question includes a desired final data structure.</strong></p>
+<p><strong>Q2A: Using your Q1 dataset, another aspect of your final project data, or another civic dataset, identify one of the more advanced modeling workflows you want to explore. Answer to this question briefly describes what workflow you’re wanting to explore (regression, classification, etc) and how it’s a good fit for your dataset.</strong></p>
+<p><strong>Q2B: Using the resources linked in the modeling section of this chapter as a starting point, develop an outline for this data analysis workflow. This could be a list with bullet points, a narrative, or a visual diagram (or a combination of these elements). Answer to this question includes notes on a desired final data structure and preliminary outputs.</strong></p>
 <ul class="simple">
 <li><p><em>NOTE: No code is required as part of this answer.</em></p></li>
 </ul>
@@ -627,6 +628,26 @@ document.write(`
 <li><p><em>NOTE: You may not get to a full working program. That’s fine! Get as far as you can. Pseudocode can be helpful.</em></p></li>
 </ul>
 <p><strong>Q2D: What challenges did you encounter? How did you approach solving them?</strong></p>
+</section>
+<section id="question-3">
+<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this heading">#</a></h2>
+<p><strong>Q3A: Build on your Q1 &amp; Q2 work to develop an analysis outline or workflow for your final project data. Start by briefly describing the data you’re working with and what aspects of it you want to analyze. Answer to this question briefly describes what workflows you’re wanting to explore and how they’re a good fit for your dataset</strong></p>
+<p>A couple places to start:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://kwaldenphd.github.io/elements-of-computing/07-data-analysis/01-terms.html">“Core Concepts” page from the textbook</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/user_guide/groupby.html#groupby">Pandas documentation on aggregation and split-apply-combine workflows</a></p></li>
+</ul>
+<p>The <a class="reference external" href="https://kwaldenphd.github.io/elements-of-computing/08-data-viz/02-chart-type.html">“Choosing a Chart Type” page</a> (from an upcoming textbook chapter) can also be helpful.</p>
+<p>If you’re wanting to explore more advanced analysis/modeling workflows, including text or geospatial data:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://kwaldenphd.github.io/elements-of-computing/07-data-analysis/06-modeling.html">“More Advanced Modeling Workflows” page from the textbook</a></p></li>
+</ul>
+<p><strong>Q3B: Develop an outline for this data analysis workflow. This could be a list with bullet points, a narrative, or a visual diagram (or a combination of these elements). Answer to this question includes notes on a desired final data structure and preliminary outputs.</strong></p>
+<p><strong>Q3C: Develop a Python program that implements your Q3B outline. Answer to this question includes code + comments.</strong></p>
+<ul class="simple">
+<li><p><em>NOTE: You may not get to a full working programs for everything. That’s fine! Get as far as you can. Pseudocode can be helpful.</em></p></li>
+</ul>
+<p><strong>Q3D: What challenges did you encounter? How did you approach solving them?</strong></p>
 </section>
 </section>
 
@@ -696,6 +717,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
 </ul>
   </nav></div>
 

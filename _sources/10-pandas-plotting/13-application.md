@@ -2,12 +2,13 @@
 
 [Click here](https://colab.research.google.com/drive/1cOshaiEA5eHhJDOi22_x3GRHsxqC0L3_?usp=sharing) for a Jupyter Notebook template for this chapter's application problems.
 
+All the materials to reproduce your work (notebook and data files, API call, etc) should be included in the assignment Google Drive folder.
+
 ## Question 1
 
-**Q1A: Identify a civic dataset that you want to analyze. Answer to this question notes and briefly describes the dataset you're working with. Include a link if possible.**
-- *I encourage folks to use this question to explore civic data you might use for the final project.*
+**Q1A: Identify an aspect of your final project data (or another civic dataset) that you want to analyze. Answer to this question briefly describes the data you're working with and what aspects of it you want to analyze.**
 
-**Q1B: Develop an outline for your data visualization workflow. This could be a list with bullet points, a narrative, or a visual diagram (or a combination of these elements). Answer to this question includes a desired final data structure.**
+**Q1B: Develop an outline for your data visualization workflow. This could be a list with bullet points, a narrative, or a visual diagram (or a combination of these elements). Answer to this question includes notes on a desired final data structure and preliminary outputs.**
 - *NOTE: No code is required as part of this answer.*
 
 **Q1C: Develop a Python program that uses Pandas plotting functions to generate at least three different plot types using your Q1A dataset and Q1B workflows. Answer to this question includes code + comments.**
@@ -37,10 +38,9 @@ Plot types to choose from:
 
 ## Question 2
 
-**Q2A: Identify a civic dataset that you want to analyze. Answer to this question notes and briefly describes the dataset you're working with. Include a link if possible.**
-- *I encourage folks to use this question to explore civic data you might use for the final project.*
+**Q2A: Identify an aspect of your final project data (or another civic dataset) that you want to analyze. Answer to this question briefly describes the data you're working with and what aspects of it you want to analyze.**
 
-**Q2B: Develop an outline for your data visualization workflow. This could be a list with bullet points, a narrative, or a visual diagram (or a combination of these elements). Answer to this question includes a desired final data structure.**
+**Q2B: Develop an outline for your data visualization workflow. This could be a list with bullet points, a narrative, or a visual diagram (or a combination of these elements). Answer to this question includes notes on a desired final data structure and preliminary outputs.**
 - *NOTE: No code is required as part of this answer.*
 
 **Q2C: Develop a Python program that uses Seaborn plotting functions to generate at least two different plot types. Answer to this question includes code + comments.**

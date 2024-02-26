@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Introduction to Relational Databases &#8212; Elements of Computing</title>
+    <title>Case Study: American Community Survey Data &#8212; Elements of Computing</title>
   
   
   
@@ -70,13 +70,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '03-RBDMS/00-overview';</script>
-    <link rel="canonical" href="https://kwaldenphd/github.io/elements-of-computing/03-RBDMS/00-overview.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = '05-data-wrangling/17_case_study';</script>
+    <link rel="canonical" href="https://kwaldenphd/github.io/elements-of-computing/05-data-wrangling/17_case_study.html" />
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="From Table to Database" href="01-from-table-to-database.html" />
-    <link rel="prev" title="Application" href="../02-Structured-Data/07-application.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -142,6 +140,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -176,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../how-to.html">How to Interact With This Book</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../01-Python-Refresh/00-overview.html">1. Python Refresh</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../01-Python-Refresh/01-comments-variables-assignment.html">Comments, Variables &amp; Assignment</a></li>
@@ -199,12 +199,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../02-Structured-Data/07-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">3. Relational Databases</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="01-from-table-to-database.html">From Table To Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02-terminology.html">Terminology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03-erd.html">Entity Relationship Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04-rs.html">Relational Schema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05-application.html">Application</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03-rdbms/00-overview.html">3. Relational Databases</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03-rdbms/01-from-table-to-database.html">From Table To Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-rdbms/02-terminology.html">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-rdbms/03-erd.html">Entity Relationship Diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-rdbms/04-rs.html">Relational Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-rdbms/05-application.html">Application</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../04-SQL/00-overview.html">4. SQL</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -222,33 +222,32 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../04-SQL/10-application.html">Application</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../05-data-wrangling/00-overview.html">5. Data Wrangling</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../05-data-wrangling/01-pandas-basics.html">Interacting With a DataFrame</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/02-selecting.html">Selecting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/03-sorting.html">Sorting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/04-filtering.html">Filtering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/05-time-series.html">Time Series Data</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="00-overview.html">5. Data Wrangling</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="01-pandas-basics.html">Interacting With a DataFrame</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02-selecting.html">Selecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-sorting.html">Sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-filtering.html">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-time-series.html">Time Series Data</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../05-data-wrangling/06-reshaping.html">Reshaping</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/07-pivot.html">Pivot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/08-pivot-table.html">Pivot Table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/09-melt.html">Melt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/10-transpose.html">Transpose</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/11-explode.html">Explode</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="06-reshaping.html">Reshaping</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="07-pivot.html">Pivot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-pivot-table.html">Pivot Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-melt.html">Melt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-transpose.html">Transpose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-explode.html">Explode</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../05-data-wrangling/12-merging-joining.html">Merging &amp; Joining</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/13-merge.html">Merge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/14-concat.html">Concat</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="12-merging-joining.html">Merging &amp; Joining</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="13-merge.html">Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-concat.html">Concat</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../05-data-wrangling/15-indexing.html">Labels &amp; Indexing</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../05-data-wrangling/16-putting-it-all-together.html">Putting It All Together</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../05-data-wrangling/17-case-study.html">U.S. Census Bureau Case Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="15-indexing.html">Labels &amp; Indexing</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="16-putting-it-all-together.html">Putting It All Together</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../05-data-wrangling/18-application.html">Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18-application.html">Application</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../06-tidy-data/00-overview.html">6. Tidy Data</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -440,6 +439,37 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/kwaldenphd/elements-of-computing/blob/main/book/05-data-wrangling/17_case_study.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -465,7 +495,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/kwaldenphd/elements-of-computing/issues/new?title=Issue%20on%20page%20%2F03-RBDMS/00-overview.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/kwaldenphd/elements-of-computing/issues/new?title=Issue%20on%20page%20%2F05-data-wrangling/17_case_study.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -495,7 +525,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/03-RBDMS/00-overview.md" target="_blank"
+      <li><a href="../_sources/05-data-wrangling/17_case_study.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -505,7 +535,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -579,7 +609,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction to Relational Databases</h1>
+    <h1>Case Study: American Community Survey Data</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -589,10 +619,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-table-of-contents">Chapter Table of Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-building-an-outline">Step #1: Building an Outline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-breaking-out-category-and-variable-columns">Step #2: Breaking out category and variable columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-melting-variable-labels">Step #3: Melting Variable Labels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-splitting-multi-value-column">Step #4: Splitting multi-value column</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-subsetting-filtering">Step #5: Subsetting &amp; Filtering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap Up</a></li>
 </ul>
             </nav>
         </div>
@@ -604,46 +636,206 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="introduction-to-relational-databases">
-<h1>Introduction to Relational Databases<a class="headerlink" href="#introduction-to-relational-databases" title="Permalink to this heading">#</a></h1>
-<p>This chapter provides an overview of relational database systems, covering core terminology and fundamental concepts.</p>
-<section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
-<p>The author consulted the following resources when building out this chapter:</p>
+  <section id="case-study-american-community-survey-data">
+<h1>Case Study: American Community Survey Data<a class="headerlink" href="#case-study-american-community-survey-data" title="Permalink to this heading">#</a></h1>
+<p>Let’s look at an example of how we might utilize these workflows on an actual dataset, specifically <a href="https://data.census.gov/table/ACSST5Y2022.S1501?t=Education:Educational Attainment&g=050XX00US18141,18141$8600000&moe=false">educational outcome attribute data from the American Community Survey</a></p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_syntax.asp">W3 Schools “SQL Syntax”</a></p></li>
-<li><p><a class="reference external" href="https://librarycarpentry.org/lc-sql/08-database-design/index.html">Library Carpentry “Database Design”</a></p></li>
-<li><p><a class="reference external" href="https://librarycarpentry.org/lc-sql/">Library Carpentry “SQL”</a></p></li>
+<li><p><a class="reference external" href="https://raw.githubusercontent.com/kwaldenphd/elements-of-computing/main/book/data/ch5/data.csv">Link to download</a></p></li>
+<li><p><em>Note: I’m working with 2022’s 5 year estimate, which I’ve renamed <code class="docutils literal notranslate"><span class="pre">data.csv</span></code>.</em></p></li>
 </ul>
-<p>Peer review and editing was provided by Spring 2021 graduate teaching assistants <a class="reference external" href="https://github.com/adraper2">Aidan Draper</a>, <a class="reference external" href="https://github.com/milktea292">Eric Tsai Sahoo</a> &amp; <a class="reference external" href="https://github.com/SDSAHOO703">Subhadyuti Sahoo</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span><span class="o">,</span> <span class="nn">re</span> <span class="c1"># import statements</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/kwaldenphd/elements-of-computing/main/book/data/ch5/data.csv&quot;</span><span class="p">)</span> <span class="c1"># load data</span>
+<span class="n">df</span> <span class="c1"># show output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A rich dataset, but not in particularly usable shape at the moment.</p>
+<section id="step-1-building-an-outline">
+<h2>Step #1: Building an Outline<a class="headerlink" href="#step-1-building-an-outline" title="Permalink to this heading">#</a></h2>
+<p>A good starting point is sketching out how you want the data to look at the end of reshaping operations. We can start thinking of this as the data processing version of pseudocode.</p>
+<p>For this dataset, you might want something like…</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Area</p></th>
+<th class="head"><p>Category</p></th>
+<th class="head"><p>Variable</p></th>
+<th class="head"><p>Gender</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>geographic unit</em></p></td>
+<td><p><em>category</em></p></td>
+<td><p><em>specific field</em></p></td>
+<td><p><em>gender breakdown</em></p></td>
+<td><p><em>amount or measure</em></p></td>
+</tr>
+</tbody>
+</table>
+<p>Based on where the data is now, some things we might need to do…</p>
+<ul class="simple">
+<li><p>Take the category rows, make them a new column, and create a multi-level index on that axis</p></li>
+<li><p>Break out the current column headers</p></li>
+<li><p>Make the updated column headers their own columns</p></li>
+<li><p>Probably relabel the columns to more user-friendly labels</p></li>
+</ul>
+<p>Let’s dig in!</p>
 </section>
-<section id="chapter-table-of-contents">
-<h2>Chapter Table of Contents<a class="headerlink" href="#chapter-table-of-contents" title="Permalink to this heading">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="01-from-table-to-database.html">From Table To Database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02-terminology.html">Terminology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03-erd.html">Entity Relationship Diagrams</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04-rs.html">Relational Schema</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05-application.html">Application</a></li>
+<section id="step-2-breaking-out-category-and-variable-columns">
+<h2>Step #2: Breaking out category and variable columns<a class="headerlink" href="#step-2-breaking-out-category-and-variable-columns" title="Permalink to this heading">#</a></h2>
+<p>Let’s take a look at the first column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="c1"># inspect unique values in first column</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A few things going on here, but the first thing we might want to do is remove the <code class="docutils literal notranslate"><span class="pre">\xa0</span></code> unicode character.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\xa0&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># remove unicode character</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="c1"># inspect output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then, we can use a couple conditional statements to add a <code class="docutils literal notranslate"><span class="pre">Category</span></code> column.</p>
+<ul class="simple">
+<li><p>First, we’ll insert an empty column at the start of our DataFrame</p></li>
+<li><p>Then, we’ll iterate over rows, test if the third cell is null (<code class="docutils literal notranslate"><span class="pre">NaN</span></code>)</p></li>
+<li><p>If that test is <code class="docutils literal notranslate"><span class="pre">True</span></code>, we’ll add the category value to the first column</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Category&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># insert new column for category</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span> <span class="c1"># iterate over rows, insert new column value</span>
+  <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span> <span class="c1"># test if third cell is a NaN value</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># if null test if True, add that value to a new column</span>
+  <span class="k">else</span><span class="p">:</span> <span class="c1"># otherwise, keep iterating over rows</span>
+    <span class="k">continue</span>
+
+<span class="n">df</span> <span class="c1"># inspect output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Making progress! Let’s break down the pseudocode version of next steps:</p>
+<ul class="simple">
+<li><p>Now that we have a <code class="docutils literal notranslate"><span class="pre">Category</span></code> column, we can filter out the <code class="docutils literal notranslate"><span class="pre">NaN</span></code> rows.</p></li>
+<li><p>Then, we can forward fill or fill down the <code class="docutils literal notranslate"><span class="pre">Category</span></code> column values so there’s a connection between the category and variable lable</p></li>
+</ul>
+<p>A couple last steps before we think about the next reshaping operation:</p>
+<ul class="simple">
+<li><p>Rename the second column</p></li>
+<li><p>Reset the index (after filtering)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">df</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1"># mask empty cells with NaN</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ffill</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># foward fill category column</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># drop rows with NA</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Variable&#39;</span> <span class="c1"># rename column</span>
+<span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># reset index</span>
+<span class="n">df</span> <span class="c1"># show output</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
-<section id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
-<p>This chapter will work with four tables. <a class="reference external" href="https://docs.google.com/spreadsheets/d/1x40S3DSv5EzwPqma7ivsZIk92fre0Uj1IWhuozYO4pM/edit?usp=sharing">Link to access via Google Drive</a></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">transactions</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">players</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">teams</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">locations</span></code></p></li>
-</ul>
-<p align="center"><img src="https://github.com/kwaldenphd/elements-of-computing/blob/main/book/images/ch3/drive.jpg?raw=true" width="1000"></p>
-<p>You can copy the project to your own Drive workspace and/or download individual sheets as <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files.</p>
+<section id="step-3-melting-variable-labels">
+<h2>Step #3: Melting Variable Labels<a class="headerlink" href="#step-3-melting-variable-labels" title="Permalink to this heading">#</a></h2>
+<p>Now that we have a <code class="docutils literal notranslate"><span class="pre">Category</span></code> and <code class="docutils literal notranslate"><span class="pre">Variable</span></code> columns, let’s melt this dataframe so the existing column labels become their own column. We’ll use these two columns as <code class="docutils literal notranslate"><span class="pre">id_vars</span></code>.</p>
+<p>We can also rename the columns after this operation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">,</span> <span class="s1">&#39;Variable&#39;</span><span class="p">])</span> <span class="c1"># melt everything but the first two columns</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;variable&#39;</span><span class="p">,</span> <span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="c1"># inspect output</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="application">
-<h2>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://docs.google.com/document/d/19MKZm6q_taSeLN1Rz4R_B6y4aQ9fSVnERBKdy3J01Rw/copy">Click here</a> for a Google Doc template for this chapter’s application problems.</p>
+<section id="step-4-splitting-multi-value-column">
+<h2>Step #4: Splitting multi-value column<a class="headerlink" href="#step-4-splitting-multi-value-column" title="Permalink to this heading">#</a></h2>
+<p>If we take a closer look at the <code class="docutils literal notranslate"><span class="pre">metadata</span></code> column, there are three key pieces of information:</p>
+<ul class="simple">
+<li><p>Geographic scope (county, zip code, etc)</p></li>
+<li><p>Gender scope (total, male, female)</p></li>
+<li><p>Measure type (all estimates, so we’ll eventually drop this value)</p></li>
+</ul>
+<p>We’ll use <code class="docutils literal notranslate"><span class="pre">!!</span></code> as a separator for regular expression string methods.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://colab.research.google.com/drive/1Rd9KMoJ2AdtwVMNXwibakUbMGxz5Z6nM?usp=sharing#scrollTo=c1TKLsmiSS9N">Click here</a> for a Jupyter Notebook that provides a deep dive into regular expressions (regex) and string methods in Python.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;measure&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;metadata&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;!!&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># split metadata column using separator</span>
+<span class="n">df</span> <span class="c1"># inspect output</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-subsetting-filtering">
+<h2>Step #5: Subsetting &amp; Filtering<a class="headerlink" href="#step-5-subsetting-filtering" title="Permalink to this heading">#</a></h2>
+<p>Last but not least, we might want to subset our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> for meaningful columns, and remove rows with <code class="docutils literal notranslate"><span class="pre">NaN</span></code> values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;variable&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]]</span> <span class="c1"># subset columns</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span> <span class="c1"># remove rows with NaN in value</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># reset index</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;ZCTA5 &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="c1"># clean up area column to be able to join on zip code</span>
+<span class="n">df</span> <span class="c1"># show output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There’s more we might want to do with processing or filtering this data, but a solid start to programmatically reshape this data.</p>
+</section>
+<section id="wrap-up">
+<h2>Wrap Up<a class="headerlink" href="#wrap-up" title="Permalink to this heading">#</a></h2>
+<p>Voila! Let’s see all of those steps together:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span><span class="o">,</span> <span class="nn">re</span> <span class="c1"># import statements</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/kwaldenphd/elements-of-computing/main/book/data/ch5/data.csv&quot;</span><span class="p">)</span> <span class="c1"># load data</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\xa0&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># remove unicode character</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Category&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># insert new column for category</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span> <span class="c1"># iterate over rows, insert new column value</span>
+  <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span> <span class="c1"># test if third cell is a NaN value</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># if null test if True, add that value to a new column</span>
+  <span class="k">else</span><span class="p">:</span> <span class="c1"># otherwise, keep iterating over rows</span>
+    <span class="k">continue</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">df</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1"># mask empty cells with NaN</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ffill</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># foward fill category column</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># drop rows with NA</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Variable&#39;</span> <span class="c1"># rename column</span>
+<span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># reset index</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">,</span> <span class="s1">&#39;Variable&#39;</span><span class="p">])</span> <span class="c1"># melt everything but the first two columns</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;variable&#39;</span><span class="p">,</span> <span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;measure&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;metadata&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;!!&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># split metadata column using separator</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;variable&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]]</span> <span class="c1"># subset columns</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span> <span class="c1"># remove rows with NaN in value</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># reset index</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;ZCTA5 &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="c1"># clean up area column to be able to join on zip code</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;output.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># write output to csv</span>
+<span class="n">df</span> <span class="c1"># show output</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -660,7 +852,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./03-RBDMS"
+            path: "./05-data-wrangling"
         },
         predefinedOutput: true
     }
@@ -677,24 +869,6 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../02-Structured-Data/07-application.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Application</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="01-from-table-to-database.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">From Table to Database</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -711,10 +885,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-table-of-contents">Chapter Table of Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-building-an-outline">Step #1: Building an Outline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-breaking-out-category-and-variable-columns">Step #2: Breaking out category and variable columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-melting-variable-labels">Step #3: Melting Variable Labels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-splitting-multi-value-column">Step #4: Splitting multi-value column</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-subsetting-filtering">Step #5: Subsetting &amp; Filtering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap Up</a></li>
 </ul>
   </nav></div>
 

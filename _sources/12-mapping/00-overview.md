@@ -62,4 +62,4 @@ Save this token value (string of numbers and letters) for later in the chapter.
 
 ## Application
 
-[Click here](https://colab.research.google.com/drive/1Oz7GGpg5jqchdPTk7_4IrYKf8EuyDoM-?usp=sharing) for a Jupyter Notebook template for this chapter's application problems.
+[Click here](https://colab.research.google.com/drive/1igToXStJBCZGqutfIXu2b_3MJFO6SOmO?usp=sharing) for a Jupyter Notebook template for this chapter's application problems.
